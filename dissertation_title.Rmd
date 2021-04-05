@@ -1,0 +1,65 @@
+---
+header-includes:
+    - \usepackage{setspace}\doublespacing
+    - \usepackage[left]{lineno}
+    - \usepackage{indentfirst}
+    - \setlength\parindent{1cm}
+
+bibliography: sb_refs.bib
+fontsize: 11pt
+geometry: margin=1in
+output: pdf_document
+---
+
+\pagenumbering{gobble}
+
+\center __Evidence for and Mechanisms of Ecosystem Transformation in the Great Basin of the Western United States__ \center
+
+\center by \center
+
+\center __Adam L. Mahood__ \center
+
+\center B.S., University of Minnesota, 2004 \center
+
+\center M.A., University of Colorado Boulder, 2017 \center
+
+\vspace{10mm}
+
+\center A thesis submitted to the \center
+
+\center Faculty of the Graduate School of the \center
+
+\center University of Colorado in partial fulfillment \center
+
+\center of the requirements for the degree of \center
+
+\center Doctor of Philosophy \center
+
+\center Department of Geography \center
+
+\center 2021 \center
+
+
+\vspace{20mm}
+
+\begin{flushright}
+
+Committee Members:
+
+
+
+Jennifer K. Balch, Chair
+
+Thomas T. Veblen
+
+Stefan Leyk
+
+Katharine N. Suding
+
+Carson J. Q. Farmer
+
+\end{flushright}
+
+\raggedright
+
+\newpage

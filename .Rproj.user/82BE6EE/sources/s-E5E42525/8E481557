@@ -1,0 +1,26 @@
+{
+    "id": "8E481557",
+    "path": "~/projects/dissertation/dissertation_mahood.Rmd",
+    "project_path": "dissertation_mahood.Rmd",
+    "type": "r_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1617643779910.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "87,56",
+        "scrollLine": "81"
+    },
+    "folds": "125|153|290|0|\n291|147|835|0|\n836|144|991|0|\n992|151|1117|0|\n1118|12|1155|0|\n",
+    "lastKnownWriteTime": 1617647072,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1617647072429,
+    "read_only": false,
+    "read_only_alternatives": []
+}
