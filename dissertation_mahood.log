@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.16)  7 APR 2021 11:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.1.16)  8 APR 2021 08:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1356,7 +1356,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  15789 strings out of 494532
  231712 string characters out of 6176185
- 415428 words of memory out of 5000000
+ 414428 words of memory out of 5000000
  18363 multiletter control sequences out of 15000+600000
  88672 words of font info for 152 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1374,7 +1374,7 @@ texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pf
 b>
-Output written on dissertation_mahood.pdf (132 pages, 47651979 bytes).
+Output written on dissertation_mahood.pdf (132 pages, 47651963 bytes).
 PDF statistics:
  1839 PDF objects out of 2073 (max. 8388607)
  1629 compressed objects within 17 object streams

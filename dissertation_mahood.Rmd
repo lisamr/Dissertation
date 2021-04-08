@@ -203,7 +203,7 @@ In order to understand how the seed bank composition compares to the realized ve
 
 ### 2.5 Estimating Burn Severity with Landsat 8 OLI
 
-We downloaded the "fire bundle" of the Hot Pot fire from http://www.mtbs.gov. This included cloud-free Landsat 8 scenes collected before the Hot Pot fire, and already calculated layers of the Differenced Normalized Burn Ratio (dNBR) [@Miller2009]. Because our sites were generally within 10 meters of the burn perimeter, The pixels directly intersecting the plot locations had the potential to be mixed pixels (i.e. containing burned and unburned ground). To minimize this effect, we extracted all the dNBR values within a 120 meter buffer for pixels whose centroids fell inside of the fire perimeter and calculated the mean. 
+We downloaded the "fire bundle" of the Hot Pot fire from http://www.mtbs.gov. This included cloud-free Landsat 8 scenes collected before the Hot Pot fire, and already calculated layers of the Differenced Normalized Burn Ratio [dNBR, @Miller2009]. Because our sites were generally within 10 meters of the burn perimeter, The pixels directly intersecting the plot locations had the potential to be mixed pixels (i.e. containing burned and unburned ground). To minimize this effect, we extracted all the dNBR values within a 120 meter buffer for pixels whose centroids fell inside of the fire perimeter and calculated the mean. 
 
 ### 2.6 Statistical Analysis
 
