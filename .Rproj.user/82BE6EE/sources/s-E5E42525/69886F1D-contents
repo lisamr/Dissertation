@@ -1,3 +1,0 @@
-library(rmarkdown)
-
-system(paste("pdftk dissertation_title.pdf dissertation_mahood.pdf cat output full_dissertation.pdf"))
