@@ -47,14 +47,24 @@ Thesis directed by Prof. Jennifer K. Balch
 
 \vspace{10mm}
 
-Ecosystem transformations are very difficult to reverse and are likely to become more common with accelerating global change. The novel systems that often result are maintained by stabilizing feedbacks that are composed of forcing mechanisms that can be either external or internal to the system. Increasing our understanding of these feedback components and how they relate to each other is crucial to know when they can be reversed and the original ecosystem restored. Here, we studied the sagebrush biome in the western United states, where annual grass invasion and fire are converting vast areas of shrublands into annual grasslands, and these are thought to be two alternative species assemblages. In four separate studies, we aimed to understand the components of positive feedback mechanisms that maintain these two assemblages, and the impacts that conversion from shrubland to grassland has on ecosystem function.
+Ecosystem transformations are difficult to reverse and often create novel ecosystems. These systems can be maintained by stabilizing feedbacks driven by external or internal mechanisms. Increasing our understanding of these feedback components and how they relate to each other is crucial to know if and when they can be reversed. We studied the sagebrush biome in the western United states. Here, cheatgrass invasion and fire are converting vast areas of shrublands into grasslands, which may be two alternative stable states. We aimed to understand the components of positive feedback mechanisms that maintain these two states, and the impacts that conversion from shrubland to grassland has on ecosystem function.
 
-In chapter one we found that the spatial connectivity of fuel influences the burn severity of fire, which then favors the occurrence of fire-tolerant annuals in the seedbank. In chapter two we investigated how invasion and the loss of shrubs and perennial grasses by fire influenced soil nutrient cycling, and found that the annual grass dominance in the post-fire state converted the system from a source to a sink of soil C and N. In chapter three, we constructed a fire history atlas to isolate the effect of time since fire and remove the effect of repeated fires. We found that there was very little evidence of recovery towards the pre-fire state even after 30 years. Rather, we found that livestock grazing and annual grass abundance interact to maintain the post-fire, grass-dominated state. Finally, in chapter four we created an allometric equation to calculate biomass from cover estimates.  
+In chapter one the connectivity of fuel influenced the burn severity of fire, which favored fire-tolerant annuals in the seedbank. In chapter two invasion and the loss of shrubs and perennial grasses by fire changed the system from a sink to a source of soil carbon and nitrogen. In chapter three, we constructed a fire history atlas to isolate the effect of time since fire by removing the effect of repeated fires. There was little evidence of recovery towards the pre-fire state, and instead livestock grazing and cheatgrass abundance interacted to maintain the grass-dominated state. In chapter four we created an allometric equation to calculate biomass from cover estimates that can be applied to broad-scale models of cheatgrass abundance. 
+
+Overall, we document self-reinforcing mechanisms of an alternative stable state, over several decades. We demonstrate how interannual climate variability creates initial or sustaining conditions that can alter longer-term trends and interannual oscillations in ecosystem functions. Finally, there are important management implications of this work, as cheatgrass dominance can present a sustained and novel ecosystem type with few opportunities to restore to native shrubland. Cheatgrass-dominated landscapes in the U.S. Great Basin offer a critical view into how novel alternative stable vegetation states can be initiated through disturbance and sustained through self-reinforcing mechanisms. Global changes such as climate warming, expanding land use, and invasive species present novel disturbance regimes and species assemblages. This study provides key insights into what prompts and sustains ecosystem transformation in drylands. 
 
 \pagebreak
 
 \setcounter{tocdepth}{2}
 \tableofcontents
+
+\pagebreak
+
+\listoftables
+
+\pagebreak
+
+\listoffigures
 
 
 \pagebreak
@@ -774,7 +784,8 @@ kable(ndfpt %>% mutate(pic = ""), digits=2, escape=F, booktabs=T,
       col.names = c("Exogenous variable", "Path", "\\emph{B. tectorum}", "",
                     "\\emph{P. secunda}", "", "Other Plants", "")) %>%
   column_spec(2, image=spec_image(c(ndfpt$pic), 300,300)) %>%
-  collapse_rows(columns = 2, latex_hline = "major") 
+  collapse_rows(columns = 2, latex_hline = "major") %>%
+  kable_styling(latex_options = "scale_down")
 
 ```
 
@@ -1500,15 +1511,16 @@ fitted(bcn_fit)$cov %>%
   as_tibble(rownames = "x") %>%
   kable(booktabs=T, caption = "Covriance matrix for the Bromus C:N path model")
 
-fitted(ocn_fit)$cov %>%
+fitted(pcn_fit)$cov %>%
   round(3) %>%
   as_tibble(rownames = "x") %>%
   kable(booktabs=T, caption = "Covriance matrix for the Poa C:N path model")
 
-fitted(pcn_fit)$cov %>%
+fitted(ocn_fit)$cov %>%
   round(3) %>%
   as_tibble(rownames = "x") %>%
-  kable(booktabs=T, caption = "Covriance matrix for the other plants C:N path model")
+  kable(booktabs=T, caption = "Covriance matrix for the other plants C:N path model")%>%
+  kable_styling(latex_options = "scale_down")
 
 ```
 
