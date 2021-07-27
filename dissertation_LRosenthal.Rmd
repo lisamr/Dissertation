@@ -1,0 +1,380 @@
+---
+header-includes:
+    - \usepackage{setspace}
+    - \usepackage[left]{lineno}
+    - \usepackage{indentfirst}
+    - \setlength\parindent{1cm}
+    #- \usepackage[bottom]{footmisc} #ensures no random vertical spacing
+    - \usepackage{caption} #customize figure caption font
+    - \captionsetup[figure]{labelformat=empty}
+    - \newcommand{\beginsupplement} {\setcounter{table}{0} \renewcommand{\thetable}{S\arabic{table}}\setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+
+csl: ecology-letters_inpress.csl
+bibliography: dissertation_refs.bib
+fontsize: 11pt
+geometry: margin=1in
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,cache = F, message=FALSE, warning = FALSE)
+
+library("knitr")
+library(kableExtra)
+library(captioner)
+
+### Chunk options: see http://yihui.name/knitr/options/ ###
+## Text results
+## Code decoration
+opts_chunk$set(tidy = TRUE, comment = NA, highlight = TRUE)
+
+## Cache
+# opts_chunk$set(cache = 2, cache.path = "output/cache/")
+
+## Plots
+# opts_chunk$set(fig.path = "output/figures/")
+```
+
+
+\pagenumbering{roman}
+\setcounter{page}{2}
+
+<!-- Acknowledgement page -->
+
+\doublespacing
+# Acknowledgements
+These are the people and places that I acknowledge. 
+
+\pagebreak
+
+<!-- Abstract page -->
+
+\begin{raggedleft}
+\singlespacing
+\setlength{\parskip}{0em}
+Lisa M. Rosenthal
+
+September 2021
+
+ECOLOGY
+
+\end{raggedleft}
+
+\doublespacing
+# Abstract
+This is my abstract.
+
+Is this a new paragraph?
+
+\pagebreak
+
+\singlespacing
+\setcounter{tocdepth}{2}
+\tableofcontents
+\pagebreak
+
+\listoftables
+\pagebreak
+
+\listoffigures
+\pagebreak
+
+\pagenumbering{arabic} 
+\doublespacing
+<!-- \linenumbers -->
+
+# Chapter 2. Direction and mechanisms of the diversity-disease relationship are distinct across hierarchical levels
+
+Lisa M. Rosenthal^1,2^, Allison B. Simler-Williamson^3^, David M. Rizzo^2^
+
+
+\small
+
+^1^ Graduate Group in Ecology, University of California, Davis, CA 95616, USA
+
+^2^ Department of Plant Pathology, University of California, Davis, CA 95616, USA
+
+^3^ Department of Biological Sciences, Boise State University, Boise, ID 83725, USA
+
+
+<!-- figure captions to be referenced -->
+```{r, include = F}
+fig_ch2 <- captioner(prefix = "Figure 2.",  auto_space = FALSE)
+fig_app_ch2 <- captioner(prefix = "Figure B.",  auto_space = FALSE)
+
+fig_ch2("concept_fig_ch2", 'Negative diversity-disease relationships assessed at the community level may be affected by multiple dilution mechanisms and/or measurements of disease risk. The addition of low-competence, rarely symptomatic species (i.e. ‘diluter’ species) to higher diversity communities may potentially limit transmission risk, as measured by average individual-level disease risk, A) by reducing the density of competent hosts (‘competent host regulation’, modified *sensu* Keesing et al. 2006), or B) by reducing encounter rates or probability of transmission between infectious and susceptible individuals (‘encounter reduction‘ or ‘transmission reduction‘ *sensu* Keesing et al. 2006). The addition of these species may also C) have no effect on plant-plant interactions, resulting in no corresponding change in individual-level disease risk. Across all three scenarios, the overall proportion of commonly symptomatic species is lower in the higher diversity community, causing a negative relationship between diversity and community-level disease risk. The area of the dashed halos represent total potential inoculum pressure exerted by competent hosts.')
+
+fig_ch2(name = 'map_ch2', caption = 'Map of 151 study plots located in the Big Sur coastal region of California, USA. Bounding box in the inset state map designates the closeup area. Plots were split among mixed evergreen (blue) and redwood (orange) forest types.')
+
+fig_ch2(name = 'densities_ch2', caption = 'Relationships between richness and various measurements of plant density by forest type.  A) Density measured as total plant basal area. B, C) Hurdle models measuring tanoak or bay laurel density, which assessed probability of occurrence (bottom) and, conditional upon presence, assessed basal area (top). D) Density measured as number of commonly symptomatic host plants. E) Density measured as number of rarely symptomatic host plants. Points are horizontally jittered. Lines and shaded regions represent the median and 90% HPDI of the posterior estimate of the mean. Solid lines indicate the 90% HPDI of the effect of richness did not cross zero.')
+
+fig_ch2(name = 'comp_ch2', caption = 'Nestedness and the linkages between host competence and diversity in both forest types. A) Matrix of species that are present among the 151 study plots. The top rows represent the most ubiquitous species and the leftmost columns represent the richest plots. In a perfectly nested set of communities, the depauperate communities would consist of a subset of the species present their richer counterparts, causing this matrix to be filled entirely in the upper left-hand side. B) Sporulation potential (mean ± SE) as assessed in laboratory inoculation assays. Species are in order of rank ubiquity. C) Each species’ contribution towards community competence (mean ± SE). D) The relationship between richness and community competence with points horizontally jittered. Line and shaded region represents the median and 90% HPDI of the posterior estimate of the mean. Solid lines indicate the 90% HPDI of the effect of richness did not cross zero. Species not included in the laboratory sporulation assays (grey) are estimated as the median of those that were measured. Analyses are shown separately for each forest type, mixed evergreen (blue) and redwood (orange).')
+
+fig_ch2(name ='dis_plot_ch2', caption = 'Effects of community-related covariates of disease risk models evaluated as A) plot-level disease prevalence for all hosts, B) plot-level disease prevalence for commonly symptomatic hosts, and C) individual-level disease risk for commonly symptomatic hosts. Note that panel C shows the mean effect of richness (beta_bar, equation 2), while species-specific parameters of the individual-level disease risk models are displayed in Fig. 6. The three colors represent the three explanatory models (M1. Richness only, M2. Richness + density of key hosts, M3. Richness + community competence) being contrasted within each disease risk metric. Posterior estimates are displayed with the median and 90% HDPI, with intervals not crossing one shown with a solid line and closed points.')
+
+fig_ch2(name ='dis_spp_ch2', caption = 'Additional posterior estimates of the individual-level disease risk models, including species-specific A) intercepts and B) effects of richness, representing alpha_s and beta_s for species *s*, respectively (see equation 2). Posterior estimates are displayed with the median and 90% HDPI, with intervals not crossing one shown with a solid line and closed points.')
+
+
+#figures in the appendix
+fig_app_ch2('ch2pairsplot', 'Pairs plots and Pearson’s correlations of continuous variables used in the three disease risk model submodels. Orange and blue points designate data from redwood and mixed evergreen forests, respectively.')
+
+fig_app_ch2('ch2ppc1', 'Density plots of posterior predictions (100 samples, light blue) against observed (dark blue) densities measured as either basal area or number of individual plants.')
+
+fig_app_ch2('ch2ppc2', 'Intervals of posterior predictions plotted against observed basal areas (dark blue point) in each plot of the top 6 most commonly occurring species. The 50% (medium blue) and 90% (lightest blue) of the probability mass are shown.')
+
+fig_app_ch2('ch2ppc3', 'Density plots of posterior predictions (100 samples, light blue) against observed (dark blue) log-community competence.')
+
+fig_app_ch2('ch2ppc4', 'Density plots of posterior predictions (100 samples, light blue) against observed infections (dark blue) from the best performing disease risk models assessed at the plot or individual level for all hosts or highly susceptible species.')
+
+fig_app_ch2('ch2basalarea', 'Mean basal area of individuals in a plot was highly correlated with the total basal area for the top 6 most commonly occurring species. Plots with more total basal area on average had larger individual plants.')
+
+fig_app_ch2('ch2moransI', 'Moran’s I correlogram testing for spatial autocorrelation. The mean Pearson’s residuals from the best performing model assessing plot-level disease prevalence among all hosts were used to assess unexplained correlations between plots and their pairwise distances. Closed black circles indicate significant autocorrelation (p < 0.05).')
+
+fig_app_ch2('ch2GPcor', 'Median (red) correlation between plots with 100 posterior draws (grey).')
+
+fig_app_ch2('ch2GPhist', 'Distribution of plot pairwise distances.')
+
+```
+
+
+\normalsize
+
+## Abstract  
+Understanding why diversity sometimes limits disease is essential for managing outbreaks; however, mechanisms underlying this ‘dilution effect’ remain poorly understood. Negative diversity-disease relationships have previously been detected in plant communities impacted by an emerging forest disease, sudden oak death. We used this focal system to empirically evaluate whether these relationships were driven by dilution mechanisms that reduce transmission risk for individuals or from the fact that disease was averaged across the host community. We integrated laboratory competence measurements with plant community and symptom data from a large forest monitoring network. Richness did not limit individual-level disease risk, dismissing possible dilution mechanisms. Nonetheless, richness was negatively associated with community-level disease prevalence because disease was aggregated among hosts that vary in disease susceptibility. Aggregating observations may bias the direction and obscure underlying mechanisms of diversity-disease relationships, which has consequential implications for managing disease in the midst of global biodiversity loss.
+
+\newpage
+
+## Introduction  
+Human-caused biodiversity loss [@Cardinale2012-iq] alters interactions among hosts and pathogens with cascading effects on infectious diseases of humans, plants, and wildlife. Susceptible hosts are often more vulnerable to infections in depauperate communities than in nearby richer communities, a phenomenon coined the ‘dilution effect’ [@Civitello2015-ld; @Magnusson2020-tg; @Ostfeld2012-ui]. However, the relationship between infection risk and diversity may also be positive [@Guilherme_Becker2011-nz], idiosyncratic [@Salkeld2013-sk], or context-dependent [@Halliday2019-nv; @Liu2020-yf]. If diversity predictably covaries with factors that limit disease, conservation of biodiversity could be a viable win-win strategy; if not, targeted management of specific species would be needed [@Rohr2020-xa]. Thus, it is essential to understand why diversity affects disease dynamics to forecast and manage disease outbreaks under global change [@Johnson2015-vu; @Rohr2020-xa].  
+
+Higher diversity communities may be associated with less disease risk for individuals if they contain species that contribute little to inoculum pressure and reduce transmission risk [@Keesing2006-in]. ‘Diluter’ species often regulate the densities of high-competence hosts, or those that efficiently acquire and transmit pathogens, via competition for finite resources [Fig. 2.1A; @Strauss2015-fz]. Owing to the dominance of high-competence hosts in species-poor communities, decreases in diversity have been associated with increases in infections for plant, animal, and zoonotic diseases [@Johnson2012-hu; @Mitchell2002-km; @Ostfeld2000-so]. Covariance between competent host densities and diversity likely depends on additional relationships among host competence, nestedness, and total density. However, few studies have investigated these linkages thus far [e.g. @Johnson2013-dg; @Lacroix2014-bv].  
+
+![`r fig_ch2('concept_fig_ch2')`](figure/chapter2/MS_diagram6_173mm.pdf)
+
+The dilution effect may also be driven by richness *per se* (Fig. 2.1B). For example, communities of greater diversity might be associated with less disease if diluter species reduce encounters between infectious and susceptible hosts [e.g. by ingesting propogules; @Schmeller2014-ec] or if they lower the likelihood of transmission given an encounter [e.g. by altering microclimates; @Zhu2000-my]. Since multiple dilution mechanisms can operate simultaneously, diversity-associated mechanisms driven by encounter/transmission reduction can be deduced after accounting for competent host densities [@Strauss2016-mz; @Strauss2018-wi].  
+
+Furthermore, diversity-disease relationships may change whether disease is measured for particular host individuals or species, or the overall host community (Fig. 2.1C). For instance, individual risk of hantavirus infection in the most susceptible rodent species did not vary across habitats, but seroprevalence of the entire rodent community was greater in rural settings compared to forests [@Piudo2011-ci]. Differences arise because disease in a focal host controls for species-specific susceptibility, whereas community-level prevalence aggregates across species and is sensitive to the average susceptibility of individuals from all species. Individual-level disease risk or disease prevalence in the entire host community capture fundamentally different components of epidemiology: disease of individuals measures risk of acquiring infections, and community prevalence measures disease burden. While the majority of studies discussed within the dilution effect context measure disease risk in a particular host, many focus on community-wide disease. Community-level prevalence comprised *ca.* 11%, 27%, and 15% of studies from dilution effect meta-analyses by @Civitello2015-ld, @Magnusson2020-tg, and @Salkeld2013-sk, respectively (Table S1). Variation in disease metrics alters diversity-disease relationships [@Luis2018-ho; @Roberts2018-rr; @Young2014-ai]. This overlooked distinction between individual- and community-level observations might account for additional inconsistencies.  
+
+To empirically evaluate dilution mechanisms underpinning the disease-diversity relationship and the influence of aggregation, we studied plant communities impacted by sudden oak death, an emerging forest disease that has killed at least 48 million stems of tanoak (*Notholithocarpus densiflorus*) and oak species (*Quercus* spp.) in coastal California and southwestern Oregon since 1995 [@Cobb2020-si; @Rizzo2003-zf]. The causal agent, *Phytophthora ramorum*, is an invasive oomycete pathogen with a wide host range, though some hosts exhibit symptoms more often than others. Field studies in California suggest that transmission is driven primarily by two species: bay laurel (*Umbellularia californica*) and, to a lesser extent, tanoak [@Davidson2005-lq; @Davidson2008-pu]. Whether other forest plant species also contribute to inoculum pressure via asymptomatic sporulation, reduce transmission success, or have no effect on transmission is unknown.  
+
+We combined laboratory competence measurements with high-resolution plant community and disease symptom data from a large network of plots in the Big Sur region of California. In a previous analysis of this field-collected dataset, community-level disease prevalence declined with both plant species richness and Shannon-Wiener diversity index, even after accounting for the densities of known competent hosts, bay laurel and tanoak [@Haas2011-ut]. Although other species might underly dilution mechanisms, such as ‘competent host regulation’ (via asymptomatic sporulation) or ‘encounter/transmission reduction’ [modified *sensu* @Keesing2006-in], it is difficult to assess without investigating individual-level disease risk. In order to test whether this negative diversity-disease relationship arose from dilution mechanisms, or from the fact that disease was averaged across the community, we tested three hypotheses:  
+
+i) The dilution effect is driven by competent host regulation, indicated by decreases in individual- and community-level disease risk with diversity, with associated decreases in competent host density. 
+ii) The dilution effect is driven by encounter/transmission reduction, indicated by decreases in individual- and community-level disease risk with diversity, which persist after accounting for changes in competent host density.
+iii) The negative diversity-disease relationship is a product of how disease is measured, indicated by decreases in community-level, but not individual-level, disease risk with diversity. 
+
+\setlength{\parindent}{0in}
+Our study explores the empirical foundation linking community composition, competence, and different disease metrics. Understanding these links is essential to predicting where diseases may emerge or decline as a function of global threats to biodiversity.
+\setlength{\parindent}{.25in}
+
+## Methods  
+### Study system  
+Our study was conducted in redwood and mixed evergreen forest types in the Big Sur region of California. Redwood forests are typified by redwood (*Sequoia sempervirens*) canopies, with bay laurel, tanoak, pacific madrone (*Arbutus menziesii*) and various oak species in the subcanopies. Mixed evergreen forests occupy drier sites and consist of similar species excluding redwood.  
+ 
+In this system, woody plants fell into three categories in regard to *P. ramorum*: ‘commonly symptomatic’, ‘rarely symptomatic’, and nonhosts. We considered bay laurel, tanoak, coast live oak (*Quercus agrifolia*), and Shreve oak (*Q. parvula*) to be commonly symptomatic hosts because they accounted for the majority of detected infections. Infected true oaks and tanoaks may develop lethal stem cankers, while bay laurels do not experience disease-induced mortality [@Rizzo2005-jr]. Infectious propagules (sporangia) formed on foliar and branch lesions are most prolifically produced on bay laurel, followed by tanoak [@Davidson2005-lq; @Davidson2008-pu], and are very rarely observed on true oaks [@Vettraino2008-xs]. Infections on other, more rarely symptomatic hosts typically lead to nonlethal foliar and branch lesions.  
+
+### Plot network design and data collection  
+In 2006 and 2007, plant community and disease data were collected in 500 $\text{m}^2$ plots established to monitor long-term sudden oak death dynamics [see @Metz2011-dj]. All woody stems at least 1 cm diameter at breast height were recorded for species identity, live/dead status, and visually assessed for *P. ramorum* symptoms. Plant individuals with any symptomatic live stems were considered diseased. Note that we assessed disease—not infections, opening the possibility that some plants were asymptomatically infected [@Denman2009-pe].  
+
+![`r fig_ch2('map_ch2')`](figure/chapter2/map_151plots.pdf)
+
+We studied 151 plots where the pathogen was confirmed present using culture-based methods [Fig. 2.2; see Appendix S1 for details, including how our selected plots differed from @Haas2011-ut]. We adopted host/nonhost categorizations from @Haas2011-ut, defined by whether or not natural infections had been identified on that species [@Davidson2003-ht]. We measured density of species using total basal area, which better captures variation in tree sizes than counts of individual plants, and the number of individuals, which directly influences community-wide disease prevalence ($\frac{\text{Infected host individuals}}{\text{Total host individuals}}$). Plot diversity was characterized using species richness of woody plants.  
+ 
+To account for other sources of heterogeneity that may correlate with species richness, the same climatic, topographic, and landscape characteristics used by [@Haas2011-ut] were estimated for each plot. We used the 30-year mean wet-season precipitation (December–May) calculated from Parameter Elevation Regression on Independent Slopes Model [PRISM; @Daly1994-so]; potential solar insolation [PSI; @Dubayah1995-sb]; and the area of host vegetative coverage within 200 m of plot center [@Meentemeyer2008-yg].  
+
+### Host and community competence  
+To evaluate how the entire plant community might contribute to overall inoculum pressure, we estimated host competence from the 10 most commonly occurring species in the two forest types [13 species in total; @Rosenthal_undated-ct]. In Spring 2019, leaves from 32 individuals per species were collected in the Big Sur region and inoculated with *P. ramorum* in the laboratory. Sporulation was quantified after 5 days of incubation by scraping the leaves, collecting the solution, and counting sporangia under the microscope.  
+
+We estimated community competence (*K*) as the cumulative density of each species weighted by their competence [modified from @Johnson2013-dg]: $K = \sum^S_i{c_in_i}$, where $c_i$ is the mean competence and $n_i$ is the total basal area of species *i* for *S* total species per plot. Each species’ component contribution to *K* was calculated as $k_i = c_in_i$. For species not examined in the competence assay, we assumed missing values were the median of the quantified host competencies. Since these species comprised only 0.7% of the basal area in the dataset, assumptions about their values had a negligible effect.  
+
+### Statistical Analyses
+#### How density varies with richness  
+To understand linkages between community composition and disease, we evaluated several measurements of density in relation to plot richness and forest type. Densities of known competent hosts, bay laurel and tanoak, were investigated in separate hurdle models. We predicted the probabilities of their occurrences with a Bernoulli generalized linear model (GLM) and when a species was present in a plot, its basal area was estimated with a gamma GLM. We used a gamma GLM to explore if densities of these hosts could be explained by the relationship between total plant basal area and richness. Additionally, we analyzed the total number of either commonly or rarely symptomatic host plants per plot, using separate negative binomial GLMs.  
+
+#### How community competence varies with richness
+To test whether a negative covariance between community competence and richness might explain the past negative diversity-disease relationship, community competence was modeled with a log-normal likelihood and included predictors for plot richness and forest type. A predictable relationship between community competence and diversity is predicated on nested communities. We calculated a nestedness metric based on overlap and decreasing fill [NODF; @Almeida-Neto2008-tn] and compared it against 999 null permutations [proportional row and column totals; @Strona2014-oi] using an online software [@Strona2014-vx].  
+
+#### How disease risk varies with richness, known competent hosts, and community competence  
+To address if competent host regulation, encounter/transmission reduction, or aggregation of observations drove the previous negative diversity-disease relationship, we estimated disease risk at the community and individual level. For both hierarchical levels, we contrasted three explanatory models, which included covariates for M1) richness, M2) richness and basal area of tanoak and bay laurel, and M3) richness and community competence. If competent host regulation was a driving mechanism, we expected individual-level disease risk to be negatively associated with richness in M1 and positively associated with either host densities in M2 or community competence in M3. Additionally, if plant species besides tanoak or bay laurel enhanced transmission risk, M3 would have a greater predictive performance than M1 and M2. If encounter/transmission reduction was a contributing factor, we expected to still see a negative effect of richness on individual-level disease risk after incorporating host densities in M2 and/or community competence in M3. Lastly, if the negative diversity-disease relationship was a product of aggregation of observations, we expected to see a negative effect of richness on disease risk at the community, but not individual level.
+
+To isolate how inclusion of rarely symptomatic host species might alter the calculation of community-level disease prevalence, community-wide disease was analyzed both for all hosts (commonly and rarely symptomatic species) and for the four commonly symptomatic host species. Community-level disease prevalence was estimated by modeling $I_j$, the number of diseased plants in plot *j*, given $n_j$, the total number of host plants (*j*=151 plots). To capture overdispersion in the response variable, we used a beta-binomial likelihood with $\mu_j$, the expected value of probability of disease $p_j$, and a dispersion parameter $\theta$:  
+
+\begin{equation}
+  \begin{gathered}
+    I_j \sim \text{Binomial}(n_j, \ p_j) \\
+    p_j \sim \text{Beta}(alpha_j, \ beta_j) \\
+    alpha_j = \mu_j \, \theta \\
+    beta_j = (1 - \mu_j) \, \theta\\
+    logit(\mu_j) = \alpha_0 + BX_j 
+  \end{gathered}
+\end{equation}
+where $\alpha_0$ is the global intercept and *B* is a vector of coefficients for the covariates contained in the data matrix $X_j$. In addition to the covariates mentioned above (richness, host basal areas, and community competence), we incorporated variables for forest type, sample year, precipitation, PSI, and host vegetation in the surrounding landscape in order to control for confounding effects from the sampling design and landscape heterogeneity.  
+
+Individual-level disease risk was assessed for the four commonly symptomatic hosts.
+We modeled $I_i$, the disease status of individual *i* of species *s* located in plot *j*, using a Bernoulli likelihood with a mean probability $p_i$ (*i*=4206 individuals from 151 plots and 4 species):
+
+\begin{equation}
+  \begin{gathered}
+I_i \sim \text{Bernoulli}(p_i) \\
+\text{logit}(p_i) = \alpha_{j[i]} + \alpha_{s[i]} + \beta_{s[i]}richness_{j[i]} + \gamma BA_i\\
+\alpha_{j} \sim \text{Normal}(BX_j, \ \sigma_{plot}) \\
+\begin{bmatrix} \alpha_{s} \\ \beta_{s} \end{bmatrix} \sim 
+  \text{MVNormal} \Big(
+    \begin{bmatrix} \alpha_{0} \\ \bar\beta \end{bmatrix}, \ \boldsymbol{\Sigma}
+  \Big) 
+  \end{gathered}
+\end{equation}
+where intercept $\alpha_j$ varied by plot, intercept $\alpha_s$ and the effect of richness $\beta_s$ varied by species, and $\gamma$ characterized the basal area of the plant (summed among live stems) in order to account for size-dependent variation in susceptibility. Plot-level intercepts were normally distributed with a mean $BX_j$, defined by the same predictor variables as described previously in the plot-level models. $\alpha_s$ and $\beta_s$ were drawn from a multivariate normal distribution, defined by means $\alpha_0$ and $\bar{\beta}$ and covariance matrix $\Sigma$.    
+
+Host densities and community competence were square root transformed to spread the right-skewed distributions. All variables were centered and scaled by dividing by 2 SD [@Gelman2008-kn]. Collinearity was assessed by confirming that correlations between continuous variables were <0.5 (`r fig_app_ch2('ch2pairsplot', display = 'cite')`). We contrasted model predictive performance by computing approximate leave-one-out cross-validation, comparing models based on the difference in expected log pointwise predictive density [ELPD; @Vehtari2017-rt]. We tested for spatial autocorrelation using a Moran’s I correlogram on the mean residuals from the best performing plot-level disease prevalence including all hosts. No significant spatial clustering emerged (`r fig_app_ch2('ch2moransI', display = 'cite')`). Additional information about our treatment of spatial autocorrelation is in Appendix S1.  
+
+#### Model fitting
+Models were written in the Bayesian programming language `Stan` [@Stan_Development_Team2019-sw] and analyzed in the `R` environment [@R_Core_Team2019-wp; @Stan_Development_Team2020-lp]. Packages used for our analysis are listed in Appendix B. We used weakly informative priors and 4 chains with 2000 iterations each. Model fits were visually evaluated by comparing observed values against posterior predictive draws (Fig. B.2–B.5). Parameter estimates with 90% highest posterior density intervals (HPDI) that did not contain zero (or one, when expressed as odds ratios) were considered to have important, non-zero effects on the response variable. A common default in Bayesian analyses is to use 90% HPDIs because they are more stable than 95% intervals [@Goodrich2020-bb].  
+
+## Results  
+
+Across 151 plots, 5798 trees and shrubs were included in our study and 18 species were considered hosts and 9 as nonhosts (Table S2). Four commonly symptomatic species accounted for 99.6% of detected infections. Symptoms were primarily found on the two most ubiquitous and abundant species, bay laurel (923 symptomatic/1104 total plants, 83.6%) and tanoak (1153 symptomatic/2189 plants, 52.6%), while there were fewer on coast live oak (36 symptomatic/296 plants, 12.2%) and Shreve oak (28 symptomatic/617 plants, 4.5%). The other 14 host species were rarely symptomatic. Of these species, only 8 redwoods and 1 California buckeye (*Aesculus californica*) were symptomatic.  
+
+### How density varies with richness  
+Total basal area of all species remained constant across richness in both forest types (Fig. 2.3A). Bay laurel occurred more frequently in richer plots, while tanoak occurrence did not vary strongly with richness (Fig. 2.3B, 2.3C). When present, the basal area of bay laurel had a weakly negative relationship with richness (median, 90% HPDI = -0.15 [-0.31, 0.03]), whereas that of tanoak did not vary considerably (-0.08 [-0.29, 0.14]; Fig. 2.3B, 2.3C). Additionally, the number of rarely symptomatic host plants increased with richness, while the number of commonly symptomatic host plants did not change substantially (Fig. 2.3D, 2.3E).
+
+![`r fig_ch2('densities_ch2')`](figure/chapter2/all_density_plots.pdf)
+
+### How community competence varies with richness
+Mixed evergreen and redwood forest communities were both significantly nested (mixed evergreen: $\text{NODF}_{\text{obs}}=50.2$, P < 0.001; redwood: $\text{NODF}_{\text{obs}}=58.5$, P < 0.001), indicating that depauperate communities were nested subsets of their richer counterparts (Fig. 2.4A). Species-poor communities were more likely to contain ubiquitous species, while richer communities also consisted of rarer species, which tended to be less competent. Bay laurel and tanoak were more competent than the other measured species (Fig. 2.4B). Within mixed evergreen forests, the species that contributed most to community competence were bay laurel followed by tanoak, and in redwood forests they were tanoak, followed by bay laurel and redwood (Fig. 2.4C). Although redwood is a low-competence host, it is the largest tree species in the forest and very common. Total community competence was higher in redwood forests than mixed evergreen forests and it declined in plots with higher richness (Fig. 2.4D).  
+
+![`r fig_ch2('comp_ch2')`](figure/chapter2/nestedness_competence.pdf)
+
+### How disease risk varies with richness, known competent hosts, and community competence
+Across all models, surrounding host vegetation had consistently positive effects, redwood forests and historical precipitation levels had negative or no effects, and sampling year and PSI had negligible effects on community- and individual-level disease risk (Table S3-S5). After accounting for variation related to these factors, the importance of richness on disease risk and its association with known competent hosts and community competence varied depending on how disease was measured.  
+
+Disease prevalence aggregated among all hosts in the community decreased with richness (median odds ratio, 90% HPDI = 0.68 [0.49, 0.90]; Fig. 2.5A). We included bay laurel basal area, tanoak basal area, and community competence into subsequent models, all of which had positive effects (Fig. 2.5A). After accounting for variation in bay laurel and tanoak density, the negative richness-disease covariance weakened only slightly (0.70 [0.52, 0.96]), and it further weakened when community competence was instead incorporated (0.79 [0.58, 1.08]). Disease prevalence was best predicted by the model featuring richness and host basal area (M2), outperforming the models including community competence (M3: $\Delta\text{ELPD}=-13.9$, $\text{SE}_\Delta = 3.6$) and richness only (M1: $\Delta\text{ELPD}= -20.1$, $\text{SE}_\Delta = 5.8$).  
+
+![`r fig_ch2('dis_plot_ch2')`](figure/chapter2/disease_risk_plotlevel.pdf)
+
+When detected infections were examined exclusively among the four commonly symptomatic species, richness no longer had a nonzero effect on disease prevalence (odds ratio: 0.84 [0.61, 1.17]; Fig. 2.5B). Bay laurel and community competence had positive effects, while the effect of tanoak diminished. The negligible effect of richness did not change when models included host basal area or community competence. The model with richness and host basal area (M2) performed better than the models with community competence (M3: $\Delta\text{ELPD}=-16.8$, $\text{SE}_\Delta = 4.7$) and richness alone (M1: $\Delta\text{ELPD}= -23.7$, $\text{SE}_\Delta = 6.7$).  
+
+Individual-level disease risk models accounted for species-specific disease rates, which were highest for bay laurel, followed by tanoak, coast live oak, and Shreve oak (Fig. 6A). The models also controlled for size-dependent variation in susceptibility, which was greater for larger individuals (Table S5). Richness on average was not strongly correlated with disease risk in the model including richness only (odds ratio: 1.31 [0.62, 2.75]), and its effect did not substantially change after including predictors for host basal area or community competence (Fig. 2.5C). Across the three explanatory submodels, species-specific effects of richness for coast live oak, Shreve oak, and tanoak were unlikely important (90% HPDI contained one); meanwhile, richness had a positive effect on disease risk for bay laurel, with credible intervals slightly smaller or larger depending on the covariates included in the model (Fig. 2.6B). Disease risk was not strongly correlated with tanoak basal area, positively correlated with community competence, and strongly, positively correlated with bay laurel basal area (Fig. 2.5C). The model including richness and host basal area (M2) marginally outperformed models including community competence (M3: $\Delta\text{ELPD}= -3.7$, $\text{SE}_\Delta = 2.3$) or richness alone (M1: $\Delta\text{ELPD}= -4.9$, $\text{SE}_\Delta = 2.5$).  
+
+![`r fig_ch2('dis_spp_ch2')`](figure/chapter2/disease_risk_specieslevel.pdf)
+
+
+## Discussion  
+
+Despite frequent tests of negative diversity-disease relationships in natural ecosystems, the mechanisms remain poorly resolved. We tested how relationships among species richness, densities of keys hosts, community competence, and disease risk metrics vary in a forest system previously shown to exhibit negative diversity-disease patterns [@Haas2011-ut]. Richness had no limiting effect on individual-level disease risk, and therefore neither competent host regulation nor encounter/transmission reduction were possible dilution mechanisms. Rather than depending on the composition of the entire community, average risk of acquiring disease was largely driven by a single, common, highly competent host, bay laurel (Fig. 2.5C). This species’ density did not have a clear relationship with richness, which may explain the lack of a dilution effect evaluated at the individual level. In contrast, the negative effect of richness on community-level disease prevalence was solely attributable to its positive covariance with the number of rarely symptomatic host species. Rarely symptomatic host species reduced the relative density of commonly symptomatic hosts without significantly altering their individual risks of disease (Fig. 2.1C). Aggregating disease prevalence at the community level may misattribute dilution mechanisms and bias toward negative diversity-disease relationships, which has consequential implications for the effects of conserving biodiversity in disease-impacted ecosystems.  
+
+### Diversity-associated mechanisms of individual-level disease risk
+While multiple host species of varying competence may contribute to transmission risk [@Hamer2011-vi; @Searle2016-or], sometimes generalist pathogens are influenced by the presence of a single host species [@Wilber2020-kd]. The risk of acquiring disease symptoms primarily depended upon the basal area of bay laurel, which we uncovered using models that estimated individual-level disease risk. Less competent hosts were not essential in predicting disease risk. Consistent with other field studies in California, basal area of the next most competent host, tanoak, was not influential [@Meentemeyer2008-gz; @SimlerWilliamson2021-iq; @Swiecki2002-gi] and community competence, a weighted mean of all species’ transmission potentials, had a weaker effect than bay laurel and did not improve model predictive performance relative to the model including bay laurel density. Accordingly, much of the effect of richness hinged upon its correlation with bay laurel occurrence and abundance.  
+
+Theory predicts that when the most competent species has a low extirpation risk, communities are nested, and total density remains invariant with diversity (‘substitutive assembly’), there should be a higher density of competent hosts in species-poor communities [@Joseph2013-rd; @Mihaljevic2014-bk; @Rudolf2005-if]. Each of these conditions was met and indeed, we found that the basal area of bay laurel was slightly higher in depauperate communities (Fig. 2.3A). However, bay laurel was also less likely to persist in species-poor communities (Fig. 2.3A). The combined effect of these two opposing variables (basal area and occurrence) likely led to a weak overall association between bay laurel density and richness, and no corresponding shift in individual-level disease risk averaged among the commonly symptomatic species.  
+
+By contrast, community competence, based on laboratory sporulation assays, did decline with richness, and yet this did not lower individual-level disease risk in more diverse plots. Measurements from artificial inoculations do not integrate variation due to host phenology, forest structure, and climate [@Davidson2011-hu; @Dodd2008-yr; @Rosenthal_undated-ct; @SimlerWilliamson2021-iq], nor variation within species or individuals [@Stewart_Merrill2020-wo]. These challenges are logistically difficult to overcome for such a broad set of large, long-lived tree species. Community competence currently weights the contribution from bay laurel and less competent hosts. If community competence were calibrated to more accurately reflect natural inoculum pressure, it might primarily reflect bay laurel density.  
+
+When effects of richness were parsed for each species, richness had undetectable effects on disease risk for tanoak or oaks, but it had a positive effect for bay laurel. This result could be highly impactful given how central bay laurel is to pathogen spread. The positive effect of richness may reflect a correlation with unaddressed, disease-inducing factors, such as microclimates or pathogen invasion history. Plots with greater richness may have been invaded earlier by this nonnative pathogen, and thus *P. ramorum* would have more time to spread within those stands [@Cobb2020-si].  
+
+### Diversity-associated mechanisms of plot-level disease risk
+Richness was negatively associated with disease prevalence for all hosts in a plot, which is best explained by the relative abundance of commonly symptomatic species. The number of rarely symptomatic host plants increased with richness, while the number of commonly symptomatic plants (accounting for 99.6% of detected infections) did not change. The proportion of commonly symptomatic hosts negatively covaried with richness, limiting the fraction of community-wide disease. Without rarely symptomatic species, models of community-level disease prevalence led to similar conclusions as the individual-level analysis—bay laurel density drove detected infections and richness did not have a strong effect. By aggregating disease among all hosts in a community, low-competence, rarely symptomatic hosts numerically diluted the proportion of symptomatic plants without affecting transmission risk to susceptible populations.  
+
+### Differences in the diversity-disease relationship across hierarchical levels
+Individual- and community-level disease risk varied independently with respect to the density of competent hosts and proportion of symptomatic hosts, respectively. Thus, the direction and drivers of the diversity-disease relationship are distinct across hierarchical levels. However, this distinction is easily conflated. For instance, the negative effect of richness on community-level disease prevalence remained after accounting for tanoak and bay laurel densities. @Haas2011-ut acquired similar results and hypothesized richer communities contained either more noncompetent plants that interfered with inoculum dispersal pathways (‘encounter reduction’; Fig. 2.1B), or fewer asymptomatic, competent hosts that illusively caused infections (‘competent host regulation’; Fig. 2.1A). Noncompetent species inhibit encounter rates when they can physically block local transmission. Pathogens with root-to-root transmission are good candidates to observe this mechanism, unlike *P. ramorum* where sporangia travel distances of up to 4 km [@Hansen2008-hm; @Mascheretti2008-zm]. Yet, richness became unimportant after adding community competence to the model predicting community-level prevalence (Fig. 2.5A), suggesting that asymptomatic transmission from many forest species may explain the negative diversity-disease relationship. However, we instead interpret this finding as a spurious correlation since our individual-level models indicate that bay laurel was the primary host driving disease.  
+
+Community-level observations cannot directly explain processes occurring between (susceptible and infectious) individuals, and our study represents a case of Simpson’s paradox, in which correlations are not preserved during data aggregation [@Simpson1951-ln]. @Salkeld2020-xt illustrated that disease aggregated across large spatial scales can lead to spurious correlations with diversity and explanatory factors, and these relationships might reverse if reexamined using individual- or species-level data. Our results, and others’ [@Piudo2011-ci], confirm that aggregating disease at the community level can generate this pattern. Although not examined in our study, community-wide disease caused by multiple pathogens [e.g. ‘community pathogen load’ *sensu* @Mitchell2002-km, which also averages across species] can produce similar mismatches [e.g. @Hantsch2013-py]. To be clear, we believe individual- and community-level disease metrics are equally valid and important to study; however, mechanisms used to explain diversity-disease relationships need to reflect the levels at which disease was measured.  
+
+We also suspect that community-level prevalence may negatively correlate with diversity more frequently than individual-level disease risk under specific assembly patterns. When depauperate communities are dominated by disease-prone species—which is more often the case than not [@Gibb2020-vx; @Joseph2013-rd], even in the absence of dilution mechanisms, less susceptible species added to higher diversity communities would increase the likelihood of observing a decline in overall prevalence. Diversity often negatively covaries with community-level prevalence [@Bradley2008-lh; @Liu2018-kc; @Moore2012-mz], but not always [@Hydeman2017-wq; @Milholland2017-pe; @Vaz2007-gr]. Community-wide disease risk is not uncommon under the dilution effect purview (Table S1), and whether it biases toward negative diversity-disease relationships deserves closer attention.  
+
+Given that diversity-disease relationships may change across hierarchical levels, what was the most appropriate measure of disease? Response variables need to match questions meaningful to management [@Johnson2015-vu]. Frequently the goal is to manage the health of specific hosts, which aligns with the majoritarian notion of the dilution effect. We examined disease risk in four species and accounted for differences in species-specific susceptibility. Maintaining diverse forest stands would not reduce the risk of individuals acquiring disease and targeted management of bay laurel is needed. Additionally, promotion of ecosystem services and stability in forests is a highly important management goal. The percentage of all diseased host plants in a plot is critical for predicting how disease-induced mortality may affect fuels, carbon sequestration, or resilience to large-scale disturbance [@Simler2018-ey; @Cobb2020-si; @Metz2011-dj]. Conserving biodiversity may still improve ecosystem health when richness is correlated with a lower proportion of susceptible species.  
+
+### Conclusion
+Two unresolved frontiers in disease ecology involve exploring how diversity correlates with species composition and the consequences on disease risk, and how disease measured at the individual or community level affects conclusions [@Johnson2015-vu]. We found that the overall density of the most competent species likely did not have a strong relationship with richness and, consequently, richness did not limit individual-level disease risk. Empirical tests of this pattern must continue in other naturally assembled communities, especially in forests and other understudied systems. We also found that richness can have a positive or negligible effect on disease at the individual level while concomitantly having a negative effect at the community level. Understanding these multilevel differences is key for managing the health of the ecosystem versus specific forest species. Looking forward, one solution is to explicitly define the currently vague description of ‘disease risk’, which will require discussion among research, management, and policy priorities [see @Keesing2006-in]. A more expansive prospect is for researchers to contrast various metrics of disease to uncover how, why, and for which species biodiversity affects disease.  
+
+## Acknowledgements
+We thank Felicia Keesing, Tara Stewart-Merrill, and Emily Brodie for feedback on earlier drafts. We acknowledge the reviewers, whose comments undoubtedly improved the manuscript. We thank the Landels-Hill Big Creek Reserve, CA State Parks, US Forest Service, and many private landowners for research access. Field data collection was funded by the NSF-NIH Ecology and Evolution of Infectious Diseases (DEB-1115664) and NSF Ecosystem Science (ES-1753965) programs, USDA Forest Service Pacific Southwest Research Station & Forest Health Protection, State and Private Forestry, the Gordon and Betty Moore Foundation, and an NSF Graduate Research Fellowship awarded to LMR.  
+
+\pagebreak
+
+\beginsupplement
+
+# Appendix 
+
+## B. Supplementary material, Ch. 2
+
+### Supplementary figures  
+
+![`r fig_app_ch2('ch2pairsplot')`](figure/chapter2/supp_pairs_plot.pdf)
+
+![`r fig_app_ch2('ch2ppc1')`](figure/chapter2/PPC_density_models2.pdf)
+
+![`r fig_app_ch2('ch2ppc2')`](figure/chapter2/PPC_density_models1.pdf)
+
+![`r fig_app_ch2('ch2ppc3')`](figure/chapter2/PPC_community_compentency.pdf)
+
+![`r fig_app_ch2('ch2ppc4')`](figure/chapter2/PPC_diseaserisk.pdf)
+
+
+\clearpage
+
+### Additional study design and data collection details
+ 
+#### Sample collections 
+As described in the main text, we collected *P. ramorum* symptom data from all stems $\geq1$ cm diameter breast height (DBH) to assess disease risk. Additionally, in each plot, samples from 3–5 plants were collected and plated onto an oomycete-selective medium [pimaricin-ampicillin-rifampicin-pentachloronitrobenzene agar; @Jeffers1986-om]. *P. ramorum* was considered present in a plot when at least one sample matched its morphotype.
+ 
+#### Plot selection
+We focused on plots where the pathogen was confirmed present using the culture-based methods, for a total of 151 plots. Our decision to exclude culture-negative plots differs from the analysis by @Haas2011-ut, which analyzed disease risk from 278 plots using a zero-inflated binomial model. The zero-inflated model is a mixture model that assesses two processes: i) occurrence of the pathogen with the additional assumption that some culture-negative plots may in fact contain undetected infections, and ii) disease prevalence in culture-positive plots. Since this invasive species, *P. ramorum*, was still actively spreading to new parts of the study region during the observation period, we were interested in factors that control disease prevalence and not pathogen establishment. Thus, we analyzed culture-positive plots only. Similarly, @Haas2011-ut exclusively discussed the results from the prevalence model. Their models qualitatively matched our models assessing disease prevalence among all hosts in a plot, indicating that our plot selection did not bias results. Furthermore, our individual-level models can only include plots in which the disease was present--they cannot also assess disease in a plot where the pathogen has not yet established. Considering that we contrasted disease risk at the individual and plot level, we needed to ensure consistency over which plots were used.  
+ 
+#### Plot variables
+We measured the density of species using total basal area. We also considered mean basal area as an alternative density metric since larger individuals may spread more spores throughout the canopy, but we found that it strongly correlated with total basal area (`r fig_app_ch2('ch2basalarea', display = 'cite')`).  
+
+![`r fig_app_ch2('ch2basalarea')`](figure/chapter2/mean_v_total_basalarea.pdf)
+
+Additionally, plot diversity was characterized using species richness of woody plants with stems $\geq1$ cm DBH. In contrast, @Haas2011-ut also included shrubs below the 1 cm DBH cutoff as long as the areal coverage was at least 1 $\text{m}^2$. Since we estimated community competence as the product of each species’ mean competence and basal area, translating areal sizes of shrubs into basal area units would be inconsistent and inaccurate. As a result, we excluded shrubs below 1 cm DBH from our analysis altogether. Exploratory models showed that inclusion of these shrubs in the richness estimates led to qualitatively similar results.  
+
+### Additional treatments of spatial autocorrelation
+
+#### Summary
+In addition to testing for spatial autocorrelation using a Moran's I correlogram (`r fig_app_ch2('ch2moransI', display = 'cite')`), we explored how our results might change if we incorporated a spatially weighted term into our models. Gaussian process (GP) regressions allow the covariance between plots to decay with distance. Because these models are computationally intensive, we ran one model assessing individual-level disease risk including covariates from the best performing non-spatial models (M2: +richness, tanoak basal area, and bay laurel basal). We also attempted to fit a GP plot-level disease risk model, but it would not converge. We suspect this is because the model was unable to seperate the two dispersion terms--the spatially weighted intercept and the dispersion parameter in the beta-binomial likelihood.
+
+![`r fig_app_ch2('ch2moransI')`](figure/chapter2/correlogram.pdf)
+
+The posteriors from the GP individual-level model were nearly identical to the non-GP model and predictive performance was indistinguishable ($\Delta \text{ELPD}=-0.3, \text{SE}_\Delta =0.4$) As a result, we did not pursue the spatial models for the main analysis. Descriptions of the GP model are below.  
+
+#### Spatial disease risk models
+The GP individual-level disease risk model was the same Bernoulli model as described in the main text (*i*=individual observation, *j*=plot, and *s*=species), except that the plot-level intercept spatially varied:   
+$$
+\begin{gathered}
+I_i \sim \text{Bernoulli}(p_i) \\
+\text{logit}(p_i) = \alpha_{j[i]} + \alpha_{s[i]} + \beta_{s[i]}richness_{j[i]} + \gamma BA_i \\
+\alpha_{j} \sim \text{MVNormal}(BX_j, \ K(d)) \\
+[K(d)]_{m,n} = \eta^2 \, \text{exp}(-\frac{1}{2\rho^2}(d_{mn})^2) + I(m=n)\sigma^2\\
+\begin{bmatrix} \alpha_{s} \\ \beta_{s} \end{bmatrix} \sim 
+  \text{MVNormal} \Big(
+    \begin{bmatrix} \alpha_{0} \\ \bar\beta \end{bmatrix}, \ \boldsymbol{\Sigma}
+  \Big). \\
+\end{gathered}
+$$
+
+The covariance matrix $K(d)$ of the plot-level varying intercept ($\alpha_j$) was defined by an exponentiated quadratic kernel. This function decayed with distance between plots $m$ and $n$ and its range and intensity were controlled by $\rho^2$ and $\eta^2$, respectively. The term $\sigma^2$ accounted for repeated plot observations (i.e. when plot $m=n$).  
+
+*Correlation between plots*  
+Using the posteriors from the GP individual-level model, we show the correlation between plots as a function of distance (`r fig_app_ch2('ch2GPcor', display = 'cite')`). Spatial autocorrelation was only noticeable at very short distances, primarily between plots less than 1.25 km apart.  
+
+![`r fig_app_ch2('ch2GPcor')`](figure/chapter2/gaussian_process_correlation.pdf)
+
+Only 2% of the pairwise distances between plots were within 1.25 km of each other (`r fig_app_ch2('ch2GPhist', display = 'cite')`). It is possible that the GP models were similar to the non-GP models because there were so few plots where spatial autocorrelation was of potential concern.  
+
+![`r fig_app_ch2('ch2GPhist')`](figure/chapter2/histogram_of_distances.pdf)
+
+### R Packages
+
+For fitting, visualizing, summarizing, and contrasting Bayesian models, we used `Rstan`, `rethinking`, `Bayesplot`, and `loo` [@bayesplot; @loo; @rethinking; @rstan]. For data wrangling and creating figures, we used `dplyr`, `ggplot2`, and `cowplot` [@cowplot; @dplyr; @ggplot].
+
+\newpage
+# References 
+\singlespacing
+\setlength{\parindent}{-0.25in}
+\setlength{\leftskip}{0.25in}
+\setlength{\parskip}{8pt}
+
+<!-- allows me to put references NOT at the end -->
+<div id="refs"></div>
+
+
