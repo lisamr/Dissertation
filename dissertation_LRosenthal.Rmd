@@ -7,7 +7,7 @@ header-includes:
     #- \usepackage[bottom]{footmisc} #ensures no random vertical spacing
     - \usepackage{caption} #customize figure caption font
     - \captionsetup[figure]{labelformat=empty}
-    - \newcommand{\beginsupplement} {\setcounter{table}{0} \renewcommand{\thetable}{S\arabic{table}}\setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+    - \captionsetup[table]{labelformat=empty}
 
 csl: ecology-letters_inpress.csl
 bibliography: dissertation_refs.bib
@@ -22,6 +22,7 @@ knitr::opts_chunk$set(echo = FALSE,cache = F, message=FALSE, warning = FALSE)
 library("knitr")
 library(kableExtra)
 library(captioner)
+library(tidyverse)
 
 ### Chunk options: see http://yihui.name/knitr/options/ ###
 ## Text results
@@ -41,11 +42,11 @@ opts_chunk$set(tidy = TRUE, comment = NA, highlight = TRUE)
 
 <!-- Acknowledgement page -->
 
-\doublespacing
-# Acknowledgements
-These are the people and places that I acknowledge. 
+<!-- \doublespacing -->
+<!-- # Acknowledgements -->
+<!-- These are the people and places that I acknowledge.  -->
 
-\pagebreak
+<!-- \pagebreak -->
 
 <!-- Abstract page -->
 
@@ -73,15 +74,175 @@ Is this a new paragraph?
 \tableofcontents
 \pagebreak
 
-\listoftables
-\pagebreak
-
-\listoffigures
-\pagebreak
-
 \pagenumbering{arabic} 
 \doublespacing
 <!-- \linenumbers -->
+
+
+# Chapter 1. Sporulation potential of *Phytophthora ramorum* differs among common California plant species in the Big Sur region
+
+Lisa M. Rosenthal^1,2^, Sebastian N. Fajardo^2^, David M. Rizzo^2^
+
+
+\small
+
+^1^ Graduate Group in Ecology, University of California, Davis, CA 95616, USA
+
+^2^ Department of Plant Pathology, University of California, Davis, CA 95616, USA
+
+\normalsize
+
+<!-- figure captions to be referenced -->
+```{r figs_ch1, include = F}
+fig_ch1 <- captioner(prefix = "Figure 1.",  auto_space = FALSE)
+tab_ch1 <- captioner(prefix = "Table 1.",  auto_space = FALSE)
+tab_app_ch1 <- captioner(prefix = "Table A.",  auto_space = FALSE)
+
+fig_ch1("sporangia_fig_ch1", 'Distributions (grey) depict the predicted mean sporangia per cm^2^ produced on different plant species. Lines (black) represent the 90th HDPI and point estimate marks the median. The two panels are seperated by assays. A. menziesii (ARME) and the inoculum only control were not significantly different, and neither were N. densiflorus (LIDE) and U. californica (UMCA) in either assay. Additionally, P. ponderosa (PIPO) was not significantly different from zero.')
+
+fig_ch1('chlamydo_fig_ch1', 'Distributions (grey) depict the predicted mean chlamydospores per cm^2^ produced on different plant species. Lines (black) represent the 90th HDPI and point estimate marks the median. The two different panels are separated by assays. Pairwise differences between all species were significant except for between A. macrophyllum (ACMA) and C. oliganthus (CEOL).')
+
+fig_ch1('lesions_fig_ch1', 'The relationship between lesion area (cm^2^) and number of sporangia produced across species. Points are mean values grouped by individual and the grey shaded region represents the posterior predictions of the model. **denotes a significant relationship between lesion area and sporangia for that species (90th HDPI of slope coefficient does not cross zero).')
+
+```
+
+```{r tables_ch1, include = F}
+species_table_ch1 <- tab_ch1('species_table_ch1', 'Most common plant species from mixed evergreen and redwood forests. Rank values are based off of the number of plots each species is present in (in parentheses). *Since \\textit{U. california} and \\textit{N. densiflorus} were used in the leaf disc and leaf dip assay, species codes for samples from the detached leaf dip assay are UMCA-D and LIDE-D, respectively.')
+rawCSV <- read.csv("tables/chapter1/species_table.csv")
+names(rawCSV) <- str_replace_all(names(rawCSV), '_', ' ')
+names(rawCSV)[2] <- 'Species code*'
+tab1_ch1 <- kable(rawCSV, "latex", booktabs =T, caption = species_table_ch1) %>%
+  kable_styling(latex_options = c("solid", "scale_down"),
+                bootstrap_options = c("condensed")) %>%
+  kable_paper(full_width = T) %>% 
+  row_spec(0, bold = T) %>% 
+  column_spec(1, italic = T) 
+
+cultures_ch1 <- tab_ch1('cultures_ch1', 'Results of the viability tests for the treatment group only (no viable cultures were recovered from the control group). Species are split by lesion presence (symptomatic and asymptomatic) and viability tests (mycelia and sporangia). Viable mycelia (indicative of infection) and sporangia are denoted by the following symbols: + = presence, - = absence, NA = no sample.')
+rawCSV <- read.csv("tables/chapter1/cultures.csv", skip = 1)
+names(rawCSV) <- c("Species", "Mycelia", "Sporangia", "Mycelia", "Sporangia")
+tab2_ch1 <- kable(rawCSV, "latex", booktabs =T, caption = cultures_ch1) %>%
+  kable_styling(latex_options = c("solid", "scale_down"),
+                bootstrap_options = c("condensed")) %>%
+  kable_paper(full_width = T) %>% 
+  add_header_above(c(" " = 1, "Symptomatic" = 2, "Asymptomatic" = 2), bold = T) %>% 
+  row_spec(0, bold = T)
+```
+
+## Abstract
+
+Sudden oak death (SOD), caused by the generalist pathogen *Phytophthora ramorum*, has profoundly impacted California coastal ecosystems. SOD has largely been treated as a two-host system, with *Umbellularia californica* as the most transmissive host, *Notholithocarpus densiflorus* less so, and remaining species as epidemiologically unimportant. However, this understanding of transmission potential primarily stems from observational field studies rather than direct measurements on the diverse assemblage of plant species. Here, we formally quantify the sporulation potential of common plant species inhabiting SOD-endemic ecosystems on the California coast in the Big Sur region. This study allows us to better understand the pathogen’s basic biology, trajectory of SOD in a changing environment, and how the entire host community contributes to disease risk. Leaves were inoculated in a controlled laboratory environment and assessed for production of sporangia and chlamydospores, the infectious and resistant propagules, respectively. *P. ramorum* was capable of infecting every species in our study and almost all species produced spores to some extent. Sporangia production was greatest in *N. densiflorus* and *U. californica* and the difference was insignificant. Even though other species produced much less, quantities were non-zero. Thus, additional species may play a previously unrecognized role in local transmission. Chlamydospore production was highest in *Acer macrophyllum* and *Ceanothus oliganthus*, raising questions about the role they play in pathogen persistence. Lesion size did not consistently correlate with the production of either sporangia or chlamydospores. Overall, we achieved an empirical foundation to better understand how community composition affects transmission of *P. ramorum*. 
+
+## Introduction
+Emergent diseases operate in dynamic and complex ecological communities of multiple interacting hosts and pathogens [@Johnson2015-pk]. The vast majority of human, wildlife, and plant diseases are caused by multi-host pathogens [@Woolhouse2001-wj] and as a result, control strategies often require detailed knowledge about many host-pathogen interactions. Gathering information on host susceptibility and infectiousness (i.e., host competency) is important in order to inform targeted strategies for management in new or changing environments. 
+
+Sudden oak death (SOD) is a prominent forest disease caused by the generalist invasive oomycete pathogen Phytophthora ramorum, which has profoundly impacted California coastal ecosystems since its initial observations in the mid-1990s [@Garbelotto2003-cg; @Rizzo2003-zf]. Symptoms can develop as lethal canker infections, primarily on tanoak (*Notholithocarpus densiflorus*) and a subset of true oak species (*Quercus* spp.), and nonlethal foliar and twig lesions [@Rizzo2005-jr]. Field measurements among three dominant species showed that bay laurel (*Umbellularia californica*) produced the greatest concentration of *P. ramorum* inoculum in the form of infectious sporangia, tanoak produced significantly fewer, and no sporangia were recovered from coast live oak (*Quercus agrifolia*) [@Davidson2005-lq; @Davidson2008-pu]. Naturally infected redwood (*Sequoia sempervirens*) foliage was incubated in the laboratory and found to occasionally produce sporangia, but the concentrations were not quantified [@Davidson2008-pu]. Although tests for sporulation on additional California species have not been published, field observations suggested other common plant species either contribute very little or not at all to transmission [@Grunwald2019-si; @Meentemeyer2004-mu]. Thus, SOD has largely been treated as a two-host system, with bay laurel being the most transmissive host, tanoak less so, and all remaining species as noninfectious. This conventional knowledge has formed the foundation for disease risk maps [@Meentemeyer2008-gz], management plans [@Cobb2013-bu; @Cobb2017-ux], and many ecological studies [e.g. @Cobb2010-jd; @Cobb2012-kk; @Dillon2019-aa].
+
+The goal of this study is to formally quantify the inoculum-production potential of common *P. ramorum* hosts from California coastal forests. While much has been learned about the disease in the absence of such a comprehensive survey, we are motivated for several reasons. First, we are filling in the gaps of the pathogen’s basic biology. Multiple studies have already assessed the competencies of host species outside of California due to the pathogen’s potential to cause epidemics in new locations [@Harris2016-eo; @Huberli2008-pu; @Ireland2012-vn; @Jinek2011-cb; @Linderman2007-at; @Tooley2009-gk], but the same has yet to be done for the region most severely affected by the disease. 
+
+Quantifying sporulation potentials also allows us to understand more about the trajectory of SOD in a changing environment. In addition to possible genetic changes in the pathogen, variation in either host or climatic variables will influence its epidemiology. For example, increased fuel loads created by SOD-induced mortality interact with wildfires to increase fire severity [@Metz2011-dj]. This leads to increased mortality of aboveground stems [@Metz2013-ub] and belowground genets [@Simler2018-ey], but also increased opportunity for sexual regeneration for some species in a forest dominated by asexually reproducing species [@SimlerWilliamson2019-ft]. The fire-disease interaction presents an interesting opportunity for compositional shifts to take place in novel gaps. Moreover, climate change is expected to shift the geographic ranges of host species, as well as alter the distribution of landscapes with favorable growth conditions for the pathogen [@Meentemeyer2011-hq]. Overall, uncertainty in the future’s forest composition and the distribution of the pathogen provokes newfound reason to understand the sporulation potential of species beyond what is conventionally understood.
+
+Finally, this study will generate a more nuanced perspective of how the entire host community may contribute to disease risk. Current epidemiological models have typically only considered bay laurel and tanoak as transmissive hosts [@Cobb2012-uj; @Ndeffo_Mbah2010-vn]. These models are highly sensitive to minor increases in inoculum load (Cobb et al. 2012), implying that undetected low-competency hosts may undermine optimal management strategies [@Ndeffo_Mbah2010-vn]. The role of non-host species must also not be disregarded; after accounting for the densities of bay laurel and tanoak, more diverse plant communities were associated with a lower probability of SOD infection [@Haas2011-ut; @Haas2015-fl]. The mechanisms driving a negative relationship between diversity and disease risk are highly debated and speculated about [@Halsey2019-mv; @Johnson2015-vu; @Rohr2020-xa], but one suggestion is that non-host species may lower transmission by reducing encounter rates between infected and susceptible individuals  [@Keesing2006-in]. Data on sporulation potential can leverage nearly two decades of ecological data, making SOD an ideal model system to elucidate mechanisms driving the disease-diversity relationship involving a forest pathogen.
+
+This study assesses the sporulation potential of common plant species inhabiting SOD-endemic ecosystems on the California coast. The intent of this study is to estimate the interspecific variation in sporulation potential. In order to control for phenological differences that would manifest in a state-wide survey [@Dodd2008-yr], we focused our sampling efforts on the Big Sur region, where we use a network of 280 long-term monitoring plots to identify the top 10 most common plant species in both redwood and mixed evergreen forests [@Metz2011-dj; @Metz2012-pn]. Leaf tissue from each species was inoculated in a controlled laboratory environment and assessed for production of its two spore types, sporangia and chlamydospores. Sporangia and their released zoospores are the pathogen’s infectious propagules and thick-walled chlamydospores might facilitate long-term survival in the soil [@Fichtner2007-eq], but consensus on their epidemiological role is still unclear. Specifically, we address the following questions: i) How do plant species vary in sporangia and chlamydospore production? ii) Is lesion area positively correlated with spore production? 
+
+## Materials and Methods
+
+### Field sampling
+
+The forests in Big Sur broadly split into two types, one comprised of mixed evergreen species and the other with a similar composition but dominated by redwood [@Metz2012-pn]. The three most common species in mixed evergreen forests are bay laurel, coast live oak, and tanoak; in redwood forests they are redwood, tanoak, and bay laurel [@Metz2012-pn]. We inoculated leaf tissue from the top 10 most ubiquitous plant species in our plot network (measured as number of plots in which each species occurs) for both forest types (Table 1.1). Plant samples were collected in the Big Sur area from Landels-Big Creek Reserve (36.070$^{\circ}$N, 121.599$^{\circ}$W) and nearby private property in May and early June 2019, the seasonal period with greatest sporulation [@Davidson2005-lq; @Davidson2008-pu]. For each species, we collected healthy-looking, fully flushed leaves from 32 individuals. They were rinsed with deionized water, placed in moist plastic bags inside of a cooler, and refrigerated overnight. Inoculations were conducted the following day using *P. ramorum* isolate PR979 (GenBank accession MN783356), which was originally isolated in 2012 from a bay laurel tree located within the plot network.
+
+```{r table1.1}
+tab1_ch1
+```
+
+
+### Experimental design
+Separate experiments were conducted for the broadleaf and conifer species in May and June, respectively. We inoculated leaf discs cut with a cork borer (size 9, 1.25 cm diameter) from broadleaf species [@Widmer2015-mb], but since cutting discs from conifer needles is not possible, entire shoots or needles were inoculated using a detached leaf dip method [@Denman2005-by]. For the broadleaf species, 2 leaf discs from each of the 32 individuals were inoculated and quantified for either sporangia or chlamydospores. An additional 2 leaf discs cut from 10 or 32 individuals were used as controls (32 controls were used for tanoak, oak species, and bay laurel; 10 controls were used for all other species). Controls were inoculated with sterile water and spores were quantified to assess presence of naturally occurring *Phytophthora* species. In order to limit intra-individual variation, all leaf discs from an individual were cut from the same leaf when possible. For the conifer species, 2 shoots or needle fascicles from 32 individuals were inoculated with either sporangia or sterile water and the replicates were subsequently sampled for both sporangia and chlamydospore counts. 
+
+While it is more difficult to directly compare species responses from different assays, we decided to inoculate the majority of species using leaf discs because we were more able to limit sampling and methodological error. The leaf disc assay allowed us to scale up replication, which was necessary to detect statistically significant differences among many species, and inoculum was more consistently applied on the flat leaf discs. We attempted to compare results from the two inoculation methods by also performing the leaf dip assays on 10 individuals of bay laurel and tanoak. Overall, leaves from 317 and 106 individuals were used in the leaf disc and leaf dip assays, respectively. 
+
+### Inoculations
+
+To produce inoculum, the *P. ramorum* isolate was passaged through a rhododendron leaf to ensure pathogenicity and grown on 20% unclarified V8 agar for 7 days at 20$^{\circ}$C under natural light. Cultures were flooded with sterile water and incubated under the same conditions. After 48 h, we scraped the colonies to dislodge the sporangia. Sporangia suspensions were rinsed with sterile water and filtered with 4-ply cheesecloth. The concentration was estimated with a hemocytometer and adjusted to 4,000 sporangia/ml [@Tooley2009-gk]. 
+
+Following a modified protocol from @Widmer2015-mb, leaf discs were placed into quartered Petri dishes and 15 $\mu$l of inoculum was pipetted onto the underside surface. In order to maintain high relative humidity, the Petri dishes were closed with lids lined with sterilized Whatman No. 1 filter paper dampened with 150 $\mu$l of sterile water and placed inside of moist clear plastic containers. The leaf discs were incubated under natural light at 20$^\circ$C, and were removed after 5 days for quantification of sporangia, chlamydospores and lesion area. In order to estimate a minimum baseline of sporangia originating from the inoculum source alone, we also incubated 8 drops of the sporangia solution without a host.
+
+Detached leaves were held at the petioles, submerged in inoculum to a depth of 4 cm for 30 s, and placed inside a moisture chamber with the underside down [@Denman2005-by]. Each chamber contained 6–12 leaves of the same treatment depending on available space. Leaves sat on a sterilized metal mesh platform contained in clear plastic containers lined with moist paper towels. The leaves were incubated under the same conditions as the leaf discs for 5 days. After 48 h, we gently rinsed the control and treatment leaves with running distilled water to ensure that recovered sporangia were produced post-inoculation, rather than from residual inoculum. 
+
+### Assessments of lesion area and spore production
+We estimated lesion area by photographing the underside of all of the leaf discs and measuring the area of visible necrosis with the software program ImageJ (v10.2, National Institutes of Health, USA). We counted sporangia by selecting half of the samples, adding 100 ul of water to each disc and scraping with the flat side of a flame-sterilized T-pin 20 times on the underside and 10 times on the topside [modified from @Ireland2012-vn]. We pipetted the dislodged sporangia into 0.2 ml strip tubes, added 2.5 $\mu$l of lactophenol cotton blue (LPCB) solution, a killing agent and fungal preservant, and stored at 4$^{\circ}$C for up to 3 months. Estimating sporangia production involved adding 5 $\mu$l of well-mixed sporangia solution onto a slide, counting all of the sporangia under a compound microscope, and repeating for a total of 3 times. The remaining half of the leaves were used for chlamydospore quantification. Since chlamydospores are typically embedded within the leaf tissue, we counted them directly on the leaves. The leaf discs were placed into 2 ml tubes of 1 M potassium hydroxide (KOH), which makes the leaf tissue transparent, and stored at room temperature for 2–4 weeks before counting under the compound microscope [@Fichtner2007-eq; @Fichtner2009-zb]. For leaves with large quantities of chlamydospores (i.e. >200 spores), we used the micrometer in the microscope eyepiece reticle as a transect to sample a smaller proportion. 
+
+In order to process the leaves from the leaf dip assay in a similar manner, from the inoculated regions we randomly removed 6 needles from redwood and Douglas fir (*Pseudotsuga menziesii*) shoots, 2 out of 3 needles from ponderosa pine (*Pinus ponderosa*), and cut 2 leaf discs with the cork borer from bay laurel and tanoak. Photos were taken for assessments of lesion area. As described above, we added 100 $\mu$l of water to half of these samples, scraped the leaves, and collected the sporangia solution. Similarly, we added the other half of the samples to 2 ml tubes filled with KOH for chlamydospore counting.
+
+### Viability of the pathogen
+
+In order to test the viability of the pathogen and detect any latent infections, for each species-treatment group, we attempted to reisolate viable *P. ramorum* sporangia and mycelia from up to two replicates of symptomatic and asymptomatic leaves (delineated by presence or absence of visible lesions). Several species in the control group had no samples with lesions; conversely, many inoculated species exclusively had samples with lesions. To test sporangia viability, we dropped 10 $\mu$l of sporangia suspension onto oomycete-selective medium PARP [pimaricin-ampicillin-rifampicin-pentachloronitrobenzene agar, @Jeffers1986-om] before adding LPCB. Using these same samples, we tested viability of mycelia by plating leaf tissue that was surface sterilized for 30 s in 10% bleach and rinsed in sterile water. We considered samples with recovered cultures to be successfully infected by a viable isolate. Plates were incubated at 20$^{\circ}$C in the dark and monitored for mycelial growth for the following 3 to 4 days.
+
+### Data analysis 
+
+To analyze how the production of sporangia differed among species, we used separate Bayesian generalized linear mixed models for the leaf disc and leaf dip assays. We assumed a Poisson likelihood with a log link function and included species identity as a fixed effect predictor, individual ID as a varying intercept since we subsampled from each individual 3 times for a more accurate estimate, and an offset variable (log-leaf area) to account for differences in leaf area in the leaf dip assay. Although the offset had no effect on the data coming from the leaf disc assay since the discs were equally sized, it allowed us to easily standardize the counts to spores per 1 cm^2^. 
+
+The chlamydospore counts were overdispersed and, for several species, zero-inflated. Thus, for both of the assays, a series of regular and zero-inflated Poisson and negative binomial models were compared using leave-one-out cross-validation (LOO) [@Vehtari2017-rt] and differences were assessed with expected log pointwise predictive density (ELPD) [@Vehtari2017-rt]. For the leaf disc assay, the best performing model was the zero-inflated negative binomial model with species as a predictor, an offset term (log-area sampled) to correct for different sampling intensities, and species predicting the zero-inflation probability ($\Delta$ELPD = -39.3, SE = 7.3). The leaf dip assay model had the same structure, except the zero-inflation probability was predicted by a single intercept ($\Delta$ELPD = -2.7, SE = 1.8).
+
+For each of the above models, pairwise contrasts between species intercepts were performed on the models’ posterior values. We report mean spore counts by back-transforming the posterior values of the species intercepts, which are in the units of sampled spores per cm^2^ per $\mu$l. We standardized sporangia counts to total sporangia per cm^2^ by multiplying the values by 102.5 $\mu$l, the volume of liquid added to the sample. The chlamydospore values did not need additional transformations.  
+
+To examine if spore production was associated with lesion area, regressions were run for the two spore types, but data from both assays were included together. For the sporangia regression, predictors included lesion area with slopes and intercepts varying by species, a dummy variable for assay, and individual ID as a varying intercept. The best performing chlamydospore model was a zero-inflated negative binomial model ($\Delta$ELPD = -19.9, SE = 7.9). Predictors included lesion area with slopes and intercepts varying by species, a dummy variable for assay, an offset term (log-area sampled), and species predicting the probability of zero-inflation. 
+
+All models were performed using `brms` [@Burkner2017-zz], a package designed to fit Bayesian multilevel models with the programming language `Stan` [@Stan_Development_Team2019-sw] and was analyzed in the `R` environment [@R_Core_Team2019-wp]. We used weakly informative priors, 4 chains with 4,000 samples per chain (including 2,000 warmup samples), and chain convergence was assessed for each estimated parameter by ensuring Rhat values were less than or equal to 1.01 [@Burkner2017-zz]. Species with spore count values of exclusively 0 were omitted from the analyses since they created convergence issues. Model fits were visually assessed by graphically comparing observed values against posterior predictive draws. Parameters were considered significant when the 90% highest posterior density interval (HPDI) did not cross zero.
+
+## Results
+### Viability tests  
+We detected no viable *P. ramorum* mycelia or sporangia in the controls. Most controls had no symptomatic samples, but those that did had lesions caused by non-oomycetes. In contrast, we reisolated viable *P. ramorum* mycelia from all species except for toyon (*Heteromeles arbutifolia*) (Table 1.2). Toyon was found to produce sporangia when inoculated, so it is possible that reisolation methods were not optimized for this species, as was the case for highly infectious larch species in the United Kingdom [@Harris2016-eo]. Most symptomatic samples had both viable mycelia and sporangia, and when there were asymptomatic samples available, many still had viable sporangia. This confirms that *P. ramorum* is capable of producing latent, transmissible infections.
+
+```{r table 1.2}
+tab2_ch1
+```
+
+### Control samples
+Out of 424 control samples in the leaf disc and dip assays, no chlamydospores were found and only low quantities of sporangia were recovered in 2 samples. For these samples, we examined additional subsamples for a total of 9 5-$\mu$l counts, and we detected 1 sporangium twice in a bay laurel individual, and 1 sporangium once in a redwood individual. We therefore consider the background levels of *P. ramorum* on our collected leaves to be negligible and all following analyses were performed on the treatment replicates only.
+
+### Sporangia and chlamydospore production 
+Sporangia production differed among host plant species in the leaf disc assay. Some of the variation is attributed to random sampling error since we subsampled from the solutions 3 times, but after accounting for this within-individual variation, we detected strong differences among species (Table A.1, A.2). Bay laurel produced the greatest amount with a median $\pm$ 1 SD of $780 \pm 175$ sporangia/cm^2^, closely followed by tanoak with $526 \pm 114.$ The difference between these two species was not significant. The remaining 8 broadleaf plant species produced significantly fewer sporangia (`r fig_ch1("sporangia_fig_ch1", display = 'cite')`). All of these values except for that from madrone (*Arbutus menziesii*) were significantly higher than the estimated number of sporangia contained in the inoculum, indicating that almost all of these species were able to produce non-zero quantities of sporangia.
+
+![`r fig_ch1("sporangia_fig_ch1")`](figure/chapter1/Fig1_sporangia.jpg)
+
+In the detached leaf assay, bay laurel and tanoak again produced significantly more sporangia than the other species, but they did not significantly differ between each other. On average, tanoak produced more than bay laurel with 264 $\pm$ 142 and 164 $\pm$ 114 sporangia/cm^2^, respectively. These values are about 2 to 4 times lower than those from the leaf disc assay, suggesting that results from the detached leaf assay are relatively lower due to the methodology. Douglas fir and redwood produced similar quantities of sporangia, 70.7 $\pm$ 23.9 and 61.2 $\pm$ 18.6, respectively. Out of the 96 subsamples from 32 individuals, we detected 1 sporangium from ponderosa pine, which conceivably could have been from residual inoculum that was not washed off after 48 hours. Consequently, we consider the inoculum produced by ponderosa pine to be inconsequential.
+
+Chlamydospore production also varied among plant species (Table A.1), but we were only able to confidently count spores from 6 broadleaf and 2 conifer species (`r fig_ch1('chlamydo_fig_ch1', display = 'cite')`). The leaf tissue of the true oak species, bay laurel, and redwood was too sclerotic for the KOH to adequately dissolve, making it difficult to visualize and identify the spores. For those that we could quantify, after accounting for the zero-inflation, the median $\pm$ 1 SD quantity of chlamydospores produced per cm^2^ were the following: bigleaf maple (*Acer macrophyllum*, 1510 $\pm$ 330); ceanothus (*Ceanothus oliganthus*, 1290 $\pm$ 287); madrone (51.4 $\pm$ 12.5); poison oak (*Toxicodendron diversilobum*, 98.7 $\pm$ 40.4); tanoak (4.20 $\pm$ 3.00); and toyon with 0 (not included in model). Pairwise differences between these six species were all significant except for between bigleaf maple and ceanothus. In the leaf dip assay, Douglas fir produced 31.0 $\pm$ 13.1, tanoak 1.07 $\pm$ 1.49, and ponderosa pine 0 (not included in model). 
+
+![`r fig_ch1("chlamydo_fig_ch1")`](figure/chapter1/Fig2_chlamydospores.jpg)
+
+### Spores and lesion size
+Except for ceanothus, madrone, and bigleaf maple, mean necrosis encompassed less than 50% of the exposed leaf tissue. The oaks in particular produced the lowest lesion coverages, with a median $\pm$ 1 SD of 7.42 $\pm$ 4.48, 18.5 $\pm$ 14.9, 21.8 $\pm$ 20.0, and 6.82 $\pm$ 9.20 for tanoak, coast live oak, Shreve oak (*Q. parvula*), and interior live oak (*Q. chrysolepis*), respectively. Grouped across all species we detected a significantly positive relationship between sporangia production and lesion area (Table A.3). However, when we examined species-specific relationships, slopes were significantly positive only for bigleaf maple, interior live oak, poison oak, tanoak (from leaf dip assay) and bay laurel (from leaf dip assay) (`r fig_ch1('lesions_fig_ch1', display = 'cite')`). These findings indicate that for most species, lesion size does not predict sporangia quantity. Likewise, there was a positive relationship between chlamydospores and lesion area across all species (Table A.3), but the species-specific slopes were only significantly positive for bigleaf maple, ceanothus, and poison oak. 
+
+![`r fig_ch1("lesions_fig_ch1")`](figure/chapter1/Fig3_lesions_spores.jpg)
+
+## Discussion
+We found that all host species included in the study support *P. ramorum* infections when challenged, but sporulation potential varies significantly across species. Bay laurel and tanoak were prolific sporangia producers, while the majority of species produced relatively lower amounts of sporangia. Large quantities of chlamydospores were also found in some species. Since our collections were exclusively from the Big Sur region, and natural variability in susceptibility to *P. ramorum* has been documented for bay laurel, tanoak, and coast live oak [@Dodd2005-nj; @Hayden2011-ln; @Huberli2012-br], it is possible that sporulation values and relative ranks among species may differ should the study be expanded to more populations. In general, our results align closely, but not perfectly, with previous understanding of SOD-infested California coastal ecosystems. 
+
+Results from our study suggest the sporulation potential of tanoak and bay laurel are equivalent, but most studies across California regard bay laurel as the primary driver of SOD epidemics [e.g. @Cobb2010-jd; @Dillon2019-aa; @Garbelotto2017-it]. Field measurements indicated bay laurel was capable of producing orders of magnitude more sporangia than tanoak [@Davidson2008-pu], and early observational studies also found presence of bay laurel, but not tanoak, was the only significant host predictor in SOD infestations [@Meentemeyer2008-yg; @Swiecki2002-gi]. However, the disease had not yet progressed to the northern parts of California, where tanoak is most abundant. The negative correlation between disease and tanoak distribution may have led to the insignificance of tanoak [@Meentemeyer2008-yg]. Meanwhile, subsequent models from field collected data in the Big Sur area and more northern coastal regions suggested that the two species both contribute significantly to the likelihood of SOD infections [@Cobb2012-uj; @Haas2011-ut]. 
+
+We also detected sporangia production in species implicated as epidemiologically unimportant. Generally, true oak species are considered dead-end hosts that are incapable of producing sporangia [@Davidson2005-lq], while all other species are considered low-competency hosts at most [@Meentemeyer2004-mu]. Aside from ponderosa pine and madrone, our study showed that all of the other tested species, including true oak species, were able to produce non-zero quantities of sporangia. Moreover, several hosts abundantly produced chlamydospores, which may or may not be important for pathogen survival. These spores are known to survive at high rates in the soil for the duration of California’s dry summer months [@Fichtner2007-eq] and although germination rates are low [@Tooley2008-dz], large numbers ensure the presence of viable inoculum in the soil and litter. Specifically, bigleaf maple and ceanothus produced quantities of chlamydospores that rival the maximum known concentrations on highly susceptible species, rhododendron and bay laurel [@Fichtner2007-eq; @Fichtner2009-zb]. 
+
+While we believe species differences within the leaf disc and leaf dip assays may be compared, we caution against direct contrasts between assays. Cutting leaf discs involves additional wounding around the leaf edges, which might contribute to differences in sporulation potential by inducing or suppressing defenses against pathogens. However, we are unaware of studies that have examined how wounding affects local defenses on sporulation; it remains an open area of study. We estimate that species in the leaf dip assay sporulated 2 to 4 times less than species in the leaf disc assay. As a result, the sporulation potentials and lesion areas of Douglas fir and redwood may have been underestimated relative to the broadleaf species and direct comparisons with broadleaved species besides tanoak and bay laurel remain imprecise.
+
+Given that laboratory inoculations are not perfect representations of *in situ* infections, we offer explanations to account for discrepancies between our findings and field-based studies. First, our inoculum concentration, 4000 sporangia/ml, corresponds to the seasonal peak of sporangia production from bay laurel leaves during a wet year [@Davidson2008-pu], conditions that exceed average. Increased inoculum loads could lead to artificially higher rates of necrosis, infection, and sporulation [@Hansen2005-ug; @Tooley2004-jn; @Tooley2013-xc], including for species that typically do not show foliar symptoms in nature [@Vettraino2008-xs]. Furthermore, the inoculated detached leaves and cut leaf discs were without whole plant systemic defenses. While lowered defenses could elevate susceptibility [@Orlowska2012-gd] and potentially sporulation, direct comparisons from both leaf discs [@Brown1999-xc; @Cohen1993-gk; @Kortekamp2006-qe] and detached leaves [@Brown1999-xc; @Harrison1989-ra] have shown sporulation and susceptibility rates to strongly correlate with those from intact plants. 
+
+It is also conceivable that our sporangia production estimates are not reflective of realized plant-plant transmission due to components of host physiology and phenology. For example, since overstory trees are suspected to have a greater influence on *P. ramorum* establishment and transmission [@Metz2012-pn; @Peterson2014-nt; @SimlerWilliamson2021-iq], species in the understory may comparatively transmit the pathogen much less regardless of their sporulation potential. Additionally, deciduous species have a narrower transmission window because their leaves flush out nearly 4–5 months after evergreen species begin producing spores [@Davidson2008-pu]. Finally, biases inherent in observational plot studies should not be overlooked. Symptoms are most obvious on common, susceptible, large trees, and for this reason field protocols often rely on bay laurel and tanoak as indicator species to represent the community’s infection and mortality rates. Even if all hosts are equally examined for symptoms, our results and others’ indicate that detection can be low since *P. ramorum* can cause latent or small lesions [@Denman2009-pe; @Harris2016-eo].
+
+These caveats evoke the need to assess the ecological relevance of our sporulation results by corroborating them with field-collected data. One simple first step would be to update risk maps that rely on sporulation potentials primarily grounded in expert opinion [@Cunniffe2016-cd; @Meentemeyer2004-mu; @Meentemeyer2011-hq] with our empirically-derived sporangia values and assess if model performance improves. Another approach is to explore the explanatory power of community competency [@Johnson2013-dg; @Johnson2015-vu], the cumulative product of each tree species’ density and measured sporulation potential, for predicting infection risk in a stand. @Johnson2013-dg found community competency and its associated interactions among amphibian hosts explained 89% of the variance in total load of a trematode parasite. Many years of research focus has amassed several rich SOD datasets complete with community and disease data, allowing a similar analysis to be completed in the near future. 
+
+Until our results are validated and calibrated with field data, we cautiously speculate on the consequences they might have on our understanding and management of SOD. We reiterate existing calls to thin both bay laurels and tanoaks in stands that are at-risk or recently infested [@Cobb2013-bu; @Valachovic2008-tn], since they both appear to be significant drivers of pathogen spread. Regarding the implications of low-competency hosts, we hypothesize they play a role in transmission at the local, but not landscape scale. Perhaps the strong performance of the California state-wide risk model from @Meentemeyer2008-gz, which incorporates presence of bay laurel as the only host predictor, speaks to the notion that limited knowledge of one of the key hosts is sufficient to garner a coarse outlook on disease risk. We still suspect pathogen spread involving more minor hosts is occurring, albeit sometimes at low intensities, given that most species produce inoculum either in the form of sporangia or chlamydospores. They may act as reservoirs, facilitating transmission to nearby high-competency hosts, which can lead to more secondary transmission and mortality at the broader scale. 
+
+Overall, this study is largely confirmatory, echoing much of what has been suspected regarding host competency, but never formally and exhaustively tested. The greatest value of this study lies in what is now possible. By generating an empirical foundation for host competency, we can better explore how the composition of newly invaded or disturbance-altered communities may interact with the epidemiology of *P. ramorum*. Additionally, we now have an exciting opportunity to test the importance of host community composition on local transmission in an invasive forest pathogen system. This study augments decades of ecological monitoring, positioning sudden oak death as an even more valuable system to explore the community’s role in disease dynamics. 
+
+## Acknowledgements
+We thank E. Lozano, C. Edelenbos, E. Hargreaves, and H. Patteson for laboratory support and K. Frangioso for field assistance. We thank Landels-Hill Big Creek Reserve and K. Frangioso and L. Miracle for research access. We gratefully acknowledge the thoughtful feedback from two anonymous reviewers. Funding was provided by National Science Foundation Graduate Research Fellowship (grant no. 1650042); Jastro Graduate Research award; UC Davis Ecology Block Grant fellowship; and USDA Forest Service, Forest Health Protection.
+
+\clearpage
+
+
 
 # Chapter 2. Direction and mechanisms of the diversity-disease relationship are distinct across hierarchical levels
 
@@ -101,6 +262,7 @@ Lisa M. Rosenthal^1,2^, Allison B. Simler-Williamson^3^, David M. Rizzo^2^
 ```{r, include = F}
 fig_ch2 <- captioner(prefix = "Figure 2.",  auto_space = FALSE)
 fig_app_ch2 <- captioner(prefix = "Figure B.",  auto_space = FALSE)
+tab_app_ch2 <- captioner(prefix = "Table B.",  auto_space = FALSE)
 
 fig_ch2("concept_fig_ch2", 'Negative diversity-disease relationships assessed at the community level may be affected by multiple dilution mechanisms and/or measurements of disease risk. The addition of low-competence, rarely symptomatic species (i.e. ‘diluter’ species) to higher diversity communities may potentially limit transmission risk, as measured by average individual-level disease risk, A) by reducing the density of competent hosts (‘competent host regulation’, modified *sensu* Keesing et al. 2006), or B) by reducing encounter rates or probability of transmission between infectious and susceptible individuals (‘encounter reduction‘ or ‘transmission reduction‘ *sensu* Keesing et al. 2006). The addition of these species may also C) have no effect on plant-plant interactions, resulting in no corresponding change in individual-level disease risk. Across all three scenarios, the overall proportion of commonly symptomatic species is lower in the higher diversity community, causing a negative relationship between diversity and community-level disease risk. The area of the dashed halos represent total potential inoculum pressure exerted by competent hosts.')
 
@@ -140,9 +302,7 @@ fig_app_ch2('ch2GPhist', 'Distribution of plot pairwise distances.')
 \normalsize
 
 ## Abstract  
-Understanding why diversity sometimes limits disease is essential for managing outbreaks; however, mechanisms underlying this ‘dilution effect’ remain poorly understood. Negative diversity-disease relationships have previously been detected in plant communities impacted by an emerging forest disease, sudden oak death. We used this focal system to empirically evaluate whether these relationships were driven by dilution mechanisms that reduce transmission risk for individuals or from the fact that disease was averaged across the host community. We integrated laboratory competence measurements with plant community and symptom data from a large forest monitoring network. Richness did not limit individual-level disease risk, dismissing possible dilution mechanisms. Nonetheless, richness was negatively associated with community-level disease prevalence because disease was aggregated among hosts that vary in disease susceptibility. Aggregating observations may bias the direction and obscure underlying mechanisms of diversity-disease relationships, which has consequential implications for managing disease in the midst of global biodiversity loss.
-
-\newpage
+Understanding why diversity sometimes limits disease is essential for managing outbreaks; however, mechanisms underlying this ‘dilution effect’ remain poorly understood. Negative diversity-disease relationships have previously been detected in plant communities impacted by an emerging forest disease, sudden oak death. We used this focal system to empirically evaluate whether these relationships were driven by dilution mechanisms that reduce transmission risk for individuals or from the fact that disease was averaged across the host community. We integrated laboratory competence measurements with plant community and symptom data from a large forest monitoring network. Richness did not limit individual-level disease risk, dismissing possible dilution mechanisms. Nonetheless, richness was negatively associated with community-level disease prevalence because disease was aggregated among hosts that vary in disease susceptibility. Aggregating observations may bias the direction and obscure underlying mechanisms of diversity-disease relationships, which has consequential implications for managing disease in the midst of global biodiversity loss.  
 
 ## Introduction  
 Human-caused biodiversity loss [@Cardinale2012-iq] alters interactions among hosts and pathogens with cascading effects on infectious diseases of humans, plants, and wildlife. Susceptible hosts are often more vulnerable to infections in depauperate communities than in nearby richer communities, a phenomenon coined the ‘dilution effect’ [@Civitello2015-ld; @Magnusson2020-tg; @Ostfeld2012-ui]. However, the relationship between infection risk and diversity may also be positive [@Guilherme_Becker2011-nz], idiosyncratic [@Salkeld2013-sk], or context-dependent [@Halliday2019-nv; @Liu2020-yf]. If diversity predictably covaries with factors that limit disease, conservation of biodiversity could be a viable win-win strategy; if not, targeted management of specific species would be needed [@Rohr2020-xa]. Thus, it is essential to understand why diversity affects disease dynamics to forecast and manage disease outbreaks under global change [@Johnson2015-vu; @Rohr2020-xa].  
@@ -153,7 +313,7 @@ Higher diversity communities may be associated with less disease risk for indivi
 
 The dilution effect may also be driven by richness *per se* (Fig. 2.1B). For example, communities of greater diversity might be associated with less disease if diluter species reduce encounters between infectious and susceptible hosts [e.g. by ingesting propogules; @Schmeller2014-ec] or if they lower the likelihood of transmission given an encounter [e.g. by altering microclimates; @Zhu2000-my]. Since multiple dilution mechanisms can operate simultaneously, diversity-associated mechanisms driven by encounter/transmission reduction can be deduced after accounting for competent host densities [@Strauss2016-mz; @Strauss2018-wi].  
 
-Furthermore, diversity-disease relationships may change whether disease is measured for particular host individuals or species, or the overall host community (Fig. 2.1C). For instance, individual risk of hantavirus infection in the most susceptible rodent species did not vary across habitats, but seroprevalence of the entire rodent community was greater in rural settings compared to forests [@Piudo2011-ci]. Differences arise because disease in a focal host controls for species-specific susceptibility, whereas community-level prevalence aggregates across species and is sensitive to the average susceptibility of individuals from all species. Individual-level disease risk or disease prevalence in the entire host community capture fundamentally different components of epidemiology: disease of individuals measures risk of acquiring infections, and community prevalence measures disease burden. While the majority of studies discussed within the dilution effect context measure disease risk in a particular host, many focus on community-wide disease. Community-level prevalence comprised *ca.* 11%, 27%, and 15% of studies from dilution effect meta-analyses by @Civitello2015-ld, @Magnusson2020-tg, and @Salkeld2013-sk, respectively (Table S1). Variation in disease metrics alters diversity-disease relationships [@Luis2018-ho; @Roberts2018-rr; @Young2014-ai]. This overlooked distinction between individual- and community-level observations might account for additional inconsistencies.  
+Furthermore, diversity-disease relationships may change whether disease is measured for particular host individuals or species, or the overall host community (Fig. 2.1C). For instance, individual risk of hantavirus infection in the most susceptible rodent species did not vary across habitats, but seroprevalence of the entire rodent community was greater in rural settings compared to forests [@Piudo2011-ci]. Differences arise because disease in a focal host controls for species-specific susceptibility, whereas community-level prevalence aggregates across species and is sensitive to the average susceptibility of individuals from all species. Individual-level disease risk or disease prevalence in the entire host community capture fundamentally different components of epidemiology: disease of individuals measures risk of acquiring infections, and community prevalence measures disease burden. While the majority of studies discussed within the dilution effect context measure disease risk in a particular host, many focus on community-wide disease. Community-level prevalence comprised *ca.* 11%, 27%, and 15% of studies from dilution effect meta-analyses by @Civitello2015-ld, @Magnusson2020-tg, and @Salkeld2013-sk, respectively (Table B.1). Variation in disease metrics alters diversity-disease relationships [@Luis2018-ho; @Roberts2018-rr; @Young2014-ai]. This overlooked distinction between individual- and community-level observations might account for additional inconsistencies.  
 
 To empirically evaluate dilution mechanisms underpinning the disease-diversity relationship and the influence of aggregation, we studied plant communities impacted by sudden oak death, an emerging forest disease that has killed at least 48 million stems of tanoak (*Notholithocarpus densiflorus*) and oak species (*Quercus* spp.) in coastal California and southwestern Oregon since 1995 [@Cobb2020-si; @Rizzo2003-zf]. The causal agent, *Phytophthora ramorum*, is an invasive oomycete pathogen with a wide host range, though some hosts exhibit symptoms more often than others. Field studies in California suggest that transmission is driven primarily by two species: bay laurel (*Umbellularia californica*) and, to a lesser extent, tanoak [@Davidson2005-lq; @Davidson2008-pu]. Whether other forest plant species also contribute to inoculum pressure via asymptomatic sporulation, reduce transmission success, or have no effect on transmission is unknown.  
 
@@ -233,7 +393,7 @@ Models were written in the Bayesian programming language `Stan` [@Stan_Developme
 
 ## Results  
 
-Across 151 plots, 5798 trees and shrubs were included in our study and 18 species were considered hosts and 9 as nonhosts (Table S2). Four commonly symptomatic species accounted for 99.6% of detected infections. Symptoms were primarily found on the two most ubiquitous and abundant species, bay laurel (923 symptomatic/1104 total plants, 83.6%) and tanoak (1153 symptomatic/2189 plants, 52.6%), while there were fewer on coast live oak (36 symptomatic/296 plants, 12.2%) and Shreve oak (28 symptomatic/617 plants, 4.5%). The other 14 host species were rarely symptomatic. Of these species, only 8 redwoods and 1 California buckeye (*Aesculus californica*) were symptomatic.  
+Across 151 plots, 5798 trees and shrubs were included in our study and 18 species were considered hosts and 9 as nonhosts (Table B.2). Four commonly symptomatic species accounted for 99.6% of detected infections. Symptoms were primarily found on the two most ubiquitous and abundant species, bay laurel (923 symptomatic/1104 total plants, 83.6%) and tanoak (1153 symptomatic/2189 plants, 52.6%), while there were fewer on coast live oak (36 symptomatic/296 plants, 12.2%) and Shreve oak (28 symptomatic/617 plants, 4.5%). The other 14 host species were rarely symptomatic. Of these species, only 8 redwoods and 1 California buckeye (*Aesculus californica*) were symptomatic.  
 
 ### How density varies with richness  
 Total basal area of all species remained constant across richness in both forest types (Fig. 2.3A). Bay laurel occurred more frequently in richer plots, while tanoak occurrence did not vary strongly with richness (Fig. 2.3B, 2.3C). When present, the basal area of bay laurel had a weakly negative relationship with richness (median, 90% HPDI = -0.15 [-0.31, 0.03]), whereas that of tanoak did not vary considerably (-0.08 [-0.29, 0.14]; Fig. 2.3B, 2.3C). Additionally, the number of rarely symptomatic host plants increased with richness, while the number of commonly symptomatic host plants did not change substantially (Fig. 2.3D, 2.3E).
@@ -246,7 +406,7 @@ Mixed evergreen and redwood forest communities were both significantly nested (m
 ![`r fig_ch2('comp_ch2')`](figure/chapter2/nestedness_competence.pdf)
 
 ### How disease risk varies with richness, known competent hosts, and community competence
-Across all models, surrounding host vegetation had consistently positive effects, redwood forests and historical precipitation levels had negative or no effects, and sampling year and PSI had negligible effects on community- and individual-level disease risk (Table S3-S5). After accounting for variation related to these factors, the importance of richness on disease risk and its association with known competent hosts and community competence varied depending on how disease was measured.  
+Across all models, surrounding host vegetation had consistently positive effects, redwood forests and historical precipitation levels had negative or no effects, and sampling year and PSI had negligible effects on community- and individual-level disease risk (Table B.3-B.5). After accounting for variation related to these factors, the importance of richness on disease risk and its association with known competent hosts and community competence varied depending on how disease was measured.  
 
 Disease prevalence aggregated among all hosts in the community decreased with richness (median odds ratio, 90% HPDI = 0.68 [0.49, 0.90]; Fig. 2.5A). We included bay laurel basal area, tanoak basal area, and community competence into subsequent models, all of which had positive effects (Fig. 2.5A). After accounting for variation in bay laurel and tanoak density, the negative richness-disease covariance weakened only slightly (0.70 [0.52, 0.96]), and it further weakened when community competence was instead incorporated (0.79 [0.58, 1.08]). Disease prevalence was best predicted by the model featuring richness and host basal area (M2), outperforming the models including community competence (M3: $\Delta\text{ELPD}=-13.9$, $\text{SE}_\Delta = 3.6$) and richness only (M1: $\Delta\text{ELPD}= -20.1$, $\text{SE}_\Delta = 5.8$).  
 
@@ -254,7 +414,7 @@ Disease prevalence aggregated among all hosts in the community decreased with ri
 
 When detected infections were examined exclusively among the four commonly symptomatic species, richness no longer had a nonzero effect on disease prevalence (odds ratio: 0.84 [0.61, 1.17]; Fig. 2.5B). Bay laurel and community competence had positive effects, while the effect of tanoak diminished. The negligible effect of richness did not change when models included host basal area or community competence. The model with richness and host basal area (M2) performed better than the models with community competence (M3: $\Delta\text{ELPD}=-16.8$, $\text{SE}_\Delta = 4.7$) and richness alone (M1: $\Delta\text{ELPD}= -23.7$, $\text{SE}_\Delta = 6.7$).  
 
-Individual-level disease risk models accounted for species-specific disease rates, which were highest for bay laurel, followed by tanoak, coast live oak, and Shreve oak (Fig. 6A). The models also controlled for size-dependent variation in susceptibility, which was greater for larger individuals (Table S5). Richness on average was not strongly correlated with disease risk in the model including richness only (odds ratio: 1.31 [0.62, 2.75]), and its effect did not substantially change after including predictors for host basal area or community competence (Fig. 2.5C). Across the three explanatory submodels, species-specific effects of richness for coast live oak, Shreve oak, and tanoak were unlikely important (90% HPDI contained one); meanwhile, richness had a positive effect on disease risk for bay laurel, with credible intervals slightly smaller or larger depending on the covariates included in the model (Fig. 2.6B). Disease risk was not strongly correlated with tanoak basal area, positively correlated with community competence, and strongly, positively correlated with bay laurel basal area (Fig. 2.5C). The model including richness and host basal area (M2) marginally outperformed models including community competence (M3: $\Delta\text{ELPD}= -3.7$, $\text{SE}_\Delta = 2.3$) or richness alone (M1: $\Delta\text{ELPD}= -4.9$, $\text{SE}_\Delta = 2.5$).  
+Individual-level disease risk models accounted for species-specific disease rates, which were highest for bay laurel, followed by tanoak, coast live oak, and Shreve oak (Fig. 6A). The models also controlled for size-dependent variation in susceptibility, which was greater for larger individuals (Table B.5). Richness on average was not strongly correlated with disease risk in the model including richness only (odds ratio: 1.31 [0.62, 2.75]), and its effect did not substantially change after including predictors for host basal area or community competence (Fig. 2.5C). Across the three explanatory submodels, species-specific effects of richness for coast live oak, Shreve oak, and tanoak were unlikely important (90% HPDI contained one); meanwhile, richness had a positive effect on disease risk for bay laurel, with credible intervals slightly smaller or larger depending on the covariates included in the model (Fig. 2.6B). Disease risk was not strongly correlated with tanoak basal area, positively correlated with community competence, and strongly, positively correlated with bay laurel basal area (Fig. 2.5C). The model including richness and host basal area (M2) marginally outperformed models including community competence (M3: $\Delta\text{ELPD}= -3.7$, $\text{SE}_\Delta = 2.3$) or richness alone (M1: $\Delta\text{ELPD}= -4.9$, $\text{SE}_\Delta = 2.5$).  
 
 ![`r fig_ch2('dis_spp_ch2')`](figure/chapter2/disease_risk_specieslevel.pdf)
 
@@ -280,7 +440,7 @@ Individual- and community-level disease risk varied independently with respect t
 
 Community-level observations cannot directly explain processes occurring between (susceptible and infectious) individuals, and our study represents a case of Simpson’s paradox, in which correlations are not preserved during data aggregation [@Simpson1951-ln]. @Salkeld2020-xt illustrated that disease aggregated across large spatial scales can lead to spurious correlations with diversity and explanatory factors, and these relationships might reverse if reexamined using individual- or species-level data. Our results, and others’ [@Piudo2011-ci], confirm that aggregating disease at the community level can generate this pattern. Although not examined in our study, community-wide disease caused by multiple pathogens [e.g. ‘community pathogen load’ *sensu* @Mitchell2002-km, which also averages across species] can produce similar mismatches [e.g. @Hantsch2013-py]. To be clear, we believe individual- and community-level disease metrics are equally valid and important to study; however, mechanisms used to explain diversity-disease relationships need to reflect the levels at which disease was measured.  
 
-We also suspect that community-level prevalence may negatively correlate with diversity more frequently than individual-level disease risk under specific assembly patterns. When depauperate communities are dominated by disease-prone species—which is more often the case than not [@Gibb2020-vx; @Joseph2013-rd], even in the absence of dilution mechanisms, less susceptible species added to higher diversity communities would increase the likelihood of observing a decline in overall prevalence. Diversity often negatively covaries with community-level prevalence [@Bradley2008-lh; @Liu2018-kc; @Moore2012-mz], but not always [@Hydeman2017-wq; @Milholland2017-pe; @Vaz2007-gr]. Community-wide disease risk is not uncommon under the dilution effect purview (Table S1), and whether it biases toward negative diversity-disease relationships deserves closer attention.  
+We also suspect that community-level prevalence may negatively correlate with diversity more frequently than individual-level disease risk under specific assembly patterns. When depauperate communities are dominated by disease-prone species—which is more often the case than not [@Gibb2020-vx; @Joseph2013-rd], even in the absence of dilution mechanisms, less susceptible species added to higher diversity communities would increase the likelihood of observing a decline in overall prevalence. Diversity often negatively covaries with community-level prevalence [@Bradley2008-lh; @Liu2018-kc; @Moore2012-mz], but not always [@Hydeman2017-wq; @Milholland2017-pe; @Vaz2007-gr]. Community-wide disease risk is not uncommon under the dilution effect purview (Table B.1), and whether it biases toward negative diversity-disease relationships deserves closer attention.  
 
 Given that diversity-disease relationships may change across hierarchical levels, what was the most appropriate measure of disease? Response variables need to match questions meaningful to management [@Johnson2015-vu]. Frequently the goal is to manage the health of specific hosts, which aligns with the majoritarian notion of the dilution effect. We examined disease risk in four species and accounted for differences in species-specific susceptibility. Maintaining diverse forest stands would not reduce the risk of individuals acquiring disease and targeted management of bay laurel is needed. Additionally, promotion of ecosystem services and stability in forests is a highly important management goal. The percentage of all diseased host plants in a plot is critical for predicting how disease-induced mortality may affect fuels, carbon sequestration, or resilience to large-scale disturbance [@Simler2018-ey; @Cobb2020-si; @Metz2011-dj]. Conserving biodiversity may still improve ecosystem health when richness is correlated with a lower proportion of susceptible species.  
 
@@ -292,9 +452,67 @@ We thank Felicia Keesing, Tara Stewart-Merrill, and Emily Brodie for feedback on
 
 \pagebreak
 
-\beginsupplement
 
 # Appendix 
+
+## A. Supplementary material, Ch. 1
+
+```{r tabS1_ch1}
+tableS1_ch1 <- tab_app_ch1('tableS1_ch1', 'Results from generalized linear (mixed) models for relationship between spores and species. A total of four separate models were run: two for either spore type (sporangia and chlamydospores) and two for both assays, a) leaf disc and b) leaf dip assay. Since chlamydospores were modeled with a zero-inflated mixture model, parameters predict the probability that the spore counts are from a zero-inflation process, as well as from a negative binomial process.')
+rawCSV <- read.csv("tables/chapter1/tableS1_ch1.csv", skip = 1)
+names(rawCSV) <- c('', 'Median', 'SD', '5% CI', '95% CI', 'Median', 'SD', '5% CI', '95% CI')
+kable(rawCSV, 'latex', booktabs = T, caption = tableS1_ch1) %>% 
+    kable_styling(latex_options = c("solid", "scale_down", 'hold_position'),
+                 bootstrap_options = c("condensed")) %>% 
+  add_header_above(c(" " = 1, "Sporangia" = 4, "Chlamydospores" = 4), bold = T) %>% 
+  row_spec(c(0, 1, 20), italic = T)
+```
+
+```{r tabS2_ch1}
+tableS2_ch1 <- tab_app_ch1('tableS2_ch1', 'Pairwise contrasts between species intercepts in the sporangia models for a) leaf disc and b) leaf dip assays. Values are `row – column` differences between the log-posterior values. Larger absolute values indicate larger differences in posterior estimates and bold indicates significance (90th HPDI does not cross zero).')
+rawCSV <- read.csv("tables/chapter1/tableS2_ch1.csv",stringsAsFactors = F)
+
+#remove NAS to be blank
+names(rawCSV)[1] <- '' 
+rawCSV[is.na(rawCSV)] <- ''  
+#rawCSV <- rawCSV[-12,] 
+
+
+#specify which cells will be bold
+rawCSV[1, c(2, 4:11)] <- cell_spec(rawCSV[1, c(2, 4:11)] , bold = T, format = 'latex')
+rawCSV[2, c(3:6, 11)] <- cell_spec(rawCSV[2, c(3:6, 11)] , bold = T, format = 'latex')
+rawCSV[3, c(4, 6:11)] <- cell_spec(rawCSV[3, c(4, 6:11)] , bold = T, format = 'latex')
+rawCSV[4, c(6, 8:11)] <- cell_spec(rawCSV[4, c(6, 8:11)] , bold = T, format = 'latex')
+rawCSV[5, c(6, 8:11)] <- cell_spec(rawCSV[5, c(6, 8:11)] , bold = T, format = 'latex')
+rawCSV[6, c(7:10)] <- cell_spec(rawCSV[6, c(7:10)] , bold = T, format = 'latex')
+rawCSV[7:10, 11] <- cell_spec(rawCSV[7:10, 11] , bold = T, format = 'latex')
+rawCSV[12, c(2:4)] <- cell_spec(rawCSV[12, c(2:4)] , bold = T, format = 'latex')
+rawCSV[13, c(3:5)] <- cell_spec(rawCSV[13, c(3:5)] , bold = T, format = 'latex')
+rawCSV[15, 5] <- cell_spec(rawCSV[15, 5] , bold = T, format = 'latex')
+
+
+kable(rawCSV, 'latex',escape = F, booktabs = T, caption = tableS2_ch1, ) %>% 
+   kable_styling(latex_options = c("solid", "scale_down"),
+                 bootstrap_options = c("condensed")) %>%
+   kable_paper(full_width = T) %>% 
+  pack_rows("a) Leaf disc assay", 0, 10, hline_before = T) %>% 
+  pack_rows("b) Leaf dip assay", 11, 15) %>% 
+  row_spec(c( 10, 10, 11), hline_after = T) %>% 
+  column_spec(1, border_right = T)
+```
+
+```{r tabS3_ch1}
+tableS3_ch1 <- tab_app_ch1('tableS3_ch1', 'Results of generalized linear mixed models for relationships between a) sporangia vs. lesion area and b) chlamydospores vs. lesion area.')
+rawCSV <- read.csv("tables/chapter1/tableS3_ch1.csv")
+rawCSV[is.na(rawCSV)] <- ''  #remove NAs
+names(rawCSV) <- c('', 'Median', 'SD', '5% CI', '95% CI')
+
+kable(rawCSV, 'latex', booktabs = T, caption = tableS3_ch1) %>% 
+  row_spec(0, bold = T) %>% 
+  row_spec(c(1, 8), italic = T)
+```
+
+\newpage 
 
 ## B. Supplementary material, Ch. 2
 
@@ -310,9 +528,84 @@ We thank Felicia Keesing, Tara Stewart-Merrill, and Emily Brodie for feedback on
 
 ![`r fig_app_ch2('ch2ppc4')`](figure/chapter2/PPC_diseaserisk.pdf)
 
+\clearpage
+\singlespacing
+### Supplementary tables
+```{r metadata, results=F}
+tab_app_ch2('metadata', 'Annotated metadata from meta-analyses testing prevalence of the dilution effect. Metadata is supplementary data from Civitello et al. (2013), Magnusson et al. (2020), and Salkeld et al. (2015). Additional columns (right of the thick black vertical line) were added to indicate whether the effect was assessed using community disease prevalence and any useful other information. Table is downloadable at https://osf.io/gzfjr/.')
+```
+
+\setlength{\parindent}{0in}
+`r tab_app_ch2('metadata')`
+\setlength{\parindent}{.25in}
+
+```{r species_tab}
+species_table <- tab_app_ch2('species_table', 'Details on species included in the study. Total basal area, number of plants, and number of infected plants are summed for each species across all plots. Hosts types are designated by the following criteria: “commonly symptomatic host”—infections were commonly detected; “rarely symptomatic host”—infections were rarely detected; and “nonhosts”—no natural \\textit{P. ramorum} infections have ever been detected.')
+rawCSV <- read.csv("tables/chapter2/species_tab.csv")
+names(rawCSV) <- str_replace_all(names(rawCSV), '_', ' ')
+tmp <- kable(rawCSV, "latex", booktabs =T, caption = species_table) %>%
+  kable_styling(latex_options = c("solid", "scale_down"),
+                bootstrap_options = c("condensed")) %>%
+  kable_paper(full_width = T) %>% 
+  row_spec(0, bold = T) %>% 
+  column_spec(1, italic = T) %>% 
+  column_spec(2:5, width = ".5in")
+tmp
+```
 
 \clearpage
 
+```{r mod_plot_all}
+mod_plot_all <- tab_app_ch2('mod_plot_all', 'Posterior estimates (median log-odds, 90th HDPI) of the plot-level infection risk model assessed among all host species.')
+
+rawCSV <- read.csv("tables/chapter2/mod_plot_all.csv")
+names(rawCSV) <- c('variable',	'Richness only',	'Richness + density of key hosts',	'Richness + community competency')
+
+tmp <- kable(rawCSV, "latex", booktabs =T, caption = mod_plot_all) %>%
+  kable_styling(latex_options = c("solid", "scale_down")) %>%
+  kable_paper(full_width = T) %>% 
+  row_spec(0, bold = T) %>% 
+  footnote(symbol = c("Estimate for plots sampled in 2007.", 
+                      "Estimate for redwood forests."))
+tmp
+```
+
+\newpage
+
+```{r mod_plot_HS}
+mod_plot_HS <- tab_app_ch2('mod_plot_HS', 'Posterior estimates (median log-odds, 90th HDPI) of the plot-level infection risk model assessed among commonly symptomatic species.')
+
+rawCSV <- read.csv("tables/chapter2/mod_plot_HS.csv")
+names(rawCSV) <- c('variable',	'Richness only',	'Richness + density of key hosts',	'Richness + community competency')
+
+tmp <- kable(rawCSV, "latex", booktabs =T, caption = mod_plot_HS) %>%
+  kable_styling(latex_options = c("solid", "scale_down")) %>%
+  kable_paper(full_width = T) %>% 
+  row_spec(0, bold = T) %>% 
+  footnote(symbol = c("Estimate for plots sampled in 2007.", 
+                      "Estimate for redwood forests."))
+tmp
+```
+
+\newpage
+
+```{r mod_spp_HS}
+mod_spp_HS <- tab_app_ch2('mod_spp_HS', 'Posterior estimates (median log-odds, 90th HDPI) of the individual-level infection risk model assessed among commonly symptomatic species.')
+
+rawCSV <- read.csv("tables/chapter2/mod_spp_HS.csv")
+names(rawCSV) <- c('variable',	'Richness only',	'Richness + density of key hosts',	'Richness + community competency')
+
+tmp <- kable(rawCSV, "latex", booktabs =T, caption = mod_spp_HS) %>%
+  kable_styling(latex_options = c("solid", "scale_down")) %>%
+  kable_paper(full_width = T) %>% 
+  row_spec(0, bold = T) %>% 
+  footnote(symbol = c("Estimate for plots sampled in 2007.", 
+                      "Estimate for redwood forests."))
+tmp
+```
+\clearpage
+
+\doublespacing
 ### Additional study design and data collection details
  
 #### Sample collections 
@@ -365,7 +658,7 @@ Only 2% of the pairwise distances between plots were within 1.25 km of each othe
 
 ### R Packages
 
-For fitting, visualizing, summarizing, and contrasting Bayesian models, we used `Rstan`, `rethinking`, `Bayesplot`, and `loo` [@bayesplot; @loo; @rethinking; @rstan]. For data wrangling and creating figures, we used `dplyr`, `ggplot2`, and `cowplot` [@cowplot; @dplyr; @ggplot].
+For fitting, visualizing, summarizing, and contrasting Bayesian models, we used `Rstan`, `rethinking`, `Bayesplot`, and `loo` [@Gabry2019-nv; @McElreath2020-np; @Stan_Development_Team2020-lp; @Yao2017-uy]. For data wrangling and creating figures, we used `dplyr`, `ggplot2`, and `cowplot` [@Wickham2016-gd; @Wickham2021-vr; @Wilke2019-go].
 
 \newpage
 # References 
@@ -374,7 +667,6 @@ For fitting, visualizing, summarizing, and contrasting Bayesian models, we used 
 \setlength{\leftskip}{0.25in}
 \setlength{\parskip}{8pt}
 
-<!-- allows me to put references NOT at the end -->
 <div id="refs"></div>
 
 

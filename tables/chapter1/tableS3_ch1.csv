@@ -1,0 +1,22 @@
+﻿,Median,SD,5% CI,95% CI
+a) sporangia production and lesion area,,,,
+Intercept,-0.514,0.495,-1.28,0.335
+Lesion area,1.3,0.667,0.223,2.39
+Assay,0.255,0.429,-0.469,0.929
+Species-level intercept variation,1.39,0.349,0.874,1.96
+Species-level slope variation,1.7,0.797,0.402,2.97
+Individual-level variation,1.18,0.0605,1.09,1.29
+b) Chlamydospore production and lesion area,,,,
+Intercept,3.21,0.886,1.76,4.63
+Lesion area,2.06,0.978,0.468,3.68
+Assay,0.145,0.48,-0.648,0.936
+Species-level intercept variation,1.94,0.604,1.13,2.92
+Species-level slope variation,1.91,1.05,0.00236,3.3
+Zero-inflated intercept,-1.22,0.25,-1.63,-0.807
+Zero-inflated species ARME,-0.432,0.364,-1.03,0.156
+Zero-inflated species CEOL,-0.864,0.387,-1.5,-0.235
+Zero-inflated species LIDE,1.45,0.342,0.858,2
+Zero-inflated species LIDE-D,0.06,0.483,-0.758,0.83
+Zero-inflated species PSME,0.973,0.348,0.436,1.57
+Zero-inflated species TODI,0.702,0.45,-0.0483,1.41
+Phi (dispersion parameter) ,0.873,0.131,0.652,1.08
