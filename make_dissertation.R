@@ -1,7 +1,7 @@
-library(rmarkdown)
+library(pdftools)
 
-rmarkdown::render("dissertation_mahood.Rmd")
-rmarkdown::render("dissertation_title.Rmd")
+#first knit the dissertation 
 
-system(paste("pdftk dissertation_title.pdf taf.pdf dissertation_mahood.pdf cat output full_dissertation.pdf"))
+#combine with title page
+pdf_combine(c("title_page.pdf", "dissertation_Lrosenthal.pdf"), output = "full_dissertation_LRosenthal.pdf")
 
