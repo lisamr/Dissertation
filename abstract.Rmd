@@ -1,0 +1,34 @@
+---
+output: pdf_document
+editor_options: 
+  
+  chunk_output_type: console
+header-includes:
+    - \usepackage{setspace}
+    - \usepackage[left]{lineno}
+    - \usepackage{indentfirst}
+    - \setlength\parindent{1cm}
+    - \usepackage{caption} #customize figure caption font
+    - \captionsetup[figure]{labelformat=empty}
+    - \captionsetup[table]{labelformat=empty}
+csl: ecology-letters_inpress.csl
+bibliography: dissertation_refs.bib
+fontsize: 12pt
+geometry: margin=1in
+---
+\doublespacing
+
+## Abstract 
+
+Global losses of biodiversity alter interactions amongst hosts and pathogens, and in turn, affect disease dynamics. Uncovering the mechanisms underlying relationships between diversity and disease risk is essential for predicting and managing emerging outbreaks. It is also critical to understand how decisions that researchers make, such as how to measure disease risk, may affect inference in diversity-disease patterns. In my dissertation, I broadly sought to understand why diversity (sometimes) limits disease risk by focusing on two pathosystems.
+
+The first system I used is a forest disease, caused by *Phytophthora ramorum*, a generalist oomycete pathogen that has killed millions of tanoak and oak trees along the coast of California and southwestern Oregon. Studying the biology of natural disease systems is powerful for understanding linkages among community composition, host competence (i.e. the ability to acquire infections and contribute to transmission), and various metrics of disease. In chapter 1, I quantified the sporulation potential of common plant species inhabiting the Big Sur region of coastal California. These lab-based competence assays indicated that bay laurel and tanoak produced large quantities of sporangia; all remaining species produced much less. In chapter 2, I studied natural forests infested by sudden oak death to empirically evaluate hypotheses underlying previously observed negative diversity-disease relationships (i.e. 'dilution effect'). In order to understand how the whole host community might contribute to transmission risk, I leveraged data from the sporulation assays and augmented it to plant community and disease field data from a large forest monitoring plot network. I demonstrated that aggregating disease observations at the community-level can lead to misinterpretations of dilution mechanisms, bias towards a negative diversity-disease relationship, and through review of the dilution effect literature, I found that this oversight is surprisingly common. 
+
+I also relied on a tractable model system consisting of crop seedlings and an agricultural fungal pathogen, *Rhizoctonia solani*. In chapter 3, I planted and inoculated experimental mesocosms in a greenhouse to test how variation in overall species densities and species loss order along a richness gradient affects disease risk. Consistent with theoretical expectations, richness only limited disease when species loss order negatively correlated with host competence and overall species density was intransient with richness. When species density positively correlated with richness or species loss order was random, richness had either a positive or negligible association with disease. 
+
+Returning to my overarching question, I found that diversity is more likely to limit disease risk under specific patterns of community assembly and when disease risk is measured as community prevalence. These results present areas ripe for continued research, such as documenting how communities naturally (dis)assemble. They also raise points for discussion, including whether community prevalence--which captures overall disease burden rather than risk of acquiring disease--should be considered under the dilution effect purview. This work adds to the rich and rapidly progressing research focused on uncovering *why* biodiversity alters disease dynamics. 
+
+
+
+
+
