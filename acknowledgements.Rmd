@@ -1,0 +1,40 @@
+---
+output: pdf_document
+editor_options: 
+  
+  chunk_output_type: console
+header-includes:
+    - \usepackage{setspace}
+    - \usepackage[left]{lineno}
+    - \usepackage{indentfirst}
+    - \setlength\parindent{1cm}
+    - \usepackage{caption} #customize figure caption font
+    - \captionsetup[figure]{labelformat=empty}
+    - \captionsetup[table]{labelformat=empty}
+csl: ecology-letters_inpress.csl
+bibliography: dissertation_refs.bib
+fontsize: 12pt
+geometry: margin=1in
+---
+\doublespacing
+
+# Acknowledgements
+
+I owe a great amount of gratitude to colleagues, friends, loved ones, and places that got me to where I am today. For starters, I am grateful for receiving guidance--pertaining to both academics and life--from Dave Rizzo. He gave me trust, kindness, liberty and confidence to think creatively and independently. Members of the Rizzo lab, too, provided me with much feedback during lab meetings, good laughs, and portals into other aspects of the **F**ungal/**f**ungal world. In particular, I thank Allison Simler-Williamson for being a peer and a teacher, providing meaningful feedback over conversations and writing, and for inspiring me to develop my quantitative skills. 
+
+I thank my dissertation committee members, who were also important for giving me well-rounded perspectives. Andrew Latimer was essential for quantitative feedback and importantly, for letting me tag along in his lab's weekly meetings. I've learned so much from my peers who are such great forest ecologists (shoutout to Latimer lab folks!). I am lucky to have met Felicia Keesing during my first year when she visited UC Davis, as she has an unparalleled wealth of knowledge surrounding diversity and disease topics. Each time I spoke or emailed with her, she challenged me to think harder, while simultaneously validating my ideas. 
+
+Thank you to the many other faculty, staff, and peers in the UC Davis community for providing timely feedback and new insights. All members of my qualifying committee--Robert Hijmans, Janet Foley, Marcel Holyoak, Tom Gordon, and Hugh Safford--empowered me to develop as a scientist. Special thanks to Hugh for empathizing with my climber-ecologist combo and for continuing to support its ups and downs. GGE-affiliated faculty members and folks at the DataLab, especially Wesley Brooks, were instrumental in helping me develop stronger statistical modeling and computational skills. I am also grateful for being able to pop into meetings with the Fire Severity crew, most of whom are women. I learned so much from that community and I look forward to continuing to work with many of them in years to come!
+
+I also acknowledge my funding sources, UC Davis GGE and NSF Graduate Research Fellowship, for granting me extra time to devote to my research. Thanks to Northern California Botanists scholarship, Jastro-Shields award, and Miller Plant award for financial resources used to conduct my research. 
+
+Of course I am also indebted to the people who supported me in the years approaching graduate school. Thank you to my parents, siblings, niece and nephew, and grandparents for the support and desire to pursue higher education. Thank you to Tom Bruns for a charismatic introduction into the world of fungi. 
+
+To my community of friends, thank you for keeping it silly and fun. I am happy to have maintained many lasting friendships (some 10+ years!) from Davis, Sacramento, and the East Bay. In particular, thanks to the lively people from the Farmhouse and Kingman. You know who you are and how much I love you! Extra shoutout to my climbing dirtbags and gymrats. You are great and keep me stoked.
+
+And the rocks of California--Cookie cliff, Sugarloaf, Snowshed to name a few favorites. Their beautiful, aesthetic granite lines beckon me to spend my free time in the mountains. Although they may bring me heartbreak at times, I'll keep coming back for intense moments of pure joy. 
+
+Above all, I am lucky to be supported by my two best friends: Lobster and Corey Todd. To Lobby--you bring me calm and happiness. Whenever I need a break from work, you're there to snuggle, follow me to the kitchen, and will listen to me say, for the millionth time, that you're such a good boy. And Corey, you're my favorite person. You balance me out and I couldn't ask for a better person to have been by my side for all of these past years and years to come. 
+
+
+

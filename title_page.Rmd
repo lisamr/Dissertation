@@ -1,0 +1,74 @@
+---
+header-includes:
+    - \usepackage{setspace}
+    - \usepackage[left]{lineno}
+    - \usepackage{indentfirst}
+    - \setlength\parindent{1cm}
+
+fontsize: 11pt
+geometry: margin=1in
+output: pdf_document
+---
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+\begin{center}
+
+\singlespacing
+Why diversity (sometimes) limits disease risk: Drivers underlying diversity-disease relationships in natural and model plant-fungal systems
+
+\doublespacing
+By  
+
+\singlespacing
+LISA M. ROSENTHAL
+
+DISSERTATION
+
+\doublespacing
+Submitted in partial satisfaction of the requirements for the degree of
+
+DOCTOR OF PHILOSOPHY
+
+in 
+
+Ecology
+
+in the 
+
+OFFICE OF GRADUATE STUDIES
+
+of the
+
+UNIVERSITY OF CALIFORNIA
+
+DAVIS
+
+Approved:
+
+\singlespacing
+\vspace{2mm}
+\rule{8cm}{0.2mm}
+\vspace{-2mm}
+
+David M. Rizzo, Chair 
+
+\vspace{7mm}
+\rule{8cm}{0.2mm}
+\vspace{-2mm}
+
+Felicia Keesing 
+
+\vspace{7mm}
+\rule{8cm}{0.2mm}
+\vspace{-2mm}
+
+Andrew M. Latimer  
+
+\doublespacing
+
+Committee in Charge
+
+2021
+
+\end{center}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.7.26)  4 AUG 2021 18:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.6)  6 AUG 2021 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -609,7 +609,7 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 )
 (/Users/lisarosenthal/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-
 pdftex.def
-File: l3backend-pdftex.def 2021-07-12 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count317
 \l__pdf_internal_box=\box74
 ) (./dissertation_LRosenthal.aux
@@ -716,31 +716,15 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-
-pdfTeX warning: pdflatex (file ./title_page.pdf): PDF inclusion: found PDF vers
-ion <1.6>, but at most version <1.5> allowed
 <title_page.pdf, id=116, 614.295pt x 794.97pt>
 File: title_page.pdf Graphic file (type pdf)
 <use title_page.pdf>
 Package pdftex.def Info: title_page.pdf  used on input line 92.
 (pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-
-
-pdfTeX warning: pdflatex (file ./title_page.pdf): PDF inclusion: found PDF vers
-ion <1.6>, but at most version <1.5> allowed
 File: title_page.pdf Graphic file (type pdf)
 <use title_page.pdf>
 Package pdftex.def Info: title_page.pdf  used on input line 92.
 (pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-
-
-pdfTeX warning: pdflatex (file ./title_page.pdf): PDF inclusion: found PDF vers
-ion <1.6>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex (file ./title_page.pdf): PDF inclusion: found PDF vers
-ion <1.6>, but at most version <1.5> allowed
 <title_page.pdf, id=119, page=1, 614.295pt x 794.97pt>
 File: title_page.pdf Graphic file (type pdf)
 <use title_page.pdf, page 1>
@@ -764,8 +748,8 @@ Package pdftex.def Info: title_page.pdf , page1 used on input line 92.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 [1
 
- <./title_page.pdf>] [2{/Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/ma
-p/pdftex/updmap/pdftex.map}] [3] [4] (./dissertation_LRosenthal.toc
+ <./title_page.pdf{/Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/map/pdf
+tex/updmap/pdftex.map}>] [2] [3] [4] [5] (./dissertation_LRosenthal.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
 .
 (/Users/lisarosenthal/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -803,157 +787,157 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `dissertation_LRosenthal.toc'.
 
-[5]
+[6]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 198.
+(Font)              <10> on input line 263.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 198.
+(Font)              <7> on input line 263.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 198.
+(Font)              <5> on input line 263.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.249 
+l.314 
        [1] [2] [3] [4] [5] [6] [7] [8]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
-76.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
+41.
 (/Users/lisarosenthal/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [9] [10]
-<figure/chapter1/Fig1_sporangia.jpg, id=272, 2107.875pt x 1204.5pt>
+<figure/chapter1/Fig1_sporangia.jpg, id=261, 2107.875pt x 1204.5pt>
 File: figure/chapter1/Fig1_sporangia.jpg Graphic file (type jpg)
 <use figure/chapter1/Fig1_sporangia.jpg>
 Package pdftex.def Info: figure/chapter1/Fig1_sporangia.jpg  used on input line
- 673.
+ 738.
 (pdftex.def)             Requested size: 469.74852pt x 268.42772pt.
 [11] [12 <./figure/chapter1/Fig1_sporangia.jpg>]
-<figure/chapter1/Fig2_chlamydospores.jpg, id=286, 978.65625pt x 559.08875pt>
+<figure/chapter1/Fig2_chlamydospores.jpg, id=275, 978.65625pt x 559.08875pt>
 File: figure/chapter1/Fig2_chlamydospores.jpg Graphic file (type jpg)
 <use figure/chapter1/Fig2_chlamydospores.jpg>
 Package pdftex.def Info: figure/chapter1/Fig2_chlamydospores.jpg  used on input
- line 717.
-(pdftex.def)             Requested size: 469.7646pt x 268.36807pt.
+ line 782.
+(pdftex.def)             Requested size: 281.86174pt x 161.02255pt.
 [13 <./figure/chapter1/Fig2_chlamydospores.jpg>]
-<figure/chapter1/Fig3_lesions_spores.jpg, id=293, 4215.75pt x 2710.125pt>
+<figure/chapter1/Fig3_lesions_spores.jpg, id=284, 4215.75pt x 2710.125pt>
 File: figure/chapter1/Fig3_lesions_spores.jpg Graphic file (type jpg)
 <use figure/chapter1/Fig3_lesions_spores.jpg>
 Package pdftex.def Info: figure/chapter1/Fig3_lesions_spores.jpg  used on input
- line 748.
+ line 813.
 (pdftex.def)             Requested size: 469.71635pt x 301.96051pt.
 [14 <./figure/chapter1/Fig3_lesions_spores.jpg>] [15] [16] [17] [18] [19
 
 ]
-<figure/chapter2/MS_diagram6_173mm.pdf, id=327, 492.23299pt x 333.57925pt>
+<figure/chapter2/MS_diagram6_173mm.pdf, id=317, 492.23299pt x 333.57925pt>
 File: figure/chapter2/MS_diagram6_173mm.pdf Graphic file (type pdf)
 <use figure/chapter2/MS_diagram6_173mm.pdf>
 Package pdftex.def Info: figure/chapter2/MS_diagram6_173mm.pdf  used on input l
-ine 1002.
+ine 1067.
 (pdftex.def)             Requested size: 469.76677pt x 318.35422pt.
 [20] [21 <./figure/chapter2/MS_diagram6_173mm.pdf>] [22] [23]
-<figure/chapter2/map_151plots.pdf, id=417, 232.87pt x 260.975pt>
+<figure/chapter2/map_151plots.pdf, id=406, 232.87pt x 260.975pt>
 File: figure/chapter2/map_151plots.pdf Graphic file (type pdf)
 <use figure/chapter2/map_151plots.pdf>
 Package pdftex.def Info: figure/chapter2/map_151plots.pdf  used on input line 1
-157.
+223.
 (pdftex.def)             Requested size: 232.87296pt x 260.97833pt.
 [24 <./figure/chapter2/map_151plots.pdf>] [25] [26] [27] [28]
-<figure/chapter2/all_density_plots.pdf, id=474, 491.8375pt x 246.9225pt>
+<figure/chapter2/all_density_plots.pdf, id=463, 491.8375pt x 246.9225pt>
 File: figure/chapter2/all_density_plots.pdf Graphic file (type pdf)
 <use figure/chapter2/all_density_plots.pdf>
 Package pdftex.def Info: figure/chapter2/all_density_plots.pdf  used on input l
-ine 1383.
+ine 1449.
 (pdftex.def)             Requested size: 469.7721pt x 235.84474pt.
 [29] [30 <./figure/chapter2/all_density_plots.pdf>]
-<figure/chapter2/nestedness_competence.pdf, id=500, 491.8375pt x 312.16624pt>
+<figure/chapter2/nestedness_competence.pdf, id=489, 491.8375pt x 312.16624pt>
 File: figure/chapter2/nestedness_competence.pdf Graphic file (type pdf)
 <use figure/chapter2/nestedness_competence.pdf>
 Package pdftex.def Info: figure/chapter2/nestedness_competence.pdf  used on inp
-ut line 1419.
+ut line 1485.
 (pdftex.def)             Requested size: 469.7721pt x 298.16147pt.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-436.
+502.
 (/Users/lisarosenthal/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [31 <./figure/chapter2/nestedness_competence.pdf>]
-<figure/chapter2/disease_risk_plotlevel.pdf, id=1465, 491.8375pt x 312.16624pt>
+<figure/chapter2/disease_risk_plotlevel.pdf, id=1455, 491.8375pt x 312.16624pt>
 
 File: figure/chapter2/disease_risk_plotlevel.pdf Graphic file (type pdf)
 <use figure/chapter2/disease_risk_plotlevel.pdf>
 Package pdftex.def Info: figure/chapter2/disease_risk_plotlevel.pdf  used on in
-put line 1468.
+put line 1534.
 (pdftex.def)             Requested size: 469.7721pt x 298.16147pt.
 [32] [33 <./figure/chapter2/disease_risk_plotlevel.pdf>]
-<figure/chapter2/disease_risk_specieslevel.pdf, id=1495, 312.16624pt x 243.9112
+<figure/chapter2/disease_risk_specieslevel.pdf, id=1484, 312.16624pt x 243.9112
 5pt>
 File: figure/chapter2/disease_risk_specieslevel.pdf Graphic file (type pdf)
 <use figure/chapter2/disease_risk_specieslevel.pdf>
 Package pdftex.def Info: figure/chapter2/disease_risk_specieslevel.pdf  used on
- input line 1517.
+ input line 1583.
 (pdftex.def)             Requested size: 312.17024pt x 243.91435pt.
 [34 <./figure/chapter2/disease_risk_specieslevel.pdf>] [35] [36] [37] [38] [39]
 [40] [41] [42] [43] [44] [45] [46]
-<figure/chapter3/four_trts_comm_prev.pdf, id=1585, 514.92375pt x 284.06125pt>
+<figure/chapter3/four_trts_comm_prev.pdf, id=1574, 514.92375pt x 284.06125pt>
 File: figure/chapter3/four_trts_comm_prev.pdf Graphic file (type pdf)
 <use figure/chapter3/four_trts_comm_prev.pdf>
 Package pdftex.def Info: figure/chapter3/four_trts_comm_prev.pdf  used on input
- line 2086.
+ line 2151.
 (pdftex.def)             Requested size: 469.76776pt x 259.15062pt.
 [47 <./figure/chapter3/four_trts_comm_prev.pdf>]
-<figure/chapter3/four_trts_spp_prev.pdf, id=1604, 433.62pt x 281.05pt>
+<figure/chapter3/four_trts_spp_prev.pdf, id=1593, 433.62pt x 281.05pt>
 File: figure/chapter3/four_trts_spp_prev.pdf Graphic file (type pdf)
 <use figure/chapter3/four_trts_spp_prev.pdf>
 Package pdftex.def Info: figure/chapter3/four_trts_spp_prev.pdf  used on input 
-line 2105.
+line 2170.
 (pdftex.def)             Requested size: 433.63878pt x 281.06216pt.
 [48 <./figure/chapter3/four_trts_spp_prev.pdf>] [49] [50] [51]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 2347.
+(Font)              <9> on input line 2414.
 
-Overfull \hbox (0.66473pt too wide) in paragraph at lines 2347--2347
+Overfull \hbox (0.66473pt too wide) in paragraph at lines 2414--2414
 []\T1/lmr/m/n/9 ACMA|  
  []
 
 
-Overfull \hbox (0.92168pt too wide) in paragraph at lines 2347--2347
+Overfull \hbox (0.92168pt too wide) in paragraph at lines 2414--2414
 []\T1/lmr/m/n/9 UMCA|  
  []
 
 
-Overfull \hbox (7.98666pt too wide) in paragraph at lines 2347--2347
+Overfull \hbox (7.98666pt too wide) in paragraph at lines 2414--2414
 []\T1/lmr/m/n/9 UMCAD|  
  []
 
 [52] [53] [54]
-<figure/chapter2/supp_pairs_plot.pdf, id=1657, 469.755pt x 433.62pt>
+<figure/chapter2/supp_pairs_plot.pdf, id=1646, 469.755pt x 433.62pt>
 File: figure/chapter2/supp_pairs_plot.pdf Graphic file (type pdf)
 <use figure/chapter2/supp_pairs_plot.pdf>
 Package pdftex.def Info: figure/chapter2/supp_pairs_plot.pdf  used on input lin
-e 2398.
+e 2465.
 (pdftex.def)             Requested size: 469.75386pt x 433.61894pt.
-<figure/chapter2/PPC_density_models2.pdf, id=1658, 469.755pt x 144.54pt>
+<figure/chapter2/PPC_density_models2.pdf, id=1647, 469.755pt x 144.54pt>
 File: figure/chapter2/PPC_density_models2.pdf Graphic file (type pdf)
 <use figure/chapter2/PPC_density_models2.pdf>
 Package pdftex.def Info: figure/chapter2/PPC_density_models2.pdf  used on input
- line 2407.
+ line 2474.
 (pdftex.def)             Requested size: 469.75386pt x 144.53963pt.
-<figure/chapter2/PPC_density_models1.pdf, id=1659, 325.215pt x 144.54pt>
+<figure/chapter2/PPC_density_models1.pdf, id=1648, 325.215pt x 144.54pt>
 File: figure/chapter2/PPC_density_models1.pdf Graphic file (type pdf)
 <use figure/chapter2/PPC_density_models1.pdf>
 Package pdftex.def Info: figure/chapter2/PPC_density_models1.pdf  used on input
- line 2415.
+ line 2482.
 (pdftex.def)             Requested size: 325.22908pt x 144.54623pt.
-<figure/chapter2/PPC_community_compentency.pdf, id=1660, 216.81pt x 144.54pt>
+<figure/chapter2/PPC_community_compentency.pdf, id=1649, 216.81pt x 144.54pt>
 File: figure/chapter2/PPC_community_compentency.pdf Graphic file (type pdf)
 <use figure/chapter2/PPC_community_compentency.pdf>
 Package pdftex.def Info: figure/chapter2/PPC_community_compentency.pdf  used on
- input line 2424.
+ input line 2491.
 (pdftex.def)             Requested size: 216.81938pt x 144.54623pt.
-<figure/chapter2/PPC_diseaserisk.pdf, id=1661, 469.755pt x 252.945pt>
+<figure/chapter2/PPC_diseaserisk.pdf, id=1650, 469.755pt x 252.945pt>
 File: figure/chapter2/PPC_diseaserisk.pdf Graphic file (type pdf)
 <use figure/chapter2/PPC_diseaserisk.pdf>
 Package pdftex.def Info: figure/chapter2/PPC_diseaserisk.pdf  used on input lin
-e 2432.
+e 2499.
 (pdftex.def)             Requested size: 469.75386pt x 252.94438pt.
 [55
 
@@ -964,72 +948,72 @@ ommunity_compentency.pdf
 pdfTeX warning: pdflatex (file ./figure/chapter2/PPC_community_compentency.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >] [57 <./figure/chapter2/PPC_diseaserisk.pdf>]
-Overfull \hbox (4.10022pt too wide) in paragraph at lines 2496--2496
+Overfull \hbox (4.10022pt too wide) in paragraph at lines 2563--2563
  \T1/lmr/bx/n/10.95 present|
  []
 
 [58
 
 ] [59] [60] [61] [62]
-<figure/chapter2/mean_v_total_basalarea.pdf, id=2988, 469.755pt x 216.81pt>
+<figure/chapter2/mean_v_total_basalarea.pdf, id=2976, 469.755pt x 216.81pt>
 File: figure/chapter2/mean_v_total_basalarea.pdf Graphic file (type pdf)
 <use figure/chapter2/mean_v_total_basalarea.pdf>
 Package pdftex.def Info: figure/chapter2/mean_v_total_basalarea.pdf  used on in
-put line 2657.
+put line 2724.
 (pdftex.def)             Requested size: 469.75386pt x 216.80946pt.
 [63
 
 
 ] [64 <./figure/chapter2/mean_v_total_basalarea.pdf>]
-<figure/chapter2/correlogram.pdf, id=3019, 325.215pt x 252.945pt>
+<figure/chapter2/correlogram.pdf, id=3008, 325.215pt x 252.945pt>
 File: figure/chapter2/correlogram.pdf Graphic file (type pdf)
 <use figure/chapter2/correlogram.pdf>
-Package pdftex.def Info: figure/chapter2/correlogram.pdf  used on input line 26
-97.
+Package pdftex.def Info: figure/chapter2/correlogram.pdf  used on input line 27
+64.
 (pdftex.def)             Requested size: 325.21916pt x 252.94823pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2716--2720
+Underfull \hbox (badness 10000) in paragraph at lines 2783--2787
 
  []
 
 [65 <./figure/chapter2/correlogram.pdf>]
-<figure/chapter2/gaussian_process_correlation.pdf, id=3033, 361.35pt x 216.81pt
+<figure/chapter2/gaussian_process_correlation.pdf, id=3022, 361.35pt x 216.81pt
 >
 File: figure/chapter2/gaussian_process_correlation.pdf Graphic file (type pdf)
 <use figure/chapter2/gaussian_process_correlation.pdf>
 Package pdftex.def Info: figure/chapter2/gaussian_process_correlation.pdf  used
- on input line 2748.
+ on input line 2815.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
-<figure/chapter2/histogram_of_distances.pdf, id=3034, 361.35pt x 216.81pt>
+<figure/chapter2/histogram_of_distances.pdf, id=3023, 361.35pt x 216.81pt>
 File: figure/chapter2/histogram_of_distances.pdf Graphic file (type pdf)
 <use figure/chapter2/histogram_of_distances.pdf>
 Package pdftex.def Info: figure/chapter2/histogram_of_distances.pdf  used on in
-put line 2760.
+put line 2827.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
 [66 <./figure/chapter2/gaussian_process_correlation.pdf>] [67 <./figure/chapter
 2/histogram_of_distances.pdf>]
-<figure/chapter3/design.pdf, id=3061, 433.62pt x 216.81pt>
+<figure/chapter3/design.pdf, id=3051, 433.62pt x 216.81pt>
 File: figure/chapter3/design.pdf Graphic file (type pdf)
 <use figure/chapter3/design.pdf>
-Package pdftex.def Info: figure/chapter3/design.pdf  used on input line 2782.
+Package pdftex.def Info: figure/chapter3/design.pdf  used on input line 2849.
 (pdftex.def)             Requested size: 433.63878pt x 216.81938pt.
-<figure/chapter3/add_det_maps.pdf, id=3062, 433.62pt x 505.89pt>
+<figure/chapter3/add_det_maps.pdf, id=3052, 433.62pt x 505.89pt>
 File: figure/chapter3/add_det_maps.pdf Graphic file (type pdf)
 <use figure/chapter3/add_det_maps.pdf>
 Package pdftex.def Info: figure/chapter3/add_det_maps.pdf  used on input line 2
-791.
+858.
 (pdftex.def)             Requested size: 433.62555pt x 505.89645pt.
-<figure/chapter3/prop_rad_supplementary.pdf, id=3063, 289.08pt x 216.81pt>
+<figure/chapter3/prop_rad_supplementary.pdf, id=3053, 289.08pt x 216.81pt>
 File: figure/chapter3/prop_rad_supplementary.pdf Graphic file (type pdf)
 <use figure/chapter3/prop_rad_supplementary.pdf>
 Package pdftex.def Info: figure/chapter3/prop_rad_supplementary.pdf  used on in
-put line 2801.
+put line 2868.
 (pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-<figure/chapter3/four_trts_comm_dens.pdf, id=3064, 514.92375pt x 284.06125pt>
+<figure/chapter3/four_trts_comm_dens.pdf, id=3054, 514.92375pt x 284.06125pt>
 File: figure/chapter3/four_trts_comm_dens.pdf Graphic file (type pdf)
 <use figure/chapter3/four_trts_comm_dens.pdf>
 Package pdftex.def Info: figure/chapter3/four_trts_comm_dens.pdf  used on input
- line 2809.
+ line 2876.
 (pdftex.def)             Requested size: 469.76776pt x 259.15062pt.
 [68 <./figure/chapter3/design.pdf>] [69 <./figure/chapter3/add_det_maps.pdf>] [
 70 <./figure/chapter3/prop_rad_supplementary.pdf> <./figure/chapter3/four_trts_
@@ -1043,13 +1027,13 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `dissertation_LRosenthal.out' has not changed
 .
-(rerunfilecheck)             Checksum: 100C6DF072EE585D7FC5E686D2DEE998;5078.
+(rerunfilecheck)             Checksum: F2B46660BD0847050B5961EE9742398A;5134.
  ) 
 Here is how much of TeX's memory you used:
- 14698 strings out of 480502
- 231260 string characters out of 5898248
- 569584 words of memory out of 5000000
- 31643 multiletter control sequences out of 15000+600000
+ 14700 strings out of 480502
+ 231309 string characters out of 5898249
+ 568605 words of memory out of 5000000
+ 31644 multiletter control sequences out of 15000+600000
  499079 words of font info for 95 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  62i,17n,75p,1382b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1077,10 +1061,10 @@ mf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/lisarosenthal/Library/TinyTeX/
 texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/lisarosenthal/Library/TinyTe
 X/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></Users/lisarosenthal/Library/Tiny
 TeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on dissertation_LRosenthal.pdf (86 pages, 15213171 bytes).
+Output written on dissertation_LRosenthal.pdf (87 pages, 15195845 bytes).
 PDF statistics:
- 3515 PDF objects out of 3580 (max. 8388607)
- 2098 compressed objects within 21 object streams
- 410 named destinations out of 1000 (max. 500000)
+ 3503 PDF objects out of 3580 (max. 8388607)
+ 2093 compressed objects within 21 object streams
+ 411 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
