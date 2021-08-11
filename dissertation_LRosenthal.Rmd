@@ -60,9 +60,9 @@ I also acknowledge my funding sources, UC Davis GGE and NSF Graduate Research Fe
 
 Of course I am also indebted to the people who supported me in the years approaching graduate school. Thank you to my parents, siblings, niece and nephew, and grandparents for the support and desire to pursue higher education. Thank you to Tom Bruns for a charismatic introduction into the world of fungi. 
 
-To my community of friends, thank you for keeping it silly and fun. I am happy to have maintained many lasting friendships (some 10+ years!) from Davis, Sacramento, and the East Bay. In particular, thanks to the lively people from the Farmhouse and Kingman. You know who you are and how much I love you! Extra shoutout to my climbing dirtbags and gymrats. You are great and keep me stoked.
+To my community of friends, thank you for keeping it silly and fun. I am happy to have maintained many lasting friendships from Davis, Sacramento, and the East Bay. In particular, thanks to the lively people from the Farmhouse and Kingman. You know who you are and how much I love you! Extra shoutout to my climbing dirtbags and gymrats. You are great and keep me stoked.
 
-And the rocks of California--Cookie cliff, Sugarloaf, Snowshed to name a few favorites. Their beautiful, aesthetic granite lines beckon me to spend my free time in the mountains. Although they may bring me heartbreak at times, I'll keep coming back for intense moments of pure joy. 
+And the rocks of California--Cookie Cliff, Sugarloaf, Snowshed to name a few favorites. Their beautiful, aesthetic granite lines beckon me to spend my free time in the mountains. Although they may bring me heartbreak at times, I'll keep coming back for intense moments of pure joy. 
 
 Above all, I am lucky to be supported by my two best friends: Lobster and Corey Todd. To Lobby--you bring me calm and happiness. Whenever I need a break from work, you're there to snuggle, follow me to the kitchen, and will listen to me say (for the millionth time) that you're such a good boy. And Corey, you're my favorite person and biggest role model. You balance me out and keep me grounded. I couldn't ask for a better person to have been by my side for all of these past years and years to come. 
 
@@ -70,18 +70,19 @@ Above all, I am lucky to be supported by my two best friends: Lobster and Corey 
 
 <!-- Abstract page -->
 
-\begin{raggedleft}
-\singlespacing
-\setlength{\parskip}{0em}
-Lisa M. Rosenthal
+<!-- Special formatting not needed anymore. -->
+<!-- \begin{raggedleft} -->
+<!-- \singlespacing -->
+<!-- \setlength{\parskip}{0em} -->
+<!-- Lisa M. Rosenthal -->
 
-September 2021
+<!-- August 2021 -->
 
-ECOLOGY
+<!-- ECOLOGY -->
 
-\end{raggedleft}
+<!-- \end{raggedleft} -->
 
-\doublespacing
+<!-- \doublespacing -->
 
 # Abstract 
 
@@ -89,7 +90,7 @@ Global losses of biodiversity alter interactions amongst hosts and pathogens, an
 
 The first system I examined is a forest disease sudden oak death, caused by *Phytophthora ramorum*, a generalist oomycete pathogen that has killed millions of tanoak and oak trees along the coast of California and southwestern Oregon. Studying the biology of natural disease systems is powerful for understanding linkages among community composition, host competence (i.e. the ability to acquire infections and contribute to transmission), and various metrics of disease. In chapter 1, I quantified the sporulation potential of common plant species inhabiting the Big Sur region of coastal California. These lab-based competence assays indicated that bay laurel and tanoak produced large quantities of sporangia; all remaining species produced much less. In chapter 2, I studied natural forests infested by sudden oak death to empirically evaluate hypotheses underlying previously observed negative diversity-disease relationships (i.e. 'dilution effect'). In order to understand how the whole host community might contribute to transmission risk, I leveraged data from the sporulation assays and augmented it to plant community and disease field data from a large forest monitoring plot network. I demonstrated that aggregating disease observations at the community-level can lead to misinterpretations of dilution mechanisms, bias towards a negative diversity-disease relationship, and through review of the dilution effect literature, I found that this oversight is surprisingly common. 
 
-I also relied on a tractable model system consisting of crop seedlings and an agricultural fungal pathogen, *Rhizoctonia solani*. In chapter 3, I planted and inoculated experimental mesocosms in a greenhouse to test how variation in overall species densities and species loss order along a richness gradient affects disease risk. Consistent with theoretical expectations, richness only limited disease when species loss order negatively correlated with host competence and overall species density was intransient with richness. When species density positively correlated with richness or species loss order was random, richness had either a positive or negligible association with disease. 
+I also relied on a tractable model system consisting of crop seedlings and an agricultural fungal pathogen, *Rhizoctonia solani*. In chapter 3, I planted and inoculated experimental mesocosms in a greenhouse to test how variation in overall species densities and species loss order along a richness gradient affects disease risk. Consistent with theoretical expectations, richness only limited disease when species loss order negatively correlated with host competence and overall species density remained constant with richness. When species density positively correlated with richness or species loss order was random, richness had either a positive or negligible association with disease. 
 
 Returning to my overarching question, I found that diversity is more likely to limit disease risk under specific patterns of community assembly and when disease risk is measured as community prevalence. These results present areas ripe for continued research, such as documenting how communities naturally (dis)assemble. They also raise points for discussion, including whether community prevalence--which captures overall disease burden rather than risk of acquiring disease--should be considered under the dilution effect purview. This work adds to the rich and rapidly progressing research focused on uncovering *why* biodiversity alters disease dynamics. 
 
@@ -117,6 +118,11 @@ Lisa M. Rosenthal^1,2^, Sebastian N. Fajardo^2^, David M. Rizzo^2^
 ^2^ Department of Plant Pathology, University of California, Davis, CA 95616, USA
 
 \normalsize
+
+\setlength{\parindent}{0in}
+\smallskip
+*Chapter 1 was accepted for publication in the journal* Plant Disease *and is reproduced here.*
+\setlength{\parindent}{.25in}
 
 <!-- figure captions to be referenced -->
 ```{r figs_ch1, include = F}
@@ -298,7 +304,7 @@ fig_ch2(name = 'densities_ch2', caption = 'Relationships between richness and va
 
 fig_ch2(name = 'comp_ch2', caption = 'Nestedness and the linkages between host competence and diversity in both forest types. A) Matrix of species that are present among the 151 study plots. The top rows represent the most ubiquitous species and the leftmost columns represent the richest plots. In a perfectly nested set of communities, the depauperate communities would consist of a subset of the species present their richer counterparts, causing this matrix to be filled entirely in the upper left-hand side. B) Sporulation potential (mean ± SE) as assessed in laboratory inoculation assays. Species are in order of rank ubiquity. C) Each species’ contribution towards community competence (mean ± SE). D) The relationship between richness and community competence with points horizontally jittered. Line and shaded region represents the median and 90% HPDI of the posterior estimate of the mean. Solid lines indicate the 90% HPDI of the effect of richness did not cross zero. Species not included in the laboratory sporulation assays (grey) are estimated as the median of those that were measured. Analyses are shown separately for each forest type, mixed evergreen (blue) and redwood (orange).')
 
-fig_ch2(name ='dis_plot_ch2', caption = 'Effects of community-related covariates of disease risk models evaluated as A) plot-level disease prevalence for all hosts, B) plot-level disease prevalence for commonly symptomatic hosts, and C) individual-level disease risk for commonly symptomatic hosts. Note that panel C shows the mean effect of richness (beta_bar, equation 2), while species-specific parameters of the individual-level disease risk models are displayed in Fig. 6. The three colors represent the three explanatory models (M1. Richness only, M2. Richness + density of key hosts, M3. Richness + community competence) being contrasted within each disease risk metric. Posterior estimates are displayed with the median and 90% HDPI, with intervals not crossing one shown with a solid line and closed points.')
+fig_ch2(name ='dis_plot_ch2', caption = 'Effects of community-related covariates of disease risk models evaluated as A) community-level disease prevalence for all hosts, B) community-level disease prevalence for commonly symptomatic hosts, and C) individual-level disease risk for commonly symptomatic hosts. Note that panel C shows the mean effect of richness (beta_bar, equation 2), while species-specific parameters of the individual-level disease risk models are displayed in Fig. 6. The three colors represent the three explanatory models (M1. Richness only, M2. Richness + density of key hosts, M3. Richness + community competence) being contrasted within each disease risk metric. Posterior estimates are displayed with the median and 90% HDPI, with intervals not crossing one shown with a solid line and closed points.')
 
 fig_ch2(name ='dis_spp_ch2', caption = 'Additional posterior estimates of the individual-level disease risk models, including species-specific A) intercepts and B) effects of richness, representing alpha_s and beta_s for species *s*, respectively (see equation 2). Posterior estimates are displayed with the median and 90% HDPI, with intervals not crossing one shown with a solid line and closed points.')
 
@@ -316,7 +322,7 @@ fig_app_ch2('ch2ppc4', 'Density plots of posterior predictions (100 samples, lig
 
 fig_app_ch2('ch2basalarea', 'Mean basal area of individuals in a plot was highly correlated with the total basal area for the top 6 most commonly occurring species. Plots with more total basal area on average had larger individual plants.')
 
-fig_app_ch2('ch2moransI', 'Moran’s I correlogram testing for spatial autocorrelation. The mean Pearson’s residuals from the best performing model assessing plot-level disease prevalence among all hosts were used to assess unexplained correlations between plots and their pairwise distances. Closed black circles indicate significant autocorrelation (p < 0.05).')
+fig_app_ch2('ch2moransI', 'Moran’s I correlogram testing for spatial autocorrelation. The mean Pearson’s residuals from the best performing model assessing community-level disease prevalence among all hosts were used to assess unexplained correlations between plots and their pairwise distances. Closed black circles indicate significant autocorrelation (p < 0.05).')
 
 fig_app_ch2('ch2GPcor', 'Median (red) correlation between plots with 100 posterior draws (grey).')
 
@@ -326,6 +332,11 @@ fig_app_ch2('ch2GPhist', 'Distribution of plot pairwise distances.')
 
 
 \normalsize
+
+\setlength{\parindent}{0in}
+\smallskip
+*Chapter 2 was accepted for publication in the journal* Ecology Letters *and is reproduced here.*
+\setlength{\parindent}{.25in}
 
 ## Abstract  
 Understanding why diversity sometimes limits disease is essential for managing outbreaks; however, mechanisms underlying this ‘dilution effect’ remain poorly understood. Negative diversity-disease relationships have previously been detected in plant communities impacted by an emerging forest disease, sudden oak death. We used this focal system to empirically evaluate whether these relationships were driven by dilution mechanisms that reduce transmission risk for individuals or from the fact that disease was averaged across the host community. We integrated laboratory competence measurements with plant community and symptom data from a large forest monitoring network. Richness increased disease risk for bay laurel trees, dismissing possible dilution mechanisms. Nonetheless, richness was negatively associated with community-level disease prevalence because disease was aggregated among hosts that vary in disease susceptibility. Aggregating observations (which is surprisingly common in other dilution effect studies) can lead to misinterpretations of dilution mechanisms and bias towards a negative diversity-disease relationship.  
@@ -410,9 +421,9 @@ I_i \sim \text{Bernoulli}(p_i) \\
   \Big) 
   \end{gathered}
 \end{equation}
-where intercept $\alpha_j$ varied by plot, intercept $\alpha_s$ and the effect of richness $\beta_s$ varied by species, and $\gamma$ characterized the basal area of the plant (summed among live stems) in order to account for size-dependent variation in susceptibility. Plot-level intercepts were normally distributed with a mean $BX_j$, defined by the same predictor variables as described previously in the plot-level models. $\alpha_s$ and $\beta_s$ were drawn from a multivariate normal distribution, defined by means $\alpha_0$ and $\bar{\beta}$ and covariance matrix $\Sigma$.    
+where intercept $\alpha_j$ varied by plot, intercept $\alpha_s$ and the effect of richness $\beta_s$ varied by species, and $\gamma$ characterized the basal area of the plant (summed among live stems) in order to account for size-dependent variation in susceptibility. Plot-varying intercepts were normally distributed with a mean $BX_j$, defined by the same predictor variables as described previously in the community-level models. $\alpha_s$ and $\beta_s$ were drawn from a multivariate normal distribution, defined by means $\alpha_0$ and $\bar{\beta}$ and covariance matrix $\Sigma$.    
 
-Host densities and community competence were square root transformed to spread the right-skewed distributions. All variables were centered and scaled by dividing by 2 SD [@Gelman2008-kn]. Collinearity was assessed by confirming that correlations between continuous variables were <0.5 (`r fig_app_ch2('ch2pairsplot', display = 'cite')`). We contrasted model predictive performance by computing approximate leave-one-out cross-validation, comparing models based on the difference in expected log pointwise predictive density [ELPD; @Vehtari2017-rt]. We tested for spatial autocorrelation using a Moran’s I correlogram on the mean residuals from the best performing plot-level disease prevalence including all hosts. No significant spatial clustering emerged (`r fig_app_ch2('ch2moransI', display = 'cite')`). Additional information about our treatment of spatial autocorrelation is in Appendix S1.  
+Host densities and community competence were square root transformed to spread the right-skewed distributions. All variables were centered and scaled by dividing by 2 SD [@Gelman2008-kn]. Collinearity was assessed by confirming that correlations between continuous variables were <0.5 (`r fig_app_ch2('ch2pairsplot', display = 'cite')`). We contrasted model predictive performance by computing approximate leave-one-out cross-validation, comparing models based on the difference in expected log pointwise predictive density [ELPD; @Vehtari2017-rt]. We tested for spatial autocorrelation using a Moran’s I correlogram on the mean residuals from the best performing community-level disease prevalence including all hosts. No significant spatial clustering emerged (`r fig_app_ch2('ch2moransI', display = 'cite')`). Additional information about our treatment of spatial autocorrelation is in Appendix S1.  
 
 #### Model fitting
 Models were written in the Bayesian programming language `Stan` [@Stan_Development_Team2019-sw] and analyzed in the `R` environment [@R_Core_Team2019-wp; @Stan_Development_Team2020-lp]. Packages used for our analysis are listed in Appendix B. We used weakly informative priors and 4 chains with 2000 iterations each. Model fits were visually evaluated by comparing observed values against posterior predictive draws (Fig. B.2–B.5). Parameter estimates with 90% highest posterior density intervals (HPDI) that did not contain zero (or one, when expressed as odds ratios) were considered to have important, non-zero effects on the response variable. A common default in Bayesian analyses is to use 90% HPDIs because they are more stable than 95% intervals [@Goodrich2020-bb].  
@@ -458,7 +469,7 @@ By contrast, community competence, based on laboratory sporulation assays, did d
 
 When effects of richness were parsed for each species, richness had undetectable effects on disease risk for tanoak or oaks, but it had a positive effect for bay laurel. This result could be highly impactful given how central bay laurel is to pathogen spread. The positive effect of richness may reflect a correlation with unaddressed, disease-inducing factors, such as microclimates or pathogen invasion history. Plots with greater richness may have been invaded earlier by this nonnative pathogen, and thus *P. ramorum* would have more time to spread within those stands [@Cobb2020-si].  
 
-### Diversity-associated mechanisms of plot-level disease risk
+### Diversity-associated mechanisms of community-level disease risk
 Richness was negatively associated with disease prevalence for all hosts in a plot, which is best explained by the relative abundance of commonly symptomatic species. The number of rarely symptomatic host plants increased with richness, while the number of commonly symptomatic plants (accounting for 99.6% of detected infections) did not change. The proportion of commonly symptomatic hosts negatively covaried with richness, limiting the fraction of community-wide disease. Without rarely symptomatic species, models of community-level disease prevalence led to similar conclusions as the individual-level analysis—bay laurel density drove detected infections and richness did not have a strong effect. By aggregating disease among all hosts in a community, low-competence, rarely symptomatic hosts numerically diluted the proportion of symptomatic plants without affecting transmission risk to susceptible populations.  
 
 ### Differences in the diversity-disease relationship across hierarchical levels
@@ -516,7 +527,7 @@ Even when competence negatively correlates with extirpation risk, changes in dis
 
 Despite a strong theoretical foundation explaining how competence, species order loss, and abundance may influence the diversity-disease relationship, empirical tests are limited. Correlational studies of natural communities are powerful for identifying how species composition varies across richness levels [@Johnson2013-dg; @Lacroix2014-bv], which is essential for predicting how communities would likely disassemble. Nevertheless, the effects of different assembly patterns on disease risk may be best addressed under an experimental framework where species composition can be manipulated independently of diversity. To date, experimental studies focused on the dilution effect have compared random versus non-random species loss [@Johnson2019-wz; @Liu2018-kc] and additive versus substitutive assembly [@Johnson2013-dg; @Wojdak2014-mv]. However, interactions between these two influential axes of community assembly have yet to be empirically investigated. 
 
-Moreover, the relationship between diversity and disease can be sensitive to whether disease is measured at the community or species level. The dilution effect typically addresses how diversity impacts the risk of individuals acquiring disease, and hence disease is evaluated for particular host species. The dilution effect has also been assessed using community-level disease metrics, including total propagule load [e.g. @Young2014-ai] or average community disease severity or prevalence [e.g. @Haas2011-ut; @Mitchell2002-km], which capture overall transmission potential or disease burden, respectively. Despite their fundamental epidemiological differences, various metrics of disease for focal species and overall host communities frequently appear together in the dilution effect literature and can lead to divergent outcomes on diversity-disease patterns (Rosenthal et al. in review).
+Moreover, the relationship between diversity and disease can be sensitive to whether disease is measured at the community or species level. The dilution effect typically addresses how diversity impacts the risk of individuals acquiring disease, and hence disease is evaluated for particular host species. The dilution effect has also been assessed using community-level disease metrics, including total propagule load [e.g. @Young2014-ai] or average community disease severity or prevalence [e.g. @Haas2011-ut; @Mitchell2002-km], which capture overall transmission potential or disease burden, respectively. Despite their fundamental epidemiological differences, various metrics of disease for focal species and overall host communities frequently appear together in the dilution effect literature and can lead to divergent outcomes on diversity-disease patterns [@Rosenthal_undated-uy].
 
 Here we used artificial plant mesocosms to examine the effects of species identities and densities on disease caused by a fungal plant pathogen, *Rhizoctonia solani*. This generalist soil-borne pathogen causes visible aboveground damping-off symptoms when it infects belowground host tissue [@Otten2003-lc]. Transmission occurs between plants through infective hyphae and slows or arrests when resources are unavailable [@Bailey2000-ie]. Mesocosms inoculated with *R. solani* are ideal for testing community disease ecology theory because symptoms are obvious, epidemics are fast, high replication is feasible, and environmental conditions, host heterogeneity, and inoculum amounts are relatively easy to control [e.g. @Otten2001-ju; @Otten2003-lc; @Otten2005-ah]. 
 
@@ -584,7 +595,7 @@ Regardless of species loss order, additive assembly produced positive correlatio
 
 Diversity-disease relationships were largely insensitive to whether disease was measured at the species or community level (recorded as absolute or relative density of diseased plants). Our findings from substitutive communities—that non-random species loss increased community-wide disease risk and random species loss had little effect—were consistent with experimental studies measuring total infectious propagules [@Johnson2019-wz] or community-averaged disease severity [@Liu2018-kc]. Results from communities with additive assembly, which led to positive associations between disease and richness, further suggest that species loss order has minimal effects on community-level disease when densities of individual species are maintained.  
 
-What do results from our experiment, which tested hypothetical endpoints of community disassembly, portend for natural communities? Substitutive and additive assembly might arise when species niches either perfectly overlap or partition, respectively, but a saturating relationship between richness and density may be more realistic. Saturating host abundance should lead to disease risk rising, then falling across a richness gradient (Mihaljevic et al. 2014). Despite its strong influence on disease dynamics, few studies have examined the relationship between overall host density and diversity in natural ecosystems [but see @Guo2006-tp, Rosenthal et al. in review] and remains an important topic. Likewise, the strength of the competence-extirpation risk relationship can transform a negative diversity-disease relationship to one that is idiosyncratic. Although disease-prone species tend to be more resistant to perturbations [@Gibb2020-vx], extirpations are subject to environmental and demographic stochasticity. Additional stochasticity may weaken any negative extirpation risk-competence associations, add noise to community nestedness, and introduce more uncertainty in diversity-disease patterns. Finally, although various disease metrics did not lead to qualitatively different associations with richness, it is critical to consider what epidemiological information can be gleaned from each metric and its applications to disease management goals. 
+What do results from our experiment, which tested hypothetical endpoints of community disassembly, portend for natural communities? Substitutive and additive assembly might arise when species niches either perfectly overlap or partition, respectively, but a saturating relationship between richness and density may be more realistic. Saturating host abundance should lead to disease risk rising, then falling across a richness gradient (Mihaljevic et al. 2014). Despite its strong influence on disease dynamics, few studies have examined the relationship between overall host density and diversity in natural ecosystems [but see @Guo2006-tp; @Rosenthal_undated-uy] and remains an important topic. Likewise, the strength of the competence-extirpation risk relationship can transform a negative diversity-disease relationship to one that is idiosyncratic. Although disease-prone species tend to be more resistant to perturbations [@Gibb2020-vx], extirpations are subject to environmental and demographic stochasticity. Additional stochasticity may weaken any negative extirpation risk-competence associations, add noise to community nestedness, and introduce more uncertainty in diversity-disease patterns. Finally, although various disease metrics did not lead to qualitatively different associations with richness, it is critical to consider what epidemiological information can be gleaned from each metric and its applications to disease management goals. 
 
 Overall, our experimental study confirmed many theoretical predictions outlining effects of community assembly on disease risk. It is necessary to continue gathering information on how natural communities will likely (dis)assemble, which involves examining relationships among diversity, species densities, host competence and susceptibility, and likelihoods of extirpation. Through a combination of models, manipulative experimental systems, and surveys of natural communities, we can advance our understanding of how community assembly will impact disease, identify which species loss patterns are most likely to occur under various disturbances pressures, and devise actionable plans to mitigate emerging outbreaks. 
 
@@ -697,7 +708,7 @@ tmp
 \clearpage
 
 ```{r mod_plot_all}
-mod_plot_all <- tab_app_ch2('mod_plot_all', 'Posterior estimates (median log-odds, 90th HDPI) of the plot-level infection risk model assessed among all host species.')
+mod_plot_all <- tab_app_ch2('mod_plot_all', 'Posterior estimates (median log-odds, 90th HDPI) of the community-level infection risk model assessed among all host species.')
 
 rawCSV <- read.csv("tables/chapter2/mod_plot_all.csv")
 names(rawCSV) <- c('variable',	'Richness only',	'Richness + density of key hosts',	'Richness + community competency')
@@ -714,7 +725,7 @@ tmp
 \newpage
 
 ```{r mod_plot_HS}
-mod_plot_HS <- tab_app_ch2('mod_plot_HS', 'Posterior estimates (median log-odds, 90th HDPI) of the plot-level infection risk model assessed among commonly symptomatic species.')
+mod_plot_HS <- tab_app_ch2('mod_plot_HS', 'Posterior estimates (median log-odds, 90th HDPI) of the community-level infection risk model assessed among commonly symptomatic species.')
 
 rawCSV <- read.csv("tables/chapter2/mod_plot_HS.csv")
 names(rawCSV) <- c('variable',	'Richness only',	'Richness + density of key hosts',	'Richness + community competency')
@@ -765,7 +776,7 @@ Additionally, plot diversity was characterized using species richness of woody p
 ### Additional treatments of spatial autocorrelation
 
 #### Summary
-In addition to testing for spatial autocorrelation using a Moran's I correlogram (`r fig_app_ch2('ch2moransI', display = 'cite')`), we explored how our results might change if we incorporated a spatially weighted term into our models. Gaussian process (GP) regressions allow the covariance between plots to decay with distance. Because these models are computationally intensive, we ran one model assessing individual-level disease risk including covariates from the best performing non-spatial models (M2: +richness, tanoak basal area, and bay laurel basal). We also attempted to fit a GP plot-level disease risk model, but it would not converge. We suspect this is because the model was unable to seperate the two dispersion terms--the spatially weighted intercept and the dispersion parameter in the beta-binomial likelihood.
+In addition to testing for spatial autocorrelation using a Moran's I correlogram (`r fig_app_ch2('ch2moransI', display = 'cite')`), we explored how our results might change if we incorporated a spatially weighted term into our models. Gaussian process (GP) regressions allow the covariance between plots to decay with distance. Because these models are computationally intensive, we ran one model assessing individual-level disease risk including covariates from the best performing non-spatial models (M2: +richness, tanoak basal area, and bay laurel basal). We also attempted to fit a GP community-level disease risk model, but it would not converge. We suspect this is because the model was unable to seperate the two dispersion terms--the spatially weighted intercept and the dispersion parameter in the beta-binomial likelihood.
 
 ![`r fig_app_ch2('ch2moransI')`](figure/chapter2/correlogram.pdf)
 
@@ -786,7 +797,7 @@ I_i \sim \text{Bernoulli}(p_i) \\
 \end{gathered}
 $$
 
-The covariance matrix $K(d)$ of the plot-level varying intercept ($\alpha_j$) was defined by an exponentiated quadratic kernel. This function decayed with distance between plots $m$ and $n$ and its range and intensity were controlled by $\rho^2$ and $\eta^2$, respectively. The term $\sigma^2$ accounted for repeated plot observations (i.e. when plot $m=n$).  
+The covariance matrix $K(d)$ of the plot-varying intercept ($\alpha_j$) was defined by an exponentiated quadratic kernel. This function decayed with distance between plots $m$ and $n$ and its range and intensity were controlled by $\rho^2$ and $\eta^2$, respectively. The term $\sigma^2$ accounted for repeated plot observations (i.e. when plot $m=n$).  
 
 *Correlation between plots*  
 Using the posteriors from the GP individual-level model, we show the correlation between plots as a function of distance (`r fig_app_ch2('ch2GPcor', display = 'cite')`). Spatial autocorrelation was only noticeable at very short distances, primarily between plots less than 1.25 km apart.  

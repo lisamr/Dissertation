@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.6)  6 AUG 2021 15:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.6)  11 AUG 2021 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -789,19 +789,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [6]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 263.
+(Font)              <10> on input line 250.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 263.
+(Font)              <7> on input line 250.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 263.
+(Font)              <5> on input line 250.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.314 
+l.307 
        [1] [2] [3] [4] [5] [6] [7] [8]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
-41.
+34.
 (/Users/lisarosenthal/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [9] [10]
@@ -809,21 +809,21 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: figure/chapter1/Fig1_sporangia.jpg Graphic file (type jpg)
 <use figure/chapter1/Fig1_sporangia.jpg>
 Package pdftex.def Info: figure/chapter1/Fig1_sporangia.jpg  used on input line
- 738.
+ 731.
 (pdftex.def)             Requested size: 469.74852pt x 268.42772pt.
 [11] [12 <./figure/chapter1/Fig1_sporangia.jpg>]
 <figure/chapter1/Fig2_chlamydospores.jpg, id=275, 978.65625pt x 559.08875pt>
 File: figure/chapter1/Fig2_chlamydospores.jpg Graphic file (type jpg)
 <use figure/chapter1/Fig2_chlamydospores.jpg>
 Package pdftex.def Info: figure/chapter1/Fig2_chlamydospores.jpg  used on input
- line 782.
+ line 775.
 (pdftex.def)             Requested size: 281.86174pt x 161.02255pt.
 [13 <./figure/chapter1/Fig2_chlamydospores.jpg>]
 <figure/chapter1/Fig3_lesions_spores.jpg, id=284, 4215.75pt x 2710.125pt>
 File: figure/chapter1/Fig3_lesions_spores.jpg Graphic file (type jpg)
 <use figure/chapter1/Fig3_lesions_spores.jpg>
 Package pdftex.def Info: figure/chapter1/Fig3_lesions_spores.jpg  used on input
- line 813.
+ line 806.
 (pdftex.def)             Requested size: 469.71635pt x 301.96051pt.
 [14 <./figure/chapter1/Fig3_lesions_spores.jpg>] [15] [16] [17] [18] [19
 
@@ -832,31 +832,31 @@ Package pdftex.def Info: figure/chapter1/Fig3_lesions_spores.jpg  used on input
 File: figure/chapter2/MS_diagram6_173mm.pdf Graphic file (type pdf)
 <use figure/chapter2/MS_diagram6_173mm.pdf>
 Package pdftex.def Info: figure/chapter2/MS_diagram6_173mm.pdf  used on input l
-ine 1067.
+ine 1066.
 (pdftex.def)             Requested size: 469.76677pt x 318.35422pt.
 [20] [21 <./figure/chapter2/MS_diagram6_173mm.pdf>] [22] [23]
 <figure/chapter2/map_151plots.pdf, id=406, 232.87pt x 260.975pt>
 File: figure/chapter2/map_151plots.pdf Graphic file (type pdf)
 <use figure/chapter2/map_151plots.pdf>
 Package pdftex.def Info: figure/chapter2/map_151plots.pdf  used on input line 1
-223.
+222.
 (pdftex.def)             Requested size: 232.87296pt x 260.97833pt.
 [24 <./figure/chapter2/map_151plots.pdf>] [25] [26] [27] [28]
 <figure/chapter2/all_density_plots.pdf, id=463, 491.8375pt x 246.9225pt>
 File: figure/chapter2/all_density_plots.pdf Graphic file (type pdf)
 <use figure/chapter2/all_density_plots.pdf>
 Package pdftex.def Info: figure/chapter2/all_density_plots.pdf  used on input l
-ine 1449.
+ine 1448.
 (pdftex.def)             Requested size: 469.7721pt x 235.84474pt.
 [29] [30 <./figure/chapter2/all_density_plots.pdf>]
 <figure/chapter2/nestedness_competence.pdf, id=489, 491.8375pt x 312.16624pt>
 File: figure/chapter2/nestedness_competence.pdf Graphic file (type pdf)
 <use figure/chapter2/nestedness_competence.pdf>
 Package pdftex.def Info: figure/chapter2/nestedness_competence.pdf  used on inp
-ut line 1485.
+ut line 1484.
 (pdftex.def)             Requested size: 469.7721pt x 298.16147pt.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-502.
+501.
 (/Users/lisarosenthal/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [31 <./figure/chapter2/nestedness_competence.pdf>]
@@ -865,7 +865,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: figure/chapter2/disease_risk_plotlevel.pdf Graphic file (type pdf)
 <use figure/chapter2/disease_risk_plotlevel.pdf>
 Package pdftex.def Info: figure/chapter2/disease_risk_plotlevel.pdf  used on in
-put line 1534.
+put line 1533.
 (pdftex.def)             Requested size: 469.7721pt x 298.16147pt.
 [32] [33 <./figure/chapter2/disease_risk_plotlevel.pdf>]
 <figure/chapter2/disease_risk_specieslevel.pdf, id=1484, 312.16624pt x 243.9112
@@ -873,7 +873,7 @@ put line 1534.
 File: figure/chapter2/disease_risk_specieslevel.pdf Graphic file (type pdf)
 <use figure/chapter2/disease_risk_specieslevel.pdf>
 Package pdftex.def Info: figure/chapter2/disease_risk_specieslevel.pdf  used on
- input line 1583.
+ input line 1582.
 (pdftex.def)             Requested size: 312.17024pt x 243.91435pt.
 [34 <./figure/chapter2/disease_risk_specieslevel.pdf>] [35] [36] [37] [38] [39]
 [40] [41] [42] [43] [44] [45] [46]
@@ -1031,9 +1031,9 @@ Package rerunfilecheck Info: File `dissertation_LRosenthal.out' has not changed
  ) 
 Here is how much of TeX's memory you used:
  14700 strings out of 480502
- 231309 string characters out of 5898249
- 568605 words of memory out of 5000000
- 31644 multiletter control sequences out of 15000+600000
+ 231330 string characters out of 5898249
+ 568620 words of memory out of 5000000
+ 31643 multiletter control sequences out of 15000+600000
  499079 words of font info for 95 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  62i,17n,75p,1382b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1061,10 +1061,10 @@ mf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/lisarosenthal/Library/TinyTeX/
 texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/lisarosenthal/Library/TinyTe
 X/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></Users/lisarosenthal/Library/Tiny
 TeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on dissertation_LRosenthal.pdf (87 pages, 15195845 bytes).
+Output written on dissertation_LRosenthal.pdf (87 pages, 15196129 bytes).
 PDF statistics:
- 3503 PDF objects out of 3580 (max. 8388607)
- 2093 compressed objects within 21 object streams
- 411 named destinations out of 1000 (max. 500000)
+ 3504 PDF objects out of 3580 (max. 8388607)
+ 2094 compressed objects within 21 object streams
+ 412 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
