@@ -121,7 +121,7 @@ Lisa M. Rosenthal^1,2^, Sebastian N. Fajardo^2^, David M. Rizzo^2^
 
 \setlength{\parindent}{0in}
 \smallskip
-*Chapter 1 was accepted for publication in the journal* Plant Disease *and is reproduced here.*
+*Chapter 1 was accepted for publication in the journal* Plant Disease *and with permission, is reproduced here. Please see link to article: [https://doi.org/10.1094/PDIS-03-20-0485-RE](https://doi.org/10.1094/PDIS-03-20-0485-RE)*
 \setlength{\parindent}{.25in}
 
 <!-- figure captions to be referenced -->
@@ -335,7 +335,7 @@ fig_app_ch2('ch2GPhist', 'Distribution of plot pairwise distances.')
 
 \setlength{\parindent}{0in}
 \smallskip
-*Chapter 2 was accepted for publication in the journal* Ecology Letters *and is reproduced here.*
+*Chapter 2 was accepted for publication in the journal* Ecology Letters *and, with permission, is reproduced here.*
 \setlength{\parindent}{.25in}
 
 ## Abstract  

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.6)  11 AUG 2021 11:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.6)  17 AUG 2021 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -798,146 +798,146 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.307 
+l.309 
        [1] [2] [3] [4] [5] [6] [7] [8]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
-34.
+36.
 (/Users/lisarosenthal/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [9] [10]
-<figure/chapter1/Fig1_sporangia.jpg, id=261, 2107.875pt x 1204.5pt>
+<figure/chapter1/Fig1_sporangia.jpg, id=265, 2107.875pt x 1204.5pt>
 File: figure/chapter1/Fig1_sporangia.jpg Graphic file (type jpg)
 <use figure/chapter1/Fig1_sporangia.jpg>
 Package pdftex.def Info: figure/chapter1/Fig1_sporangia.jpg  used on input line
- 731.
+ 733.
 (pdftex.def)             Requested size: 469.74852pt x 268.42772pt.
 [11] [12 <./figure/chapter1/Fig1_sporangia.jpg>]
-<figure/chapter1/Fig2_chlamydospores.jpg, id=275, 978.65625pt x 559.08875pt>
+<figure/chapter1/Fig2_chlamydospores.jpg, id=279, 978.65625pt x 559.08875pt>
 File: figure/chapter1/Fig2_chlamydospores.jpg Graphic file (type jpg)
 <use figure/chapter1/Fig2_chlamydospores.jpg>
 Package pdftex.def Info: figure/chapter1/Fig2_chlamydospores.jpg  used on input
- line 775.
+ line 777.
 (pdftex.def)             Requested size: 281.86174pt x 161.02255pt.
 [13 <./figure/chapter1/Fig2_chlamydospores.jpg>]
-<figure/chapter1/Fig3_lesions_spores.jpg, id=284, 4215.75pt x 2710.125pt>
+<figure/chapter1/Fig3_lesions_spores.jpg, id=288, 4215.75pt x 2710.125pt>
 File: figure/chapter1/Fig3_lesions_spores.jpg Graphic file (type jpg)
 <use figure/chapter1/Fig3_lesions_spores.jpg>
 Package pdftex.def Info: figure/chapter1/Fig3_lesions_spores.jpg  used on input
- line 806.
+ line 808.
 (pdftex.def)             Requested size: 469.71635pt x 301.96051pt.
 [14 <./figure/chapter1/Fig3_lesions_spores.jpg>] [15] [16] [17] [18] [19
 
 ]
-<figure/chapter2/MS_diagram6_173mm.pdf, id=317, 492.23299pt x 333.57925pt>
+<figure/chapter2/MS_diagram6_173mm.pdf, id=321, 492.23299pt x 333.57925pt>
 File: figure/chapter2/MS_diagram6_173mm.pdf Graphic file (type pdf)
 <use figure/chapter2/MS_diagram6_173mm.pdf>
 Package pdftex.def Info: figure/chapter2/MS_diagram6_173mm.pdf  used on input l
-ine 1066.
+ine 1069.
 (pdftex.def)             Requested size: 469.76677pt x 318.35422pt.
 [20] [21 <./figure/chapter2/MS_diagram6_173mm.pdf>] [22] [23]
-<figure/chapter2/map_151plots.pdf, id=406, 232.87pt x 260.975pt>
+<figure/chapter2/map_151plots.pdf, id=410, 232.87pt x 260.975pt>
 File: figure/chapter2/map_151plots.pdf Graphic file (type pdf)
 <use figure/chapter2/map_151plots.pdf>
 Package pdftex.def Info: figure/chapter2/map_151plots.pdf  used on input line 1
-222.
+225.
 (pdftex.def)             Requested size: 232.87296pt x 260.97833pt.
 [24 <./figure/chapter2/map_151plots.pdf>] [25] [26] [27] [28]
-<figure/chapter2/all_density_plots.pdf, id=463, 491.8375pt x 246.9225pt>
+<figure/chapter2/all_density_plots.pdf, id=467, 491.8375pt x 246.9225pt>
 File: figure/chapter2/all_density_plots.pdf Graphic file (type pdf)
 <use figure/chapter2/all_density_plots.pdf>
 Package pdftex.def Info: figure/chapter2/all_density_plots.pdf  used on input l
-ine 1448.
+ine 1451.
 (pdftex.def)             Requested size: 469.7721pt x 235.84474pt.
 [29] [30 <./figure/chapter2/all_density_plots.pdf>]
-<figure/chapter2/nestedness_competence.pdf, id=489, 491.8375pt x 312.16624pt>
+<figure/chapter2/nestedness_competence.pdf, id=493, 491.8375pt x 312.16624pt>
 File: figure/chapter2/nestedness_competence.pdf Graphic file (type pdf)
 <use figure/chapter2/nestedness_competence.pdf>
 Package pdftex.def Info: figure/chapter2/nestedness_competence.pdf  used on inp
-ut line 1484.
+ut line 1487.
 (pdftex.def)             Requested size: 469.7721pt x 298.16147pt.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-501.
+504.
 (/Users/lisarosenthal/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [31 <./figure/chapter2/nestedness_competence.pdf>]
-<figure/chapter2/disease_risk_plotlevel.pdf, id=1455, 491.8375pt x 312.16624pt>
+<figure/chapter2/disease_risk_plotlevel.pdf, id=1459, 491.8375pt x 312.16624pt>
 
 File: figure/chapter2/disease_risk_plotlevel.pdf Graphic file (type pdf)
 <use figure/chapter2/disease_risk_plotlevel.pdf>
 Package pdftex.def Info: figure/chapter2/disease_risk_plotlevel.pdf  used on in
-put line 1533.
+put line 1536.
 (pdftex.def)             Requested size: 469.7721pt x 298.16147pt.
 [32] [33 <./figure/chapter2/disease_risk_plotlevel.pdf>]
-<figure/chapter2/disease_risk_specieslevel.pdf, id=1484, 312.16624pt x 243.9112
+<figure/chapter2/disease_risk_specieslevel.pdf, id=1488, 312.16624pt x 243.9112
 5pt>
 File: figure/chapter2/disease_risk_specieslevel.pdf Graphic file (type pdf)
 <use figure/chapter2/disease_risk_specieslevel.pdf>
 Package pdftex.def Info: figure/chapter2/disease_risk_specieslevel.pdf  used on
- input line 1582.
+ input line 1585.
 (pdftex.def)             Requested size: 312.17024pt x 243.91435pt.
 [34 <./figure/chapter2/disease_risk_specieslevel.pdf>] [35] [36] [37] [38] [39]
 [40] [41] [42] [43] [44] [45] [46]
-<figure/chapter3/four_trts_comm_prev.pdf, id=1574, 514.92375pt x 284.06125pt>
+<figure/chapter3/four_trts_comm_prev.pdf, id=1578, 514.92375pt x 284.06125pt>
 File: figure/chapter3/four_trts_comm_prev.pdf Graphic file (type pdf)
 <use figure/chapter3/four_trts_comm_prev.pdf>
 Package pdftex.def Info: figure/chapter3/four_trts_comm_prev.pdf  used on input
- line 2151.
+ line 2154.
 (pdftex.def)             Requested size: 469.76776pt x 259.15062pt.
 [47 <./figure/chapter3/four_trts_comm_prev.pdf>]
-<figure/chapter3/four_trts_spp_prev.pdf, id=1593, 433.62pt x 281.05pt>
+<figure/chapter3/four_trts_spp_prev.pdf, id=1597, 433.62pt x 281.05pt>
 File: figure/chapter3/four_trts_spp_prev.pdf Graphic file (type pdf)
 <use figure/chapter3/four_trts_spp_prev.pdf>
 Package pdftex.def Info: figure/chapter3/four_trts_spp_prev.pdf  used on input 
-line 2170.
+line 2173.
 (pdftex.def)             Requested size: 433.63878pt x 281.06216pt.
 [48 <./figure/chapter3/four_trts_spp_prev.pdf>] [49] [50] [51]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 2414.
+(Font)              <9> on input line 2417.
 
-Overfull \hbox (0.66473pt too wide) in paragraph at lines 2414--2414
+Overfull \hbox (0.66473pt too wide) in paragraph at lines 2417--2417
 []\T1/lmr/m/n/9 ACMA|  
  []
 
 
-Overfull \hbox (0.92168pt too wide) in paragraph at lines 2414--2414
+Overfull \hbox (0.92168pt too wide) in paragraph at lines 2417--2417
 []\T1/lmr/m/n/9 UMCA|  
  []
 
 
-Overfull \hbox (7.98666pt too wide) in paragraph at lines 2414--2414
+Overfull \hbox (7.98666pt too wide) in paragraph at lines 2417--2417
 []\T1/lmr/m/n/9 UMCAD|  
  []
 
 [52] [53] [54]
-<figure/chapter2/supp_pairs_plot.pdf, id=1646, 469.755pt x 433.62pt>
+<figure/chapter2/supp_pairs_plot.pdf, id=1650, 469.755pt x 433.62pt>
 File: figure/chapter2/supp_pairs_plot.pdf Graphic file (type pdf)
 <use figure/chapter2/supp_pairs_plot.pdf>
 Package pdftex.def Info: figure/chapter2/supp_pairs_plot.pdf  used on input lin
-e 2465.
+e 2468.
 (pdftex.def)             Requested size: 469.75386pt x 433.61894pt.
-<figure/chapter2/PPC_density_models2.pdf, id=1647, 469.755pt x 144.54pt>
+<figure/chapter2/PPC_density_models2.pdf, id=1651, 469.755pt x 144.54pt>
 File: figure/chapter2/PPC_density_models2.pdf Graphic file (type pdf)
 <use figure/chapter2/PPC_density_models2.pdf>
 Package pdftex.def Info: figure/chapter2/PPC_density_models2.pdf  used on input
- line 2474.
+ line 2477.
 (pdftex.def)             Requested size: 469.75386pt x 144.53963pt.
-<figure/chapter2/PPC_density_models1.pdf, id=1648, 325.215pt x 144.54pt>
+<figure/chapter2/PPC_density_models1.pdf, id=1652, 325.215pt x 144.54pt>
 File: figure/chapter2/PPC_density_models1.pdf Graphic file (type pdf)
 <use figure/chapter2/PPC_density_models1.pdf>
 Package pdftex.def Info: figure/chapter2/PPC_density_models1.pdf  used on input
- line 2482.
+ line 2485.
 (pdftex.def)             Requested size: 325.22908pt x 144.54623pt.
-<figure/chapter2/PPC_community_compentency.pdf, id=1649, 216.81pt x 144.54pt>
+<figure/chapter2/PPC_community_compentency.pdf, id=1653, 216.81pt x 144.54pt>
 File: figure/chapter2/PPC_community_compentency.pdf Graphic file (type pdf)
 <use figure/chapter2/PPC_community_compentency.pdf>
 Package pdftex.def Info: figure/chapter2/PPC_community_compentency.pdf  used on
- input line 2491.
+ input line 2494.
 (pdftex.def)             Requested size: 216.81938pt x 144.54623pt.
-<figure/chapter2/PPC_diseaserisk.pdf, id=1650, 469.755pt x 252.945pt>
+<figure/chapter2/PPC_diseaserisk.pdf, id=1654, 469.755pt x 252.945pt>
 File: figure/chapter2/PPC_diseaserisk.pdf Graphic file (type pdf)
 <use figure/chapter2/PPC_diseaserisk.pdf>
 Package pdftex.def Info: figure/chapter2/PPC_diseaserisk.pdf  used on input lin
-e 2499.
+e 2502.
 (pdftex.def)             Requested size: 469.75386pt x 252.94438pt.
 [55
 
@@ -948,72 +948,72 @@ ommunity_compentency.pdf
 pdfTeX warning: pdflatex (file ./figure/chapter2/PPC_community_compentency.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >] [57 <./figure/chapter2/PPC_diseaserisk.pdf>]
-Overfull \hbox (4.10022pt too wide) in paragraph at lines 2563--2563
+Overfull \hbox (4.10022pt too wide) in paragraph at lines 2566--2566
  \T1/lmr/bx/n/10.95 present|
  []
 
 [58
 
 ] [59] [60] [61] [62]
-<figure/chapter2/mean_v_total_basalarea.pdf, id=2976, 469.755pt x 216.81pt>
+<figure/chapter2/mean_v_total_basalarea.pdf, id=2980, 469.755pt x 216.81pt>
 File: figure/chapter2/mean_v_total_basalarea.pdf Graphic file (type pdf)
 <use figure/chapter2/mean_v_total_basalarea.pdf>
 Package pdftex.def Info: figure/chapter2/mean_v_total_basalarea.pdf  used on in
-put line 2724.
+put line 2727.
 (pdftex.def)             Requested size: 469.75386pt x 216.80946pt.
 [63
 
 
 ] [64 <./figure/chapter2/mean_v_total_basalarea.pdf>]
-<figure/chapter2/correlogram.pdf, id=3008, 325.215pt x 252.945pt>
+<figure/chapter2/correlogram.pdf, id=3012, 325.215pt x 252.945pt>
 File: figure/chapter2/correlogram.pdf Graphic file (type pdf)
 <use figure/chapter2/correlogram.pdf>
 Package pdftex.def Info: figure/chapter2/correlogram.pdf  used on input line 27
-64.
+67.
 (pdftex.def)             Requested size: 325.21916pt x 252.94823pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2783--2787
+Underfull \hbox (badness 10000) in paragraph at lines 2786--2790
 
  []
 
 [65 <./figure/chapter2/correlogram.pdf>]
-<figure/chapter2/gaussian_process_correlation.pdf, id=3022, 361.35pt x 216.81pt
+<figure/chapter2/gaussian_process_correlation.pdf, id=3026, 361.35pt x 216.81pt
 >
 File: figure/chapter2/gaussian_process_correlation.pdf Graphic file (type pdf)
 <use figure/chapter2/gaussian_process_correlation.pdf>
 Package pdftex.def Info: figure/chapter2/gaussian_process_correlation.pdf  used
- on input line 2815.
+ on input line 2818.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
-<figure/chapter2/histogram_of_distances.pdf, id=3023, 361.35pt x 216.81pt>
+<figure/chapter2/histogram_of_distances.pdf, id=3027, 361.35pt x 216.81pt>
 File: figure/chapter2/histogram_of_distances.pdf Graphic file (type pdf)
 <use figure/chapter2/histogram_of_distances.pdf>
 Package pdftex.def Info: figure/chapter2/histogram_of_distances.pdf  used on in
-put line 2827.
+put line 2830.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
 [66 <./figure/chapter2/gaussian_process_correlation.pdf>] [67 <./figure/chapter
 2/histogram_of_distances.pdf>]
-<figure/chapter3/design.pdf, id=3051, 433.62pt x 216.81pt>
+<figure/chapter3/design.pdf, id=3055, 433.62pt x 216.81pt>
 File: figure/chapter3/design.pdf Graphic file (type pdf)
 <use figure/chapter3/design.pdf>
-Package pdftex.def Info: figure/chapter3/design.pdf  used on input line 2849.
+Package pdftex.def Info: figure/chapter3/design.pdf  used on input line 2852.
 (pdftex.def)             Requested size: 433.63878pt x 216.81938pt.
-<figure/chapter3/add_det_maps.pdf, id=3052, 433.62pt x 505.89pt>
+<figure/chapter3/add_det_maps.pdf, id=3056, 433.62pt x 505.89pt>
 File: figure/chapter3/add_det_maps.pdf Graphic file (type pdf)
 <use figure/chapter3/add_det_maps.pdf>
 Package pdftex.def Info: figure/chapter3/add_det_maps.pdf  used on input line 2
-858.
+861.
 (pdftex.def)             Requested size: 433.62555pt x 505.89645pt.
-<figure/chapter3/prop_rad_supplementary.pdf, id=3053, 289.08pt x 216.81pt>
+<figure/chapter3/prop_rad_supplementary.pdf, id=3057, 289.08pt x 216.81pt>
 File: figure/chapter3/prop_rad_supplementary.pdf Graphic file (type pdf)
 <use figure/chapter3/prop_rad_supplementary.pdf>
 Package pdftex.def Info: figure/chapter3/prop_rad_supplementary.pdf  used on in
-put line 2868.
+put line 2871.
 (pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-<figure/chapter3/four_trts_comm_dens.pdf, id=3054, 514.92375pt x 284.06125pt>
+<figure/chapter3/four_trts_comm_dens.pdf, id=3058, 514.92375pt x 284.06125pt>
 File: figure/chapter3/four_trts_comm_dens.pdf Graphic file (type pdf)
 <use figure/chapter3/four_trts_comm_dens.pdf>
 Package pdftex.def Info: figure/chapter3/four_trts_comm_dens.pdf  used on input
- line 2876.
+ line 2879.
 (pdftex.def)             Requested size: 469.76776pt x 259.15062pt.
 [68 <./figure/chapter3/design.pdf>] [69 <./figure/chapter3/add_det_maps.pdf>] [
 70 <./figure/chapter3/prop_rad_supplementary.pdf> <./figure/chapter3/four_trts_
@@ -1037,34 +1037,43 @@ Here is how much of TeX's memory you used:
  499079 words of font info for 95 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  62i,17n,75p,1382b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.en
-c}{/Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
-}{/Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}
-{/Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.e
-nc}{/Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathi
-t.enc}{/Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ma
-thex.enc}</Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/type1/public/lm
-/lmbx10.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/type1/public
-/lm/lmbx12.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/type1/pub
-lic/lm/lmbx9.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/type1/p
-ublic/lm/lmbxi10.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/typ
-e1/public/lm/lmex10.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-dist/fonts/
-type1/public/lm/lmmi10.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-dist/fon
-ts/type1/public/lm/lmmi8.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-dist/f
-onts/type1/public/lm/lmr10.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-dist
-/fonts/type1/public/lm/lmr6.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-dis
-t/fonts/type1/public/lm/lmr7.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-di
-st/fonts/type1/public/lm/lmr8.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-d
-ist/fonts/type1/public/lm/lmr9.pfb></Users/lisarosenthal/Library/TinyTeX/texmf-
-dist/fonts/type1/public/lm/lmri10.pfb></Users/lisarosenthal/Library/TinyTeX/tex
-mf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/lisarosenthal/Library/TinyTeX/
-texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/lisarosenthal/Library/TinyTe
-X/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></Users/lisarosenthal/Library/Tiny
-TeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on dissertation_LRosenthal.pdf (87 pages, 15196129 bytes).
+ </Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/
+ts1-lmr6.600pk> </Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/modele
+ss/public/lm/ec-lmr6.600pk> </Users/lisarosenthal/Library/TinyTeX/texmf-var/fon
+ts/pk/modeless/public/lm/rm-lmr6.600pk> </Users/lisarosenthal/Library/TinyTeX/t
+exmf-var/fonts/pk/modeless/public/lm/rm-lmr9.600pk> </Users/lisarosenthal/Libra
+ry/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/lmsy6.600pk> </Users/lisarosen
+thal/Library/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/ts1-lmr8.600pk> </Us
+ers/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/ec-lmr9
+.600pk> </Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/modeless/publi
+c/lm/ec-lmbx9.600pk> </Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/m
+odeless/public/lm/ts1-lmr10.657pk> </Users/lisarosenthal/Library/TinyTeX/texmf-
+var/fonts/pk/modeless/public/lm/rm-lmbx10.657pk> </Users/lisarosenthal/Library/
+TinyTeX/texmf-var/fonts/pk/modeless/public/lm/lmmi8.600pk> </Users/lisarosentha
+l/Library/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/lmex10.600pk> </Users/l
+isarosenthal/Library/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/rm-lmr8.600p
+k> </Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/
+lmsy10.657pk> </Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/modeless
+/public/lm/ec-lmtt10.657pk> </Users/lisarosenthal/Library/TinyTeX/texmf-var/fon
+ts/pk/modeless/public/lm/rm-lmr10.657pk> </Users/lisarosenthal/Library/TinyTeX/
+texmf-var/fonts/pk/modeless/public/lm/lmmi10.657pk> </Users/lisarosenthal/Libra
+ry/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/lmsy8.600pk> </Users/lisarosen
+thal/Library/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/ec-lmbx12.600pk> </U
+sers/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/ec-lmr
+10.600pk> </Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/modeless/pub
+lic/lm/ec-lmr7.600pk> </Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/
+modeless/public/lm/ec-lmr8.600pk> </Users/lisarosenthal/Library/TinyTeX/texmf-v
+ar/fonts/pk/modeless/public/lm/ec-lmbxi10.864pk> </Users/lisarosenthal/Library/
+TinyTeX/texmf-var/fonts/pk/modeless/public/lm/ec-lmbxi10.657pk> </Users/lisaros
+enthal/Library/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/ec-lmri10.657pk> <
+/Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/modeless/public/lm/ec-l
+mbx10.657pk> </Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts/pk/modeless/
+public/lm/ec-lmr10.657pk> </Users/lisarosenthal/Library/TinyTeX/texmf-var/fonts
+/pk/modeless/public/lm/ec-lmbx12.720pk>
+Output written on dissertation_LRosenthal.pdf (87 pages, 15072544 bytes).
 PDF statistics:
- 3504 PDF objects out of 3580 (max. 8388607)
- 2094 compressed objects within 21 object streams
+ 4108 PDF objects out of 4296 (max. 8388607)
+ 2134 compressed objects within 22 object streams
  412 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
